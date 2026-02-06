@@ -125,7 +125,7 @@ export default function CaseStudiesPage() {
                                             className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000 ease-out"
                                         />
                                         {/* Floating Badge */}
-                                        <div className="absolute top-6 left-6 z-20 bg-white/95 backdrop-blur-sm px-4 py-2 shadow-lg">
+                                        <div className="absolute top-6 left-6 z-20 bg-white/95 px-4 py-2 shadow-lg">
                                             <span className="text-xs font-bold uppercase tracking-widest text-trust-blue-950">
                                                 {study.category}
                                             </span>
