@@ -85,7 +85,7 @@ export default function BlogPage() {
                                 className="group flex flex-col h-full bg-white border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-300"
                             >
                                 <div className="relative aspect-[16/9] overflow-hidden">
-                                    <div className="absolute top-4 left-4 z-10 bg-white/90 backdrop-blur-sm text-trust-blue-950 text-xs font-bold px-3 py-1 uppercase tracking-wider rounded-sm">
+                                    <div className="absolute top-4 left-4 z-10 bg-white/90 text-trust-blue-950 text-xs font-bold px-3 py-1 uppercase tracking-wider rounded-sm">
                                         {post.category}
                                     </div>
                                     <img
