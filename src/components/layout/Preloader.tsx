@@ -29,40 +29,44 @@ export default function Preloader() {
         <AnimatePresence mode="wait">
             {isLoading && (
                 <motion.div
-                    className="fixed inset-0 z-[9999] flex items-center justify-center bg-trust-blue-950"
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.8, ease: "easeInOut" }}
+                    className="fixed inset-0 z-[9999] bg-trust-blue-950 flex flex-col items-center justify-center overflow-hidden"
+                    exit={{
+                        y: "-100%",
+                        transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] }
+                    }}
                 >
-                    <div className="relative flex flex-col items-center">
-                        {/* Animated Text */}
-                        <div className="overflow-hidden mb-4">
-                            <motion.h1
-                                initial={{ y: 100 }}
-                                animate={{ y: 0 }}
-                                transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-                                className="font-serif text-5xl md:text-7xl font-bold tracking-[0.2em] uppercase text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-200"
-                            >
-                                Valora
-                            </motion.h1>
-                        </div>
+                    <div className="relative overflow-hidden">
+                        <motion.h1
+                            initial={{ y: "100%" }}
+                            animate={{ y: 0 }}
+                            transition={{ duration: 1, ease: [0.76, 0, 0.24, 1], delay: 0.2 }}
+                            className="font-serif text-6xl md:text-9xl font-bold text-white tracking-tighter"
+                        >
+                            VALORA
+                        </motion.h1>
+                    </div>
 
-                        {/* Divider Line Animation */}
+                    <div className="flex items-center gap-4 mt-4 overflow-hidden">
                         <motion.div
                             initial={{ width: 0 }}
-                            animate={{ width: "100px" }}
-                            transition={{ duration: 0.8, ease: "easeInOut", delay: 0.8 }}
-                            className="h-[2px] bg-gold-400 mb-4"
+                            animate={{ width: "60px" }}
+                            transition={{ duration: 0.8, ease: "easeInOut", delay: 1 }}
+                            className="h-[1px] bg-gold-400"
                         />
-
-                        {/* Subtitle Fade In */}
                         <motion.p
-                            initial={{ opacity: 0, y: 10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 1.2 }}
-                            className="text-trust-blue-200 text-sm tracking-[0.3em] uppercase"
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.8, ease: "easeOut", delay: 1 }}
+                            className="text-gold-400 text-sm tracking-[0.3em] uppercase font-light"
                         >
                             Asset Management
                         </motion.p>
+                        <motion.div
+                            initial={{ width: 0 }}
+                            animate={{ width: "60px" }}
+                            transition={{ duration: 0.8, ease: "easeInOut", delay: 1 }}
+                            className="h-[1px] bg-gold-400"
+                        />
                     </div>
                 </motion.div>
             )}
