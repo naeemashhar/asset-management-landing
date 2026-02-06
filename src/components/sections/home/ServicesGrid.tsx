@@ -149,45 +149,46 @@ export default function ServicesGrid() {
                     <div
                         key={i}
                         ref={(el) => { cards.current[i] = el; }}
-                        className="rounded-sm nav-section h-screen w-[95%] mx-auto sticky top-0 flex items-center justify-center overflow-hidden bg-[#EAEAEA]"
+                        className="rounded-sm nav-section h-screen w-full sticky top-0 flex items-center justify-center overflow-hidden bg-[#EAEAEA]"
                     >
                         <div className="w-full h-full max-w-[1920px] mx-auto relative flex flex-col lg:flex-row items-center">
 
-                            {/* Left Content Area */}
-                            <div className="w-full lg:w-[60%] h-full px-8 md:px-16 lg:px-24 flex flex-col justify-center relative z-10">
+                            {/* Left Content Area - Overlapping */}
+                            <div className="w-full lg:w-[65%] h-full px-8 md:px-16 lg:px-24 flex flex-col justify-center relative z-20 pointer-events-none">
+                                <div className="pointer-events-auto pr-0 lg:pr-20">
+                                    {/* Top Label */}
+                                    <div className="text-trust-blue-500 font-medium tracking-widest uppercase text-sm mb-4">
+                                        {service.id} {service.category}
+                                    </div>
 
-                                {/* Top Label */}
-                                <div className="absolute top-12 left-8 md:left-24 text-trust-blue-400 font-medium tracking-widest uppercase text-sm">
-                                    {service.id} {service.category}
-                                </div>
+                                    <h3 className="font-serif text-5xl md:text-7xl font-bold text-trust-blue-950 mb-12 lg:mb-16 leading-tight">
+                                        {service.title}
+                                    </h3>
 
-                                <h3 className="font-serif text-5xl md:text-7xl font-bold text-trust-blue-950 mb-12 lg:mb-20">
-                                    {service.title}
-                                </h3>
-
-                                {/* Sub-Features Grid */}
-                                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                                    {service.subFeatures.map((feat, idx) => (
-                                        <div key={idx} className="bg-white p-8 rounded-sm shadow-sm hover:shadow-md transition-shadow duration-300">
-                                            <feat.icon className="text-3xl text-trust-blue-950 mb-6" />
-                                            <h4 className="font-serif text-xl font-bold text-trust-blue-950 mb-3">
-                                                {feat.title}
-                                            </h4>
-                                            <p className="text-trust-blue-600 text-sm leading-relaxed">
-                                                {feat.desc}
-                                            </p>
-                                        </div>
-                                    ))}
+                                    {/* Sub-Features Grid */}
+                                    <div className="grid grid-cols-1 md:grid-cols-3 bg-white shadow-xl rounded-sm overflow-hidden divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                                        {service.subFeatures.map((feat, idx) => (
+                                            <div key={idx} className="p-8 hover:bg-gray-50 transition-colors duration-300 group">
+                                                <feat.icon className="text-3xl text-trust-blue-950 mb-6 group-hover:scale-110 transition-transform duration-300" />
+                                                <h4 className="font-serif text-lg font-bold text-trust-blue-950 mb-3">
+                                                    {feat.title}
+                                                </h4>
+                                                <p className="text-trust-blue-600 text-sm leading-relaxed">
+                                                    {feat.desc}
+                                                </p>
+                                            </div>
+                                        ))}
+                                    </div>
                                 </div>
                             </div>
 
-                            {/* Right Image Area (Trapezoid Clip) - Full Height & Flush Right */}
-                            <div className="hidden lg:block w-[50%] h-full absolute right-0 top-0 overflow-hidden">
+                            {/* Right Image Area (Trapezoid Clip) */}
+                            <div className="hidden lg:block w-[55%] h-full absolute right-0 top-0 overflow-hidden z-10">
                                 <div
                                     className="w-full h-full bg-cover bg-center"
                                     style={{
                                         backgroundImage: `url(${service.image})`,
-
+                                        clipPath: "polygon(15% 0, 100% 0, 100% 100%, 0% 100%)"
                                     }}
                                 >
                                     <div className="absolute inset-0 bg-trust-blue-950/10" />
