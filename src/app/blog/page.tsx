@@ -14,7 +14,7 @@ const posts = [
         date: "Feb 06, 2024",
         author: "Alexander von Steinberg",
         category: "Market Outlook",
-        image: "https://images.unsplash.com/photo-1611974765270-ca12586343bb?q=80&w=2670&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=2670&auto=format&fit=crop",
     },
     {
         id: 2,
