@@ -5,20 +5,20 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
     FaChartLine,
-    FaLandmark,
-    FaHandHoldingUsd,
-    FaShieldAlt,
-    FaGlobe,
+    // FaLandmark,
+    // FaHandHoldingUsd,
+    // FaShieldAlt,
+    // FaGlobe,
     FaCoins,
     FaUserTie,
     FaBriefcase,
     FaFileContract,
     FaChartPie,
-    FaBalanceScale,
-    FaLightbulb,
+    // FaBalanceScale,
+    // FaLightbulb,
     FaSearchDollar,
     FaNetworkWired,
-    FaLock
+    // FaLock
 } from "react-icons/fa";
 import { Button } from "@/components/ui/Button";
 
@@ -67,42 +67,42 @@ const services = [
             { title: "Due Diligence", icon: FaSearchDollar, desc: "Rigorous vetting of management teams and business models." }
         ]
     },
-   /*  {
-        id: "04",
-        category: "Advisory",
-        title: "Risk Management",
-        description: "Protecting capital against volatility and systemic threats.",
-        image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2664&auto=format&fit=crop",
-        subFeatures: [
-            { title: "Hedging Strategies", icon: FaShieldAlt, desc: "Derivatives and instruments to offset market exposure." },
-            { title: "Currency Risk", icon: FaGlobe, desc: "Managing FX volatility for cross-border operations." },
-            { title: "Compliance", icon: FaBalanceScale, desc: "Navigating complex global regulatory frameworks." }
-        ]
-    },
-    {
-        id: "05",
-        category: "Intelligence",
-        title: "Market Insights",
-        description: "Data-driven research to inform critical decisions.",
-        image: "https://images.unsplash.com/photo-1526304640152-d4619684e484?q=80&w=2670&auto=format&fit=crop",
-        subFeatures: [
-            { title: "Macro Analysis", icon: FaGlobe, desc: "Global economic trend forecasting and impact assessment." },
-            { title: "Sector Deep Dives", icon: FaLightbulb, desc: "Granular analysis of specific industry verticals." },
-            { title: "Trend Spotting", icon: FaChartLine, desc: "Identifying early-stage shifts in consumer behavior." }
-        ]
-    },
-    {
-        id: "06",
-        category: "Innovation",
-        title: "Digital Assets",
-        description: "Secure entry into the digital economy frontier.",
-        image: "https://images.unsplash.com/photo-1621416894569-0f39ed31d247?q=80&w=2574&auto=format&fit=crop",
-        subFeatures: [
-            { title: "Crypto Portfolios", icon: FaCoins, desc: "Diversified exposure to blue-chip cryptocurrencies." },
-            { title: "Blockchain Tech", icon: FaNetworkWired, desc: "Strategic infrastructure investments in Web3." },
-            { title: "Custody Solutions", icon: FaLock, desc: "Institutional-grade security for digital holdings." }
-        ]
-    }, */
+    /*  {
+         id: "04",
+         category: "Advisory",
+         title: "Risk Management",
+         description: "Protecting capital against volatility and systemic threats.",
+         image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2664&auto=format&fit=crop",
+         subFeatures: [
+             { title: "Hedging Strategies", icon: FaShieldAlt, desc: "Derivatives and instruments to offset market exposure." },
+             { title: "Currency Risk", icon: FaGlobe, desc: "Managing FX volatility for cross-border operations." },
+             { title: "Compliance", icon: FaBalanceScale, desc: "Navigating complex global regulatory frameworks." }
+         ]
+     },
+     {
+         id: "05",
+         category: "Intelligence",
+         title: "Market Insights",
+         description: "Data-driven research to inform critical decisions.",
+         image: "https://images.unsplash.com/photo-1526304640152-d4619684e484?q=80&w=2670&auto=format&fit=crop",
+         subFeatures: [
+             { title: "Macro Analysis", icon: FaGlobe, desc: "Global economic trend forecasting and impact assessment." },
+             { title: "Sector Deep Dives", icon: FaLightbulb, desc: "Granular analysis of specific industry verticals." },
+             { title: "Trend Spotting", icon: FaChartLine, desc: "Identifying early-stage shifts in consumer behavior." }
+         ]
+     },
+     {
+         id: "06",
+         category: "Innovation",
+         title: "Digital Assets",
+         description: "Secure entry into the digital economy frontier.",
+         image: "https://images.unsplash.com/photo-1621416894569-0f39ed31d247?q=80&w=2574&auto=format&fit=crop",
+         subFeatures: [
+             { title: "Crypto Portfolios", icon: FaCoins, desc: "Diversified exposure to blue-chip cryptocurrencies." },
+             { title: "Blockchain Tech", icon: FaNetworkWired, desc: "Strategic infrastructure investments in Web3." },
+             { title: "Custody Solutions", icon: FaLock, desc: "Institutional-grade security for digital holdings." }
+         ]
+     }, */
 ];
 
 export default function ServicesGrid() {
@@ -129,7 +129,7 @@ export default function ServicesGrid() {
     }, []);
 
     return (
-        <section ref={container} className="relative">
+        <section ref={container} className="relative" id="services">
 
             {/* Header / Intro pinned at top or just part of flow */}
             <div className="py-24 px-6 text-center">
@@ -187,7 +187,7 @@ export default function ServicesGrid() {
                                     className="w-full h-full bg-cover bg-center"
                                     style={{
                                         backgroundImage: `url(${service.image})`,
-                                      
+
                                     }}
                                 >
                                     <div className="absolute inset-0 bg-trust-blue-950/10" />
@@ -197,6 +197,87 @@ export default function ServicesGrid() {
                         </div>
                     </div>
                 ))}
+            </div>
+
+            {/* View All Services CTA */}
+
+
+            {/* View All Services CTA */}
+            <div className="pb-24 flex justify-center relative z-10">
+                <div className="text-center">
+                    <p className="text-trust-blue-500 mb-6 text-sm uppercase tracking-widest">
+                        Looking for more?
+                    </p>
+                    <Button href="/services" variant="gold" size="lg" className="min-w-[200px]">
+                        Discover All Expertise
+                    </Button>
+                </div>
+            </div>
+
+            {/* Required Disclosures */}
+            <div className="pb-16 px-6 relative z-10">
+                <div className="max-w-5xl mx-auto">
+                    <h2 className="font-serif text-4xl md:text-5xl font-bold text-trust-blue-950 mb-12">
+                        Required Disclosures
+                    </h2>
+
+                    <div className="hover:border-yellow-600 hover:border hover:scale-101 transition-all duration-300 bg-white p-8 md:p-12 rounded-md shadow-sm border-l-4 border-yellow-600">
+                        <h3 className="font-bold text-xl text-trust-blue-950 mb-6">
+                            Risk Disclosure
+                        </h3>
+
+                        <div className="space-y-4 text-trust-blue-700 leading-relaxed">
+                            <p className="font-semibold text-trust-blue-900 uppercase text-md tracking-wide">
+                                Commodity trading involves substantial risk of loss.
+                            </p>
+
+                            <p className="text-gray-800 text-sm">
+                                The high degree of leverage that is often obtainable in commodity futures, options, and forex trading can work against you as well as for you. The use of leverage can lead to large losses as well as gains.
+                            </p>
+
+                            <p className="text-gray-800 text-sm">
+                                In some cases, managed commodity accounts are subject to substantial charges for management and advisory fees. It may be necessary for those accounts that are subject to these charges to make substantial trading profits to avoid depletion or exhaustion of their assets.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="mt-5 hover:border-yellow-600 hover:border hover:scale-101 transition-all duration-300 bg-white p-8 md:p-12 rounded-md shadow-sm border-l-4 border-yellow-600">
+                        <h3 className="font-bold text-xl text-trust-blue-950 mb-6">
+                            Past Performance Disclosure
+                        </h3>
+
+                        <div className="space-y-4 text-trust-blue-700 leading-relaxed">
+                            <p className="font-semibold text-trust-blue-900 uppercase text-md tracking-wide">
+                                Past results are not necessarily indicative of future results.
+                            </p>
+
+                            <p className="text-gray-800 text-sm">
+                                The result represented in any marketing materials are not indicative of future performance. Historical performance data should not be considered in context with the market conditions that existed during that period.
+                            </p>
+
+                            {/* <p className="text-gray-800 text-sm">
+                                In some cases, managed commodity accounts are subject to substantial charges for management and advisory fees. It may be necessary for those accounts that are subject to these charges to make substantial trading profits to avoid depletion or exhaustion of their assets.
+                            </p> */}
+                        </div>
+                    </div>
+
+
+                    <div className="mt-5 hover:border-yellow-600 hover:border hover:scale-101 transition-all duration-300 bg-white p-8 md:p-12 rounded-md shadow-sm border-l-4 border-yellow-600">
+                        <h3 className="font-bold text-xl text-trust-blue-950 mb-6">
+                            Suitability Considerations
+                        </h3>
+
+                        <div className="space-y-4 text-trust-blue-700 leading-relaxed">
+                            <p className="text-gray-800 text-sm">
+                                You should carefully consider whether such trading is suitable for you in light of your financial condition. You should be aware that if you purchase a commodity option you may sustain a total loss of the premium and of any additional funds you deposit with your broker to establish or maintain your position.
+                            </p>
+
+                            <p className="text-gray-800 text-sm">
+                                If you purchase or sell a commodity futures contract or sell a commodity option you may sustain a total loss of the initial margin funds or security deposit and any additional funds that you deposit with your broker to establish or maintain your position.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
 

@@ -22,7 +22,7 @@ export default function CTABanner() {
                         Ready to secure your legacy?
                     </h2>
                     <p className="text-xl md:text-2xl text-trust-blue-100 max-w-3xl mx-auto mb-10 font-light leading-relaxed">
-                        Partner with ApexQuants for precision-engineered financial strategies that stand the test of time.
+                        Partner with Valora for precision-engineered financial strategies that stand the test of time.
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
                         <Button size="lg" variant="gold" className="min-w-[200px]">

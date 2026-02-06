@@ -22,9 +22,12 @@ export default function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const pathname = usePathname();
 
+    // Check if we are on a "light" page where we need contrast immediately (Privacy/Terms)
+    const isLightPage = pathname === "/privacy" || pathname === "/terms";
+
     useEffect(() => {
         const handleScroll = () => {
-            setIsScrolled(window.scrollY > 50);
+            setIsScrolled(window.scrollY > 20);
         };
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
@@ -42,7 +45,7 @@ export default function Header() {
                 transition={{ duration: 0.5, ease: "easeOut" }}
                 className={cn(
                     "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-                    isScrolled
+                    isScrolled || isLightPage
                         ? "bg-trust-blue-950/70 shadow-md py-4"
                         : "bg-transparent py-6"
                 )}
@@ -52,11 +55,12 @@ export default function Header() {
                     <Link href="/" className="z-50 relative">
                         <span
                             className={cn(
-                                "font-serif text-2xl font-bold tracking-tight",
-                                "text-white" // Always white
+                                "font-serif text-2xl tracking-[0.2em] uppercase transition-all duration-300",
+                                "bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-200 bg-clip-text text-transparent",
+                                "font-semibold drop-shadow-sm hover:drop-shadow-md"
                             )}
                         >
-                            ApexQuants
+                            Valora
                         </span>
                     </Link>
 
