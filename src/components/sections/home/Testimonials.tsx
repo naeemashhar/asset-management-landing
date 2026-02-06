@@ -1,27 +1,31 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaQuoteLeft, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const testimonials = [
     {
         id: 1,
-        quote: "ApexQuants's strategic insight completely transformed our approach to risk management. They don't just advise; they partner in your success.",
+        quote: "Valora's strategic insight completely transformed our approach to risk management. They don't just advise; they partner in your success.",
         author: "Elena V.",
         role: "CEO, TechGlobal Inc.",
+        image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop"
     },
     {
         id: 2,
         quote: "The depth of market analysis provided was instrumental in our recent merger. Exceptional professionalism and clarity.",
         author: "Marcus T.",
         role: "Managing Director, Sovereign Capital",
+        image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop"
     },
     {
         id: 3,
         quote: "A rare combination of analytical rigor and creative financial problem-solving. They curated a legacy plan that secured our family's future.",
         author: "Sarah L.",
         role: "Founder, Luminous Ventures",
+        image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&auto=format&fit=crop"
     },
 ];
 
@@ -83,12 +87,22 @@ export default function Testimonials() {
                                 <p className="font-serif text-2xl md:text-3xl leading-relaxed mb-8 relative z-10">
                                     &quot;{testimonials[currentIndex].quote}&quot;
                                 </p>
-                                <div>
-                                    <div className="text-gold-400 font-bold text-lg">
-                                        {testimonials[currentIndex].author}
+                                <div className="flex items-center gap-4">
+                                    <div className="relative w-12 h-12 rounded-full overflow-hidden border border-gold-400/30">
+                                        <Image
+                                            src={testimonials[currentIndex].image}
+                                            alt={testimonials[currentIndex].author}
+                                            fill
+                                            className="object-cover"
+                                        />
                                     </div>
-                                    <div className="text-trust-blue-300 text-sm">
-                                        {testimonials[currentIndex].role}
+                                    <div>
+                                        <div className="text-gold-400 font-bold text-lg leading-tight">
+                                            {testimonials[currentIndex].author}
+                                        </div>
+                                        <div className="text-trust-blue-300 text-sm">
+                                            {testimonials[currentIndex].role}
+                                        </div>
                                     </div>
                                 </div>
                             </motion.div>

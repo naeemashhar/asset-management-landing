@@ -8,7 +8,7 @@ import { FaArrowRight } from "react-icons/fa";
 const slides = [
     {
         image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2670&auto=format&fit=crop",
-        text: "Excellence & Vision"
+        text: "Commodities Management"
     },
     {
         image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2671&auto=format&fit=crop",
@@ -73,22 +73,22 @@ export default function Hero() {
                     transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                     className="mb-6"
                 >
-                    <span className="inline-block py-1 px-3 rounded-full border border-gold-400/30 bg-gold-400/10 text-gold-400 text-sm font-medium tracking-wide uppercase">
+                    {/* <span className="inline-block py-1 px-3 rounded-full border border-gold-400/30 bg-gold-400/10 text-gold-400 text-sm font-medium tracking-wide uppercase">
                         Premium Financial Consulting
-                    </span>
+                    </span> */}
                 </motion.div>
 
-                <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-8 tracking-tight">
+                <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-8 tracking-tight">
                     <motion.span
                         initial={{ opacity: 0, y: 40 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.4 }}
                         className="block"
                     >
-                        Elevating <span className="text-gold-400 font-italic">Financial</span>
+                        Strategies Future&apos;s
                     </motion.span>
 
-                    <span className="block h-[1.2em] overflow-hidden">
+                    <span className="block h-[1.4em] overflow-hidden pb-2 -mb-2">
                         <AnimatePresence mode="wait">
                             <motion.span
                                 key={currentIndex}
@@ -96,7 +96,7 @@ export default function Hero() {
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: -40 }}
                                 transition={{ duration: 0.8, ease: "easeOut" }}
-                                className="block"
+                                className="block bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-200 bg-clip-text text-transparent"
                             >
                                 {slides[currentIndex].text}
                             </motion.span>
@@ -108,9 +108,9 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-                    className="text-lg md:text-xl text-trust-blue-200 max-w-2xl mb-10 leading-relaxed font-light"
+                    className="text-lg md:text-md text-trust-blue-200 max-w-2xl mb-10 leading-relaxed font-light"
                 >
-                    Strategic asset management and bespoke consulting solutions designed for the modern enterprise. We navigate complexity to secure your legacy.
+                    Expert guidance and portfolio management in the dynamic world of futures and commodities trading. Decades of combined experience serving institutional and individual clients.
                 </motion.p>
 
                 <motion.div
@@ -119,13 +119,14 @@ export default function Hero() {
                     transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
                     className="flex flex-col sm:flex-row gap-4"
                 >
-                    <Button size="lg" variant="gold" className="min-w-[180px]">
+                    <Button size="lg" variant="gold" className="min-w-[180px]" href="#services">
                         Our Services
                     </Button>
                     <Button
                         size="lg"
                         variant="outline"
                         className="min-w-[180px] border-white text-white hover:bg-white hover:text-trust-blue-950"
+                        href="/contact"
                     >
                         Contact Us <FaArrowRight className="ml-2 h-4 w-4" />
                     </Button>

@@ -59,7 +59,7 @@ export default function AboutBrief() {
                             className="text-trust-blue-600 space-y-6 text-lg leading-relaxed mb-10"
                         >
                             <p>
-                                At ApexQuants, we are dedicated to guiding you on your financial journey with expertise, integrity, and a personalized approach. Our team of experienced financial consultants is committed to helping you unlock your full financial potential, one step at a time.
+                                At Valora, we are dedicated to guiding you on your financial journey with expertise, integrity, and a personalized approach. Our team of experienced financial consultants is committed to helping you unlock your full financial potential, one step at a time.
                             </p>
                             <p>
                                 Our mission is to empower you with the knowledge and tools to make informed decisions, secure your financial stability, and achieve lasting success.
@@ -100,7 +100,7 @@ export default function AboutBrief() {
                     </div>
 
                     {/* RIGHT COLUMN: Stats (Span 3) */}
-                    <div className="lg:col-span-3 flex flex-col justify-center pl-0 lg:pl-10 relative">
+                    <div className=" lg:col-span-3 flex flex-col justify-center pl-0 lg:pl-10 relative">
                         {stats.map((stat, index) => (
                             <div key={index} className="relative py-8 first:pt-0 border-b border-gray-200 last:border-0">
                                 <motion.div

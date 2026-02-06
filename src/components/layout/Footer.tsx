@@ -12,17 +12,26 @@ export default function Footer() {
         <footer className="bg-trust-blue-950 text-white pt-24 pb-12">
             <div className="container mx-auto px-6">
 
-                {/* Top Section: Brand & Vision */}
-                <div className="mb-20">
-                    <div className="uppercase tracking-widest text-sm font-bold text-trust-blue-400 mb-8">
-                        ApexQuants
-                    </div>
-                    <h2 className="font-serif text-4xl md:text-5xl font-bold text-white mb-6">
-                        Building wealth, <span className="text-gold-400">creating futures.</span>
-                    </h2>
-                    <p className="text-trust-blue-200 text-lg max-w-2xl leading-relaxed">
-                        Trusted financial consulting firm providing expert guidance and personalized solutions to help clients unlock their full financial potential.
+                {/* Top Section: Risk Disclosure */}
+                <div className="mb-20 p-8 bg-trust-blue-900/30 border border-trust-blue-800 rounded-lg">
+                    <h5 className="text-gold-400 font-bold text-center uppercase tracking-widest text-md mb-4">
+                        Risk Disclosure
+                    </h5>
+                    <p className="text-trust-blue-300 text-sm leading-relaxed text-center uppercase">
+                        PAST PERFORMANCE IS NOT NECESSARILY INDICATIVE OF FUTURE RESULTS. THE RISK OF LOSS IN TRADING COMMODITY FUTURES, OPTIONS, AND FOREIGN EXCHANGE (&quot;FOREX&quot;) IS SUBSTANTIAL.
+                        <span className="normal-case block mt-2">
+                            You should carefully consider whether such trading is suitable for you in light of your financial condition. The high degree of leverage that is often obtainable in commodity futures, options, and forex trading can work against you as well as for you. The use of leverage can lead to large losses as well as gains.
+                        </span>
+
+                        <p className=" text-trust-blue-500 text-sm mb-4 mt-4">
+                            Valora Asset Management. All rights reserved. © {new Date().getFullYear()}
+                        </p>
+                        <p className="text-trust-blue-500 text-sm mb-4">
+                            This website complies with NFA Compliance Rule 2-29 & 2-36.
+                        </p>
                     </p>
+
+
                 </div>
 
                 {/* Divider */}
@@ -89,22 +98,21 @@ export default function Footer() {
                         <div className="mb-8 lg:mb-0">
                             <h4 className="font-bold text-white mb-6 text-sm uppercase tracking-wide">Legal</h4>
                             <ul className="space-y-4">
-                                <li><Link href="#" className="text-trust-blue-300 hover:text-white transition-colors text-sm font-medium">Privacy</Link></li>
-                                <li><Link href="#" className="text-trust-blue-300 hover:text-white transition-colors text-sm font-medium">Terms of Use</Link></li>
+                                <li><Link href="/privacy" className="text-trust-blue-300 hover:text-white transition-colors text-sm font-medium">Privacy</Link></li>
+                                <li><Link href="/terms" className="text-trust-blue-300 hover:text-white transition-colors text-sm font-medium">Terms of Use</Link></li>
                             </ul>
-                        </div>
-
-                        <div>
-                            <p className="text-trust-blue-500 text-xs mb-4">
-                                ApexQuants. All rights reserved. <br /> © {new Date().getFullYear()}
-                            </p>
-                            <div className="flex space-x-5">
+                            <div className="flex space-x-5 mt-5">
                                 <a href="#" className="text-trust-blue-400 hover:text-gold-400 transition-colors"><FaLinkedin size={18} /></a>
                                 <a href="#" className="text-trust-blue-400 hover:text-gold-400 transition-colors"><FaTwitter size={18} /></a>
                                 <a href="#" className="text-trust-blue-400 hover:text-gold-400 transition-colors"><FaInstagram size={18} /></a>
                                 <a href="#" className="text-trust-blue-400 hover:text-gold-400 transition-colors"><FaYoutube size={18} /></a>
                             </div>
                         </div>
+
+
+
+
+
                     </div>
 
                 </div>

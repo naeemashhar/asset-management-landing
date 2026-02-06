@@ -1,5 +1,6 @@
 import Hero from "@/components/sections/hero/Hero";
 import ServicesGrid from "@/components/sections/home/ServicesGrid";
+import WhyChooseUs from "@/components/sections/home/WhyChooseUs";
 import AboutBrief from "@/components/sections/home/AboutBrief";
 import ProcessTimeline from "@/components/sections/home/ProcessTimeline";
 import Testimonials from "@/components/sections/home/Testimonials";
@@ -10,6 +11,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <WhyChooseUs />
       <ServicesGrid />
       <AboutBrief />
       <ProcessTimeline />

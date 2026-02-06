@@ -9,7 +9,7 @@ const team = [
     {
         name: "Alexander von Steinberg",
         role: "Managing Partner & CEO",
-        bio: "With over 25 years in global investment banking, Alexander leads ApexQuants with a vision of disciplined growth and unwavering client commitment.",
+        bio: "With over 25 years in global investment banking, Alexander leads Valora with a vision of disciplined growth and unwavering client commitment.",
         image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2574&auto=format&fit=crop",
     },
     {
@@ -39,7 +39,7 @@ const team = [
     {
         name: "Victoria Al-Fayed",
         role: "Head of Client Relations",
-        bio: "Victoria is dedicated to ensuring a seamless, high-touch experience for every ApexQuants partner family.",
+        bio: "Victoria is dedicated to ensuring a seamless, high-touch experience for every Valora partner family.",
         image: "https://images.unsplash.com/photo-1598550832236-81cf9dc2d676?q=80&w=2574&auto=format&fit=crop",
     },
 ];

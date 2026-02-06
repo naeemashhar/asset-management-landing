@@ -3,6 +3,7 @@ import { Inter, Playfair_Display, Montserrat } from "next/font/google";
 import SmoothScroll from "@/components/providers/SmoothScroll";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import Preloader from "@/components/layout/Preloader";
 import "./globals.css";
 
 const inter = Inter({
@@ -24,7 +25,10 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Asset Management & Financial Consulting",
+  title: {
+    template: "%s | Valora",
+    default: "Valora Asset Management",
+  },
   description: "Premium financial consulting and asset management services.",
 };
 
@@ -38,6 +42,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${playfair.variable} ${montserrat.variable} antialiased bg-white text-gray-900 flex flex-col min-h-screen`}
       >
+        <Preloader />
         <SmoothScroll>
           <Header />
           <main className="flex-grow">{children}</main>

@@ -33,7 +33,7 @@ export default function AboutPage() {
     return (
         <>
             <PageHeader
-                title="About ApexQuants"
+                title="About Valora"
                 subtitle="Our Heritage & Vision"
                 backgroundImage="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2669&auto=format&fit=crop"
             />
@@ -51,7 +51,7 @@ export default function AboutPage() {
                             </h2>
                             <div className="space-y-6 text-trust-blue-700 leading-relaxed text-lg">
                                 <p>
-                                    Founded in 2003, ApexQuants has established itself as a premier destination for sophisticated wealth management and corporate financial consulting. We were born from a simple yet powerful belief: that true wealth stewardship requires more than just market access—it requires vision, discipline, and a deep understanding of human legacy.
+                                    Founded in 2003, Valora has established itself as a premier destination for sophisticated wealth management and corporate financial consulting. We were born from a simple yet powerful belief: that true wealth stewardship requires more than just market access—it requires vision, discipline, and a deep understanding of human legacy.
                                 </p>
                                 <p>
                                     Over two decades, we have guided ultra-high-net-worth individuals, families, and corporations through volatile markets and complex regulatory landscapes. Our approach is holistic, integrating investment management, tax strategy, and estate planning into a cohesive roadmap for generational success.
