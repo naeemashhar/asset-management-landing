@@ -1,0 +1,21 @@
+import Hero from "@/components/sections/hero/Hero";
+import ServicesGrid from "@/components/sections/home/ServicesGrid";
+import AboutBrief from "@/components/sections/home/AboutBrief";
+import ProcessTimeline from "@/components/sections/home/ProcessTimeline";
+import Testimonials from "@/components/sections/home/Testimonials";
+import CaseStudiesPreview from "@/components/sections/home/CaseStudiesPreview";
+import CTABanner from "@/components/sections/home/CTABanner";
+
+export default function Home() {
+  return (
+    <>
+      <Hero />
+      <ServicesGrid />
+      <AboutBrief />
+      <ProcessTimeline />
+      <Testimonials />
+      <CaseStudiesPreview />
+      <CTABanner />
+    </>
+  );
+}

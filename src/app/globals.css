@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  /* Trust Blue - Deep Navy for Trust & Authority */
+  --color-trust-blue-50: #f0f7ff;
+  --color-trust-blue-100: #e0f0fe;
+  --color-trust-blue-200: #bae3fd;
+  --color-trust-blue-300: #7ccbfd;
+  --color-trust-blue-400: #36b3fa;
+  --color-trust-blue-500: #0c98eb;
+  --color-trust-blue-600: #007ac9;
+  --color-trust-blue-700: #0161a3;
+  --color-trust-blue-800: #065386;
+  --color-trust-blue-900: #0b456f;
+  --color-trust-blue-950: #082c49;
+
+  /* Premium Gold (Restored Yellow Palette) */
+  --color-gold-50: #fcf9ee;
+  --color-gold-100: #f7efcb;
+  --color-gold-200: #eedd8c;
+  --color-gold-300: #e3c554;
+  --color-gold-400: #d9a426;
+  /* Primary Gold */
+  --color-gold-500: #b8851d;
+  --color-gold-600: #916314;
+  --color-gold-700: #744c13;
+  --color-gold-800: #623f15;
+  --color-gold-900: #543516;
+  --color-gold-950: #301c09;
+
+  /* Fonts */
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
+  --font-display: var(--font-montserrat);
+}
+
+@layer base {
+  :root {
+    --background: var(--color-white);
+    --foreground: var(--color-trust-blue-950);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans), sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-serif), serif;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-trust-blue-50);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-gold-400);
+    border-radius: 4px;
+    transition: background 0.2s ease;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-gold-600);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
