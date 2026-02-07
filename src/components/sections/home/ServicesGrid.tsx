@@ -161,7 +161,7 @@ export default function ServicesGrid() {
                                         {service.id} {service.category}
                                     </div>
 
-                                    <h3 className="font-serif text-5xl md:text-7xl font-bold text-trust-blue-950 mb-12 lg:mb-16 leading-tight">
+                                    <h3 className="font-serif text-5xl md:text-6xl font-bold text-trust-blue-950 mb-12 lg:mb-16 leading-tight">
                                         {service.title}
                                     </h3>
 
