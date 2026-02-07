@@ -106,16 +106,25 @@ export default function Hero() {
             </span>
           </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-            className="text-lg md:text-md text-trust-blue-200 max-w-2xl mb-10 leading-relaxed font-light"
-          >
-            Expert guidance and portfolio management in the dynamic world of
-            futures and commodities trading. Decades of combined experience
-            serving institutional and individual clients.
-          </motion.p>
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
+                    className="flex flex-col sm:flex-row gap-4"
+                >
+                    <Button size="lg" variant="gold" className="min-w-[180px]" href="#services">
+                        Our Services
+                    </Button>
+                    <Button
+                        size="lg"
+                        variant="outline"
+                        className="min-w-[180px] border-white text-white hover:bg-white hover:text-trust-blue-950"
+                        href="/risk-disclosures"
+                    >
+                        Risk Disclosures <FaArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                </motion.div>
+            </div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
