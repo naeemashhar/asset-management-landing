@@ -14,6 +14,7 @@ const navLinks = [
     { name: "Services", href: "/services" },
     { name: "Practice Areas", href: "/practice-areas" },
     /* { name: "Case Studies", href: "/case-studies" }, */
+    { name: "Risk Disclosures", href: "/risk-disclosures" },
     { name: "Contact", href: "/contact" },
     { name: "Blog", href: "/blog" },
 ];

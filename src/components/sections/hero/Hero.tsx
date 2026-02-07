@@ -126,9 +126,9 @@ export default function Hero() {
                         size="lg"
                         variant="outline"
                         className="min-w-[180px] border-white text-white hover:bg-white hover:text-trust-blue-950"
-                        href="/contact"
+                        href="/risk-disclosures"
                     >
-                        Contact Us <FaArrowRight className="ml-2 h-4 w-4" />
+                        Risk Disclosures <FaArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                 </motion.div>
             </div>
