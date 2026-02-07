@@ -14,36 +14,42 @@ import {
 
 const features = [
   {
+    id: "01",
     title: "Market Analysis",
     description:
       "Comprehensive fundamental and technical analysis across all major commodity sectors including energy, metals, agriculture, and financial futures.",
     icon: FaChartLine,
   },
   {
+    id: "02",
     title: "Risk Management",
     description:
       "Sophisticated hedging strategies and risk mitigation techniques tailored to your portfolio objectives and risk tolerance levels.",
     icon: FaShieldAlt,
   },
   {
+    id: "03",
     title: "Portfolio Diversification",
     description:
       "Strategic allocation across multiple asset classes and trading strategies to optimize risk-adjusted returns and reduce correlation with traditional investments.",
     icon: FaChartPie,
   },
   {
+    id: "04",
     title: "Commitment to Excellence",
     description:
       "Dedicated to providing thorough market analysis and personalized service as we build our track record with client accounts.",
     icon: FaAward, // you can import from react-icons/fa
   },
   {
+    id: "05",
     title: "Personalized Service",
     description:
       "Direct access to advisors who understand your unique objectives and provide customized solutions rather than one-size-fits-all approaches.",
     icon: FaUserTie,
   },
   {
+    id: "06",
     title: "Regulatory Compliance",
     description:
       "Full NFA registration and adherence to all CFTC regulations, ensuring the highest standards of professional conduct and client protection.",
@@ -145,7 +151,13 @@ export default function WhyChooseUsHeartbeat() {
   );
 }
 
-function FeatureItem({ feature, index }) {
+function FeatureItem({
+  feature,
+  index,
+}: {
+  feature: (typeof features)[0];
+  index: number;
+}) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
