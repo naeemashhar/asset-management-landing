@@ -9,13 +9,14 @@ import { HiMenuAlt4, HiX } from "react-icons/hi";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Services", href: "/services" },
-  { name: "Practice Areas", href: "/practice-areas" },
-  /* { name: "Case Studies", href: "/case-studies" }, */
-  { name: "Contact", href: "/contact" },
-  { name: "Blog", href: "/blog" },
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "Practice Areas", href: "/practice-areas" },
+    /* { name: "Case Studies", href: "/case-studies" }, */
+    { name: "Risk Disclosures", href: "/risk-disclosures" },
+    { name: "Contact", href: "/contact" },
+    { name: "Blog", href: "/blog" },
 ];
 
 export default function Header() {

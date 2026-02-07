@@ -117,30 +117,25 @@ export default function Hero() {
             serving institutional and individual clients.
           </motion.p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
-            className="flex flex-col sm:flex-row gap-4"
-          >
-            <Button
-              size="lg"
-              variant="gold"
-              className="min-w-[180px]"
-              href="#services"
-            >
-              Our Services
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="min-w-[180px] border-white text-white hover:bg-white hover:text-trust-blue-950"
-              href="/contact"
-            >
-              Contact Us <FaArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          </motion.div>
-        </div>
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
+                    className="flex flex-col sm:flex-row gap-4"
+                >
+                    <Button size="lg" variant="gold" className="min-w-[180px]" href="#services">
+                        Our Services
+                    </Button>
+                    <Button
+                        size="lg"
+                        variant="outline"
+                        className="min-w-[180px] border-white text-white hover:bg-white hover:text-trust-blue-950"
+                        href="/risk-disclosures"
+                    >
+                        Risk Disclosures <FaArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                </motion.div>
+            </div>
 
         {/* Scroll Indicator */}
         <motion.div
