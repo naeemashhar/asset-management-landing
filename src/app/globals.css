@@ -30,8 +30,8 @@
 
   /* Fonts */
   --font-sans: var(--font-inter);
-  --font-serif: var(--font-playfair);
-  --font-display: var(--font-montserrat);
+  --font-serif: var(--font-poppins);
+  --font-display: var(--font-playfair);
 }
 
 @layer base {
@@ -57,7 +57,7 @@
   h4,
   h5,
   h6 {
-    font-family: var(--font-serif), serif;
+    font-family: var(--font-display);
   }
 
   /* Custom Scrollbar */
