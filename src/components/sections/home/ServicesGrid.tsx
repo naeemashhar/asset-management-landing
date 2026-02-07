@@ -338,7 +338,7 @@ export default function ServicesGrid() {
             className="md:col-span-4 group relative bg-[#9B7E4B] p-10 flex flex-col justify-center overflow-hidden shadow-xl"
           >
             <span className="text-white/20 font-serif text-8xl absolute -top-4 -right-4 select-none">
-              04
+              02
             </span>
             <h3 className="font-serif text-3xl text-white mb-6">
               Limited Experience
@@ -365,7 +365,7 @@ export default function ServicesGrid() {
           >
             <div className="relative z-10">
               <span className="text-white/10 font-serif text-9xl absolute -top-4 -right-4 select-none">
-                02
+                03
               </span>
               <h3 className="font-serif text-4xl text-white mb-8">
                 Past Performance
@@ -388,7 +388,7 @@ export default function ServicesGrid() {
             className="md:col-span-7 group relative bg-white border border-stone-200 p-10 md:p-16 overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-700"
           >
             <span className="text-stone-100 font-serif text-9xl absolute -top-4 -right-4 select-none">
-              03
+              04
             </span>
             <h3 className="font-serif text-4xl text-[#121826] mb-8">
               Suitability
