@@ -88,7 +88,7 @@ export default function Hero() {
                         Strategies Future&apos;s
                     </motion.span>
 
-                    <span className="block h-[1.4em] overflow-hidden pb-2 -mb-2">
+                    <span className="block mb-5 h-[1.4em] overflow-hidden pb-2 -mb-2">
                         <AnimatePresence mode="wait">
                             <motion.span
                                 key={currentIndex}

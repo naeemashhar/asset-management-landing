@@ -124,7 +124,7 @@ export default function Testimonials() {
 
                         {/* Sliding Track */}
                         <motion.div
-                            className="flex items-center gap-20 whitespace-nowrap"
+                            className="mb-5 flex items-center gap-20 whitespace-nowrap"
                             animate={{ x: ["0%", "-50%"] }}
                             transition={{
                                 repeat: Infinity,
