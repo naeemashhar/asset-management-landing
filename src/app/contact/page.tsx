@@ -165,25 +165,18 @@ export default function ContactPage() {
 
                         <div className="hover:border-yellow-600 hover:border hover:scale-101 transition-all duration-300 bg-white p-8 md:p-12 rounded-md shadow-sm border-l-4 border-yellow-600">
                             <h3 className="font-bold text-xl text-trust-blue-950 mb-6">
-                                Before You Invest
+                                Regulatory Information
                             </h3>
 
                             <div className="space-y-4 text-trust-blue-700 leading-relaxed">
                                 <p className="text-gray-800 text-sm">
-                                    The regulations of the Commodity Futures Trading Commission (CFTC) require that prospective clients of a CTA receive a disclosure document before they enter into an agreement whereby the CTA will direct or guide the client&apos;s commodity interest trading.
-                                </p>
-
-                                <p className="text-gray-800 text-sm">
-                                    Valora Asset Management will provide you a copy of our disclosure document at no cost. You should review our disclosure document and study it carefully to determine whether such trading is appropriate for you in light of your financial condition.
-                                </p>
-
-                                <p className="text-gray-800 text-sm">
-                                    The CFTC has not passed upon the merits of participating in our trading programs nor on the adequacy or accuracy of our disclosure document.
+                                    Valora Asset Management is registered with the NFA as a Commodity Trading Advisor (CTA). All
+                                    promotional materials comply with NFA Compliance Rules 2-29 and 2-36.
                                 </p>
                             </div>
                         </div>
 
-                         <div className="mt-5 hover:border-yellow-600 hover:border hover:scale-101 transition-all duration-300 bg-white p-8 md:p-12 rounded-md shadow-sm border-l-4 border-yellow-600">
+                        <div className="mt-5 hover:border-yellow-600 hover:border hover:scale-101 transition-all duration-300 bg-white p-8 md:p-12 rounded-md shadow-sm border-l-4 border-yellow-600">
                             <h3 className="font-bold text-xl text-trust-blue-950 mb-6">
                                 Record Retention
                             </h3>
