@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display, Montserrat } from "next/font/google";
+import { Inter, Poppins, Playfair_Display, Montserrat } from "next/font/google";
 import SmoothScroll from "@/components/providers/SmoothScroll";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -9,6 +9,13 @@ import "./globals.css";
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap",
+});
+
+const poppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -40,7 +47,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${playfair.variable} ${montserrat.variable} antialiased bg-white text-gray-900 flex flex-col min-h-screen`}
+        className={`${inter.variable} ${poppins.variable} ${playfair.variable} ${montserrat.variable} antialiased bg-white text-gray-900 flex flex-col min-h-screen`}
       >
         <Preloader />
         <SmoothScroll>
