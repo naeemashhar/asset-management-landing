@@ -22,6 +22,8 @@ const navLinks = [
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+
   const pathname = usePathname();
 
   // Check if we are on a "light" page where we need contrast immediately (Privacy/Terms)
@@ -35,6 +37,8 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+
+
   useEffect(() => {
     setIsMobileMenuOpen(false);
   }, [pathname]);
@@ -46,8 +50,8 @@ export default function Header() {
         animate={{ y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-trust-blue-900",
-          isScrolled || isLightPage ? "shadow-md py-4" : "py-6",
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ",
+          isScrolled || isLightPage ? "shadow-md py-4 bg-trust-blue-900" : "py-6",
         )}
       >
         <div className="container mx-auto px-6 flex items-center justify-between">
