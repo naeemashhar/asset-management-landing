@@ -13,6 +13,7 @@ const studies = [
     image:
       "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2670&auto=format&fit=crop",
     metric: "$4.5B Valuation",
+    description: "Orchestrated the cross-border merger of two leading SaaS providers, navigating complex regulatory landscapes in the EU and US.",
   },
   {
     id: 2,
@@ -21,6 +22,7 @@ const studies = [
     image:
       "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2670&auto=format&fit=crop",
     metric: "Tax Optimization",
+    description: "Structured a trust framework for a multi-generational family office, ensuring seamless asset transition and tax efficiency.",
   },
   {
     id: 3,
@@ -29,6 +31,7 @@ const studies = [
     image:
       "https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=2670&auto=format&fit=crop",
     metric: "22% YOY Growth",
+    description: "Launched a $500M green energy fund focused on solar infrastructure in emerging markets.",
   },
 ];
 
@@ -62,28 +65,39 @@ export default function CaseStudiesPreview() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.6 }}
-              className="group relative h-[400px] rounded-sm overflow-hidden shadow-lg cursor-pointer"
+              className="group cursor-pointer h-full"
             >
-              <Image
-                src={study.image}
-                alt={study.title}
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-trust-blue-950/90 via-trust-blue-950/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
+              <div className="bg-white border border-gray-200 p-8 h-[90%] w-[90%] mx-auto relative hover:shadow-xl transition-all duration-300 flex flex-col items-start">
+                {/* Top Green Accent */}
+                <div className="absolute -top-3 left-8 w-4 h-8 bg-[#8FD299] transform -skew-x-[20deg] shadow-sm" />
 
-              <div className="absolute bottom-0 left-0 p-8 w-full group-hover:-translate-y-2 transition-transform duration-300">
-                <div className="text-gold-400 text-sm font-medium tracking-wider uppercase mb-2">
+                {/* Category */}
+                <span className="text-xs font-bold uppercase tracking-wide text-trust-blue-950 mb-6 block mt-2">
                   {study.category}
+                </span>
+
+                {/* Image Area */}
+                <div className={`w-full aspect-[4/3] mb-8 overflow-hidden relative ${index % 3 === 0 ? "bg-red-50" : index % 3 === 1 ? "bg-blue-50" : "bg-amber-50"
+                  }`}>
+                  <img
+                    src={study.image}
+                    alt={study.title}
+                    className="w-full h-full object-cover mix-blend-multiply opacity-90 group-hover:scale-105 transition-transform duration-700 hover:mix-blend-normal hover:opacity-100"
+                  />
                 </div>
-                <h3 className=" font-display  text-2xl font-bold text-white mb-2">
+
+                {/* Content */}
+                <h3 className="font-display text-2xl font-bold text-trust-blue-950 mb-4 leading-tight">
                   {study.title}
                 </h3>
-                <div className="text-white/80 text-sm font-light mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
-                  Key Result: {study.metric}
-                </div>
-                <div className="flex items-center text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75 transform translate-y-4 group-hover:translate-y-0">
-                  Read Case Study <FaArrowRight className="ml-2 h-3 w-3" />
+
+                <p className="text-gray-500 text-sm leading-relaxed mb-6 font-medium">
+                  {study.description}
+                </p>
+
+                <div className="mt-auto pt-4 w-full flex items-center justify-between border-t border-gray-100">
+                  <span className="text-xs font-bold text-gold-500 uppercase tracking-widest">{study.metric}</span>
+                  <FaArrowRight className="text-gray-300 w-3 h-3 group-hover:text-gold-500 group-hover:translate-x-1 transition-all" />
                 </div>
               </div>
             </motion.div>

@@ -19,6 +19,8 @@ import {
   FaSearchDollar,
   FaNetworkWired,
   // FaLock
+  FaCheck,
+  FaArrowRight
 } from "react-icons/fa";
 import { Button } from "@/components/ui/Button";
 import { motion } from "framer-motion";
@@ -282,14 +284,14 @@ function DisclosureBento() {
           className="mb-20 text-center md:text-left"
         >
           <div className="flex items-center gap-6 mb-8 justify-center md:justify-start">
-            <div className="h-[2px] w-16 bg-[#9B7E4B]" />
-            <span className="text-[#9B7E4B] font-display text-sm font-bold tracking-[0.5em] uppercase">
+            <div className="h-[2px] w-16 bg-[#374B47]" />
+            <span className="text-[#374B47] font-display text-sm font-bold tracking-[0.5em] uppercase">
               Compliance Framework
             </span>
           </div>
           <h2 className="font-display font-semibold text-6xl md:text-8xl text-[#121826] tracking-tighter leading-[0.9]">
             Required <br className="hidden md:block" />
-            <span className="italic">Disclosures</span>
+            <span className="italic text-[#374b47] ">Disclosures</span>
           </h2>
         </motion.div>
 
@@ -303,7 +305,7 @@ function DisclosureBento() {
           >
             <div className="relative z-10">
               <div className="flex justify-between items-start mb-12">
-                <span className="font-display  text-[#9B7E4B] text-sm tracking-widest uppercase bg-stone-50 px-4 py-2 border border-stone-100 font-bold">
+                <span className="font-display  text-[#374B47] text-sm tracking-widest uppercase bg-stone-50 px-4 py-2 border border-stone-100 font-bold">
                   Section // 01
                 </span>
                 <span className="text-stone-100 font-display text-[12rem] absolute -top-12 -right-6 select-none group-hover:text-stone-200 transition-colors leading-none">
@@ -313,7 +315,7 @@ function DisclosureBento() {
               <h3 className="font-display text-4xl md:text-5xl text-[#121826] mb-8">
                 Risk Disclosure
               </h3>
-              <p className="font-display font-bold text-[#9B7E4B] uppercase text-lg md:text-xl tracking-[0.1em] leading-tight mb-8 border-l-4 border-[#9B7E4B] pl-6">
+              <p className="font-display font-bold text-[#374B47] uppercase text-lg md:text-xl tracking-[0.1em] leading-tight mb-8 border-l-4 border-[#374B47] pl-6">
                 Commodity trading involves substantial risk of loss.
               </p>
               <div className="space-y-6 text-stone-600 text-lg md:text-xl leading-relaxed font-light">
@@ -335,9 +337,9 @@ function DisclosureBento() {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="md:col-span-4 group relative bg-[#9B7E4B] p-10 flex flex-col justify-center overflow-hidden shadow-xl"
+            className="md:col-span-4 group relative bg-[#D1D2BC] p-10 flex flex-col justify-center overflow-hidden shadow-xl"
           >
-            <span className="text-white/20 font-display text-8xl absolute -top-4 -right-4 select-none">
+            <span className="text-white/20 font-display text-8xl absolute -top-2 -right-0 select-none">
               02
             </span>
             <h3 className="font-display text-3xl text-white mb-6">
@@ -346,11 +348,11 @@ function DisclosureBento() {
             <p className="text-[#121826] font-display font-bold uppercase text-xs tracking-widest mb-6 bg-white/20 w-fit px-2 py-1">
               Notice of track record
             </p>
-            <p className="text-white text-lg leading-relaxed font-light">
+            <p className="text-[#121826] text-lg leading-relaxed font-light">
               Valora Asset Management has had little or no experience in trading
               actual accounts for customers.
             </p>
-            <p className="text-white/80 text-md mt-4 font-light">
+            <p className="text-[#121826]/80 text-md mt-4 font-light">
               Customers should be particularly wary of placing undue reliance on
               hypothetical performance results.
             </p>
@@ -361,7 +363,7 @@ function DisclosureBento() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="md:col-span-5 group relative bg-[#121826] p-10 md:p-16 overflow-hidden shadow-xl"
+            className="md:col-span-5 group relative bg-[#374B47] p-10 md:p-16 overflow-hidden shadow-xl"
           >
             <div className="relative z-10">
               <span className="text-white/10 font-display text-9xl absolute -top-4 -right-4 select-none">
@@ -374,7 +376,7 @@ function DisclosureBento() {
                 Past results are not necessarily indicative of future results.
                 Historical data should never be considered in isolation.
               </p>
-              <p className="text-[#9B7E4B] font-display text-xs uppercase tracking-[0.3em]">
+              <p className="text-[#D1D2BC] font-display text-xs uppercase tracking-[0.3em]">
                 Compliance Rule 2-29 & 2-36
               </p>
             </div>
@@ -410,31 +412,79 @@ function DisclosureBento() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="md:col-span-12 group relative bg-[#FBFBFA] border border-stone-200 p-10 md:p-20 overflow-hidden flex flex-col lg:flex-row gap-12 items-center"
+            className="md:col-span-12 group relative bg-trust-blue-950 border border-trust-blue-800 p-8 md:p-16 overflow-hidden shadow-2xl rounded-2xl"
           >
-            <div className="lg:w-1/3">
-              <span className="text-[#9B7E4B] font-display text-xs font-bold tracking-[0.4em] uppercase block mb-4">
-                Required Documentation
-              </span>
-              <h3 className="font-display text-4xl md:text-5xl text-[#121826]">
-                Before You <br />
-                <span className="italic">Invest</span>
-              </h3>
-            </div>
-            <div className="lg:w-2/3 space-y-8 border-l border-stone-200 pl-0 lg:pl-16">
-              <p className="text-stone-600 text-xl leading-relaxed font-light">
-                CFTC regulations require that prospective clients receive a
-                disclosure document before entering an agreement. Valora Asset
-                Management will provide this document at{" "}
-                <span className="text-[#9B7E4B] font-medium italic underline decoration-1 underline-offset-4 cursor-pointer">
-                  no cost upon request.
-                </span>
-              </p>
-              <p className="text-stone-400 text-sm uppercase tracking-widest leading-loose font-light">
-                The CFTC has not passed upon the merits of participating in our
-                trading programs nor on the adequacy or accuracy of our
-                disclosure document.
-              </p>
+            {/* Background Effects */}
+            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-trust-blue-900/40 rounded-full blur-[120px] -mr-40 -mt-40 pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gold-400/5 rounded-full blur-[100px] -ml-20 -mb-20 pointer-events-none" />
+
+            {/* Watermark Icon */}
+            <FaFileContract className="absolute -right-10 -bottom-10 text-[300px] text-white/5 rotate-12 pointer-events-none group-hover:rotate-[15deg] group-hover:scale-110 transition-transform duration-700 ease-in-out" />
+
+            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+              {/* Left Side: Heading & Context */}
+              <div className="space-y-8">
+                <div>
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-400/10 border border-gold-400/20 mb-6">
+                    <div className="w-1.5 h-1.5 rounded-full bg-gold-400 animate-pulse" />
+                    <span className="text-gold-400 text-xs font-bold uppercase tracking-widest">
+                      Compliance & Safety
+                    </span>
+                  </div>
+                  <h3 className="font-display text-4xl md:text-5xl text-white leading-tight">
+                    Before You <br />
+                    <span className="text-gold-400 italic">Invest</span>
+                  </h3>
+                </div>
+
+                <p className="text-trust-blue-200 text-lg leading-relaxed font-light max-w-lg">
+                  Transparency is the foundation of our partnership. CFTC regulations requirement ensures you are fully informed before entering any agreement.
+                </p>
+
+                <div className="flex flex-col gap-4">
+                  <div className="flex items-start gap-3">
+                    <div className="mt-1 w-5 h-5 rounded-full bg-trust-blue-800 flex items-center justify-center flex-shrink-0 border border-trust-blue-700">
+                      <FaCheck className="text-gold-400 w-2.5 h-2.5" />
+                    </div>
+                    <p className="text-sm text-trust-blue-300">Detailed Risk Disclosures</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="mt-1 w-5 h-5 rounded-full bg-trust-blue-800 flex items-center justify-center flex-shrink-0 border border-trust-blue-700">
+                      <FaCheck className="text-gold-400 w-2.5 h-2.5" />
+                    </div>
+                    <p className="text-sm text-trust-blue-300">Fee Structure Transparency</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Side: Action Card */}
+              <div className="lg:pl-10">
+                <div className="bg-white/5 border border-white/10 p-8 rounded-xl relative overflow-hidden group/card hover:bg-white/10 transition-colors duration-300">
+                  <div className="absolute top-0 left-0 w-1 h-full bg-gold-400" />
+
+                  <h4 className="text-white font-display text-xl font-bold mb-2">
+                    Downlaod Disclosure Document
+                  </h4>
+                  <p className="text-trust-blue-200 text-sm mb-6">
+                    We provided this comprehensive document at <span className="text-white font-medium">no cost</span> to all prospective clients.
+                  </p>
+
+                  <Button
+                    variant="outline"
+                    className="w-full border-gold-400 text-gold-400 hover:bg-gold-400 hover:text-trust-blue-950 group-hover/card:shadow-[0_0_20px_rgba(250,204,21,0.2)]"
+                  >
+                    <span className="flex items-center justify-center gap-2">
+                      Download Document <FaArrowRight className="w-4 h-4" />
+                    </span>
+                  </Button>
+
+                  <p className="text-trust-blue-500 text-[10px] uppercase tracking-widest leading-relaxed mt-6 text-center border-t border-white/5 pt-4">
+                    CFTC Compliance Rule 4.31
+                  </p>
+                </div>
+              </div>
+
             </div>
           </motion.div>
         </div>
