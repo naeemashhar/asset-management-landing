@@ -1,32 +1,36 @@
 @import "tailwindcss";
 
 @theme {
-  /* Trust Blue - Deep Navy for Trust & Authority */
-  --color-trust-blue-50: #f0f7ff;
-  --color-trust-blue-100: #e0f0fe;
-  --color-trust-blue-200: #bae3fd;
-  --color-trust-blue-300: #7ccbfd;
-  --color-trust-blue-400: #36b3fa;
-  --color-trust-blue-500: #0c98eb;
-  --color-trust-blue-600: #007ac9;
-  --color-trust-blue-700: #0161a3;
-  --color-trust-blue-800: #065386;
-  --color-trust-blue-900: #0b456f;
-  --color-trust-blue-950: #082c49;
+  /* Deep Green (Replaces Trust Blue) */
+  --color-trust-blue-50: #f2f7f5;
+  --color-trust-blue-100: #e1ede8;
+  --color-trust-blue-200: #c5dcd4;
+  --color-trust-blue-300: #9dbfb5;
+  --color-trust-blue-400: #6f9c8f;
+  --color-trust-blue-500: #4e7d70;
+  --color-trust-blue-600: #3b6358;
+  --color-trust-blue-700: #315048;
+  /* Text/Borders */
+  --color-trust-blue-800: #29413b;
+  --color-trust-blue-900: #374B47;
+  /* Header/Secondary BG */
+  --color-trust-blue-950: #1B2523;
+  /* Main BG */
 
-  /* Premium Gold (Restored Yellow Palette) */
-  --color-gold-50: #fcf9ee;
-  --color-gold-100: #f7efcb;
-  --color-gold-200: #eedd8c;
-  --color-gold-300: #e3c554;
-  --color-gold-400: #d9a426;
-  /* Primary Gold */
-  --color-gold-500: #b8851d;
-  --color-gold-600: #916314;
-  --color-gold-700: #744c13;
-  --color-gold-800: #623f15;
-  --color-gold-900: #543516;
-  --color-gold-950: #301c09;
+  /* Light Green Accent (Replaces Gold) */
+  --color-gold-50: #f3fbf4;
+  --color-gold-100: #e3f6e5;
+  --color-gold-200: #c6ebd0;
+  --color-gold-300: #9addb1;
+  --color-gold-400: #8FD299;
+  /* Primary Accent */
+  --color-gold-500: #4ade80;
+  /* Brighter Green for Hover */
+  --color-gold-600: #22c55e;
+  --color-gold-700: #16a34a;
+  --color-gold-800: #166534;
+  --color-gold-900: #14532d;
+  --color-gold-950: #052e16;
 
   /* Fonts */
   --font-sans: var(--font-inter);
@@ -36,8 +40,8 @@
 
 @layer base {
   :root {
-    --background: var(--color-white);
-    --foreground: var(--color-trust-blue-950);
+    --background: var(--color-trust-blue-950);
+    --foreground: var(--color-gold-50);
   }
 
   html {

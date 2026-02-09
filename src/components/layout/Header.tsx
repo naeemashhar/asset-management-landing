@@ -46,7 +46,7 @@ export default function Header() {
         animate={{ y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#082C49]",
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-trust-blue-900",
           isScrolled || isLightPage ? "shadow-md py-4" : "py-6",
         )}
       >
@@ -65,7 +65,7 @@ export default function Header() {
             <span
               className={cn(
                 " font-display  text-2xl tracking-[0.2em] uppercase transition-all duration-300",
-                "bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-200 bg-clip-text text-transparent",
+                "bg-gradient-to-r from-gold-200 via-gold-400 to-gold-200 bg-clip-text text-transparent",
                 "font-semibold drop-shadow-sm hover:drop-shadow-md",
               )}
             >

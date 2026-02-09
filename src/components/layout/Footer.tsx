@@ -12,36 +12,47 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-trust-blue-950 text-white  pb-12">
-      <div className="container mx-auto px-6">
+    <footer className="bg-trust-blue-950  text-white  pb-12">
+      <div className=" container mx-auto px-6">
         {/* Top Section: Risk Disclosure */}
-        <div className="mt-10 mb-15 p-8 bg-trust-blue-900/30 border border-trust-blue-800 rounded-lg">
-          <h5 className="text-gold-400 font-bold text-center uppercase tracking-widest text-md mb-4">
-            Risk Disclosure
-          </h5>
-          <p className="text-trust-blue-300 text-sm leading-relaxed text-center uppercase">
-            PAST PERFORMANCE IS NOT NECESSARILY INDICATIVE OF FUTURE RESULTS.
-            THE RISK OF LOSS IN TRADING COMMODITY FUTURES, OPTIONS, AND FOREIGN
-            EXCHANGE (&quot;FOREX&quot;) IS SUBSTANTIAL.
-            <span className="normal-case block mt-2">
-              You should carefully consider whether such trading is suitable for
-              you in light of your financial condition. The high degree of
-              leverage that is often obtainable in commodity futures, options,
-              and forex trading can work against you as well as for you. The use
-              of leverage can lead to large losses as well as gains.
-            </span>
-            <p className=" text-trust-blue-500 text-sm mb-4 mt-4">
-              Valora Asset Management. All rights reserved. ©{" "}
-              {new Date().getFullYear()}
-            </p>
-            <p className="text-trust-blue-500 text-sm mb-4">
-              This website complies with NFA Compliance Rule 2-29 & 2-36.
-            </p>
-          </p>
+        <div className="mt-10 mb-10 relative max-w-5xl mx-auto">
+          {/* subtle glow behind */}
+          <div className="absolute inset-0 bg-gold-500/5 blur-[100px] rounded-full pointer-events-none" />
+
+          <div className="relative bg-white border border-slate-200 p-10 md:p-14 rounded-2xl overflow-hidden shadow-2xl">
+            {/* Decorative corners */}
+            <div className="absolute top-0 left-0 w-20 h-20 border-l-2 border-t-2 border-gold-600/20 rounded-tl-2xl" />
+            <div className="absolute bottom-0 right-0 w-20 h-20 border-r-2 border-b-2 border-gold-600/20 rounded-br-2xl" />
+
+            <div className="text-center relative z-10">
+              <div className="inline-flex items-center gap-3 mb-8 px-4 py-1 rounded-full bg-gold-50 border border-gold-500/20">
+                <span className="w-1.5 h-1.5 rounded-full bg-gold-500 animate-pulse" />
+                <h5 className="font-display text-gold-600 font-bold uppercase tracking-[0.2em] text-xs">
+                  Risk Disclosure
+                </h5>
+              </div>
+
+              <h3 className="font-display text-2xl md:text-3xl text-trust-blue-950 mb-6 leading-tight">
+                Trading involves substantial <span className="text-gold-600 italic">risk of loss.</span>
+              </h3>
+
+              <div className="h-px w-24 bg-gradient-to-r from-transparent via-slate-200 to-transparent mx-auto mb-8" />
+
+              <p className="text-slate-600 text-sm leading-loose font-light mb-8 max-w-2xl mx-auto">
+                <span className="text-trust-blue-950 font-medium">Past performance is not necessarily indicative of future results.</span> The risk of loss in trading commodity futures, options, and foreign exchange (&quot;forex&quot;) is substantial. You should carefully consider whether such trading is suitable for you in light of your financial condition.
+              </p>
+
+              <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-xs text-slate-500 font-medium tracking-wide uppercase">
+                <p>© {new Date().getFullYear()} Valora Asset Management</p>
+                <div className="hidden md:block w-1 h-1 bg-slate-300 rounded-full" />
+                <p>NFA Compliance Rule 2-29 & 2-36</p>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Divider */}
-        <div className="border-t border-trust-blue-900 mb-16" />
+        <div className="border-t border-trust-blue-900/50 mb-16" />
 
         {/* Bottom Section: <Grid></Grid> Layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
