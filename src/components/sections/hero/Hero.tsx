@@ -123,7 +123,7 @@ export default function Hero() {
                     transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
                     className="flex flex-col sm:flex-row gap-4"
                 >
-                    <Button size="lg" variant="gold" className="min-w-[180px]" href="#services">
+                    <Button size="lg" variant="gold" className="min-w-[180px]" href="/services">
                         Our Services
                     </Button>
                     <Button

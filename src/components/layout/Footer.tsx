@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import {
   FaLinkedin,
@@ -5,6 +7,7 @@ import {
   FaInstagram,
   FaYoutube,
   FaAward, // Using Award icon for the badge
+  FaArrowUp,
 } from "react-icons/fa";
 
 export default function Footer() {
@@ -12,7 +15,7 @@ export default function Footer() {
     <footer className="bg-trust-blue-950 text-white  pb-12">
       <div className="container mx-auto px-6">
         {/* Top Section: Risk Disclosure */}
-        {/* <div className="mb-20 p-8 bg-trust-blue-900/30 border border-trust-blue-800 rounded-lg">
+        <div className="mt-10 mb-15 p-8 bg-trust-blue-900/30 border border-trust-blue-800 rounded-lg">
           <h5 className="text-gold-400 font-bold text-center uppercase tracking-widest text-md mb-4">
             Risk Disclosure
           </h5>
@@ -35,7 +38,7 @@ export default function Footer() {
               This website complies with NFA Compliance Rule 2-29 & 2-36.
             </p>
           </p>
-        </div> */}
+        </div>
 
         {/* Divider */}
         <div className="border-t border-trust-blue-900 mb-16" />
@@ -64,21 +67,38 @@ export default function Footer() {
               Services
             </h4>
             <ul className="space-y-4">
-              {[
-                "Financial Planning",
-                "Wealth Management",
-                "Tax and Estate Planning",
-                "Industries",
-              ].map((item) => (
-                <li key={item}>
-                  <Link
-                    href="#"
-                    className="text-trust-blue-300 hover:text-gold-400 transition-colors text-sm font-medium"
-                  >
-                    {item}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link
+                  href="/services"
+                  className="text-trust-blue-300 hover:text-gold-400 transition-colors text-sm font-medium"
+                >
+                  Financial Planning
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services"
+                  className="text-trust-blue-300 hover:text-gold-400 transition-colors text-sm font-medium"
+                >
+                  Wealth Management
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services"
+                  className="text-trust-blue-300 hover:text-gold-400 transition-colors text-sm font-medium"
+                >
+                  Tax and Estate Planning
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/practice-areas"
+                  className="text-trust-blue-300 hover:text-gold-400 transition-colors text-sm font-medium"
+                >
+                  Industries
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -88,22 +108,46 @@ export default function Footer() {
               Inside
             </h4>
             <ul className="space-y-4">
-              {[
-                "About",
-                "Our People",
-                "Careers",
-                "Awards & Recognitions",
-                "Contacts",
-              ].map((item) => (
-                <li key={item}>
-                  <Link
-                    href="#"
-                    className="text-trust-blue-300 hover:text-white transition-colors text-sm font-medium"
-                  >
-                    {item}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link
+                  href="/about"
+                  className="text-trust-blue-300 hover:text-white transition-colors text-sm font-medium"
+                >
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/team"
+                  className="text-trust-blue-300 hover:text-white transition-colors text-sm font-medium"
+                >
+                  Our People
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="text-trust-blue-300 hover:text-white transition-colors text-sm font-medium"
+                >
+                  Careers
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/about"
+                  className="text-trust-blue-300 hover:text-white transition-colors text-sm font-medium"
+                >
+                  Awards & Recognitions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="text-trust-blue-300 hover:text-white transition-colors text-sm font-medium"
+                >
+                  Contacts
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -113,18 +157,38 @@ export default function Footer() {
               Thinking
             </h4>
             <ul className="space-y-4">
-              {["Insights", "Case Studies", "Subscribe", "Media Mentions"].map(
-                (item) => (
-                  <li key={item}>
-                    <Link
-                      href="#"
-                      className="text-trust-blue-300 hover:text-white transition-colors text-sm font-medium"
-                    >
-                      {item}
-                    </Link>
-                  </li>
-                ),
-              )}
+              <li>
+                <Link
+                  href="/blog"
+                  className="text-trust-blue-300 hover:text-white transition-colors text-sm font-medium"
+                >
+                  Insights
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/case-studies"
+                  className="text-trust-blue-300 hover:text-white transition-colors text-sm font-medium"
+                >
+                  Case Studies
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="text-trust-blue-300 hover:text-white transition-colors text-sm font-medium"
+                >
+                  Subscribe
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/about"
+                  className="text-trust-blue-300 hover:text-white transition-colors text-sm font-medium"
+                >
+                  Media Mentions
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -178,6 +242,17 @@ export default function Footer() {
                   <FaYoutube size={18} />
                 </a>
               </div>
+
+              {/* Back to Top Button */}
+              <button
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                className="mt-8 group flex items-center gap-2 text-gold-400 hover:text-white transition-colors duration-300 text-sm font-medium uppercase tracking-widest"
+              >
+                <span>Back to Top</span>
+                <span className="p-2 border border-gold-400/30 rounded-full group-hover:bg-gold-400 group-hover:text-trust-blue-950 transition-all duration-300">
+                  <FaArrowUp />
+                </span>
+              </button>
             </div>
           </div>
         </div>

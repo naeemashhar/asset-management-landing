@@ -9,14 +9,14 @@ import { HiMenuAlt4, HiX } from "react-icons/hi";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Services", href: "/services" },
-    { name: "Practice Areas", href: "/practice-areas" },
-    /* { name: "Case Studies", href: "/case-studies" }, */
-    { name: "Risk Disclosures", href: "/risk-disclosures" },
-    { name: "Contact", href: "/contact" },
-    { name: "Blog", href: "/blog" },
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Services", href: "/services" },
+  { name: "Practice Areas", href: "/practice-areas" },
+  /* { name: "Case Studies", href: "/case-studies" }, */
+  { name: "Risk Disclosures", href: "/risk-disclosures" },
+  { name: "Contact", href: "/contact" },
+  { name: "Blog", href: "/blog" },
 ];
 
 export default function Header() {
@@ -52,7 +52,16 @@ export default function Header() {
       >
         <div className="container mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="z-50 relative">
+          <Link
+            href="/"
+            className="z-50 relative"
+            onClick={(e) => {
+              if (pathname === "/") {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }
+            }}
+          >
             <span
               className={cn(
                 " font-display  text-2xl tracking-[0.2em] uppercase transition-all duration-300",

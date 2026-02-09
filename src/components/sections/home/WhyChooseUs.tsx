@@ -67,7 +67,7 @@ export default function WhyChooseUsHeartbeat() {
   return (
     <section
       ref={containerRef}
-      className="relative bg-white text-slate-900 overflow-hidden"
+      className="relative bg-white text-slate-900 overflow-x-clip"
     >
       <div className="container mx-auto px-6 md:px-12 lg:px-20">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-24">
@@ -99,8 +99,9 @@ export default function WhyChooseUsHeartbeat() {
                   </p>
 
                   {/* Functional Progress Line */}
-                  <div className="hidden lg:flex items-center gap-4">
-                    <div className="h-48 w-[2px] bg-slate-100 relative rounded-full overflow-hidden">
+                  {/* Functional Progress Line */}
+                  <div className="hidden lg:flex items-center gap-6">
+                    <div className="h-48 w-[5px] bg-slate-100/80 relative rounded-full overflow-visible">
                       <motion.div
                         style={{
                           height: useTransform(
@@ -109,12 +110,22 @@ export default function WhyChooseUsHeartbeat() {
                             ["0%", "100%"],
                           ),
                         }}
-                        className="absolute top-0 left-0 w-full bg-gradient-to-b from-amber-500 to-amber-600 shadow-[0_0_10px_rgba(245,158,11,0.5)]"
-                      />
+                        className="w-full bg-gradient-to-b from-amber-400 to-amber-600 rounded-full relative"
+                      >
+                        <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-2.5 h-2.5 bg-amber-600 rounded-full shadow-[0_0_10px_rgba(245,158,11,0.6)] border border-white/80" />
+                      </motion.div>
+                      {/* Track background subtle glow for depth */}
+                      <div className="absolute inset-0 bg-slate-200/30 rounded-full -z-10 blur-[1px]" />
                     </div>
-                    <span className="text-xs font-bold text-slate-300 rotate-90 origin-left translate-y-8 tracking-widest">
-                      PROGRESS
-                    </span>
+
+                    <div className="flex flex-col gap-1 -mt-2 opacity-80 select-none">
+                      <span className="text-[10px] uppercase tracking-[0.25em] text-slate-400 font-bold">
+                        Journey
+                      </span>
+                      <span className="text-xs font-bold text-slate-900 font-display">
+                        Start — Finish
+                      </span>
+                    </div>
                   </div>
                 </div>
               </motion.div>

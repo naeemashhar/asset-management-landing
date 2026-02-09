@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { FaArrowRight } from "react-icons/fa";
 
@@ -26,16 +27,20 @@ export default function CTABanner() {
             that stand the test of time.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button size="lg" variant="gold" className="min-w-[200px]">
-              Schedule Consultation
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="min-w-[200px] border-white text-white hover:bg-white hover:text-trust-blue-950"
-            >
-              View Practice Areas <FaArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+            <Link href="/contact">
+              <Button size="lg" variant="gold" className="min-w-[200px]">
+                Schedule Consultation
+              </Button>
+            </Link>
+            <Link href="/practice-areas">
+              <Button
+                size="lg"
+                variant="outline"
+                className="min-w-[200px] border-white text-white hover:bg-white hover:text-trust-blue-950"
+              >
+                View Practice Areas <FaArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </div>
         </motion.div>
       </div>

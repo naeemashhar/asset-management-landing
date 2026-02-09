@@ -46,7 +46,7 @@ const team = [
     role: "Head of Client Relations",
     bio: "Victoria is dedicated to ensuring a seamless, high-touch experience for every Valora partner family.",
     image:
-      "https://images.unsplash.com/photo-1598550832236-81cf9dc2d676?q=80&w=2574&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1577949600607-ce774af98e18?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
 
