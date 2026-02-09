@@ -77,7 +77,7 @@ export default function RiskDisclosures() {
                             Past Performance Disclosure
                         </h2>
 
-                        <div className="bg-gray-50 p-6 md:p-8 rounded-sm border border-gray-200">
+                        <div className="bg-gray-50 p-6 md:p-8 rounded-sm border border-gray-200 hover:border-gray-700 hover:shadow-md transition-shadow">
                             <p className="font-bold text-trust-blue-950 uppercase leading-loose text-sm md:text-[15px] tracking-wide mb-4">
                                 PAST RESULTS ARE NOT NECESSARILY INDICATIVE OF FUTURE RESULTS.
                             </p>
@@ -201,7 +201,7 @@ export default function RiskDisclosures() {
                         <div className="grid md:grid-cols-2 gap-6 text-left">
 
                             {/* Card 1: Leverage & Options */}
-                            <div className="bg-white p-6 rounded-sm shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                            <div className="bg-white p-6 rounded-sm shadow-sm border border-gray-100 hover:border-gray-700 hover:shadow-md transition-shadow">
                                 <div className="flex items-center gap-3 mb-4">
                                     <div className="p-2 bg-blue-50 rounded-full text-blue-600">
                                         <IoTrendingDownOutline className="text-xl" />
@@ -222,7 +222,7 @@ export default function RiskDisclosures() {
                             </div>
 
                             {/* Card 2: Futures & Margin */}
-                            <div className="bg-white p-6 rounded-sm shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                            <div className="bg-white p-6 rounded-sm shadow-sm border border-gray-100 hover:border-gray-700 hover:shadow-md transition-shadow">
                                 <div className="flex items-center gap-3 mb-4">
                                     <div className="p-2 bg-orange-50 rounded-full text-orange-600">
                                         <IoWarningOutline className="text-xl" />
@@ -240,7 +240,7 @@ export default function RiskDisclosures() {
                             </div>
 
                             {/* Card 3: Market Volatility - Full Width on Mobile, Centered on Desktop if wanted, or just span 2 */}
-                            <div className="md:col-span-2 bg-gradient-to-r from-gray-50 to-white p-6 rounded-sm shadow-sm border border-gray-100">
+                            <div className="md:col-span-2 bg-gradient-to-r from-gray-50 to-white p-6 rounded-sm shadow-sm border border-gray-100 hover:border-gray-700">
                                 <div className="flex items-center gap-3 mb-4">
                                     <div className="p-2 bg-red-50 rounded-full text-red-600">
                                         <IoShieldCheckmarkOutline className="text-xl" />
@@ -258,7 +258,7 @@ export default function RiskDisclosures() {
                             </div>
                         </div>
 
-                        <div className="font-bold mt-20 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center text-xs text-gray-800 gap-4">
+                        <div className="font-bold mt-12 pt-6 border-t border-gray-200 flex flex-col justify-between items-center text-xs text-gray-800 gap-1">
                             <p>© 2026 Valora Asset Management. All Rights Reserved. | NFA Registered CTA</p>
                             <p className="flex items-center gap-2">
                                 <IoShieldCheckmarkOutline className="text-gold-500 text-lg" />

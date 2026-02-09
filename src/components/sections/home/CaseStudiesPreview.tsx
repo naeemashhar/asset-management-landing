@@ -105,9 +105,7 @@ export default function CaseStudiesPreview() {
                 </p>
 
                 <div className="mt-auto pt-4 w-full flex items-center justify-between border-t border-gray-100">
-                  <span className="text-xs font-bold text-gold-500 uppercase tracking-widest">
-                    {study.metric}
-                  </span>
+                  <span className="text-xs font-bold text-gold-800 uppercase tracking-widest">{study.metric}</span>
                   <FaArrowRight className="text-gray-300 w-3 h-3 group-hover:text-gold-500 group-hover:translate-x-1 transition-all" />
                 </div>
               </div>

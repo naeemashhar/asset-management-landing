@@ -124,7 +124,7 @@ export default function Footer() {
 
           {/* Col 3: Inside (Span 2) */}
           <div className="lg:col-span-2">
-            <h4 className="font-bold text-gold-400 mb-6 text-sm uppercase tracking-wide">
+            <h4 className="font-bold text-white mb-6 text-sm uppercase tracking-wide">
               Inside
             </h4>
             <ul className="space-y-4">
@@ -173,7 +173,7 @@ export default function Footer() {
 
           {/* Col 4: Thinking (Span 2) */}
           <div className="lg:col-span-2">
-            <h4 className="font-bold text-gold-400 mb-6 text-sm uppercase tracking-wide">
+            <h4 className="font-bold text-white mb-6 text-sm uppercase tracking-wide">
               Thinking
             </h4>
             <ul className="space-y-4">
@@ -266,11 +266,11 @@ export default function Footer() {
               {/* Back to Top Button */}
               <button
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                className="mt-8 group flex items-center gap-2 text-gold-400 hover:text-white transition-colors duration-300 text-sm font-medium uppercase tracking-widest"
+                className="cursor-pointer mt-8 group flex items-center gap-2 text-gold-400 hover:text-white transition-colors duration-300 text-sm font-medium uppercase tracking-widest"
               >
                 <span>Back to Top</span>
-                <span className="p-2 border border-gold-400/30 rounded-full group-hover:bg-gold-400 group-hover:text-trust-blue-950 transition-all duration-300">
-                  <FaArrowUp />
+                <span className="p-2 border border-gold-400/30 rounded-full group-hover:bg-gold-400 group-hover:text-trust-blue-950 transition-all duration-300 animate-bounce">
+                  <FaArrowUp className="group-hover:animate-none " />
                 </span>
               </button>
             </div>

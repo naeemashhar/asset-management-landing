@@ -86,12 +86,12 @@ export default function AboutBrief() {
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              <a
+              {/* <a
                 href="/about"
                 className="inline-flex items-center text-trust-blue-950 font-bold border-b-2 border-gold-400 hover:text-gold-500 transition-colors pb-1"
               >
                 About us
-              </a>
+              </a> */}
             </motion.div>
           </div>
 
