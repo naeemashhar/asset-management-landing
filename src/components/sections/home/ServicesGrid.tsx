@@ -269,7 +269,7 @@ export default function ServicesGrid() {
   );
 }
 
- function DisclosureBento() {
+function DisclosureBento() {
   return (
     <div className="py-32 px-6 relative z-10 bg-[#F4F1EE]">
       <div className="max-w-7xl mx-auto">
@@ -283,11 +283,11 @@ export default function ServicesGrid() {
         >
           <div className="flex items-center gap-6 mb-8 justify-center md:justify-start">
             <div className="h-[2px] w-16 bg-[#9B7E4B]" />
-            <span className="text-[#9B7E4B] font-mono text-sm font-bold tracking-[0.5em] uppercase">
+            <span className="text-[#9B7E4B] font-display text-sm font-bold tracking-[0.5em] uppercase">
               Compliance Framework
             </span>
           </div>
-          <h2 className="font-serif text-6xl md:text-8xl text-[#121826] tracking-tighter leading-[0.9]">
+          <h2 className="font-display font-semibold text-6xl md:text-8xl text-[#121826] tracking-tighter leading-[0.9]">
             Required <br className="hidden md:block" />
             <span className="italic">Disclosures</span>
           </h2>
@@ -303,17 +303,17 @@ export default function ServicesGrid() {
           >
             <div className="relative z-10">
               <div className="flex justify-between items-start mb-12">
-                <span className="font-mono text-[#9B7E4B] text-sm tracking-widest uppercase bg-stone-50 px-4 py-2 border border-stone-100 font-bold">
+                <span className="font-display  text-[#9B7E4B] text-sm tracking-widest uppercase bg-stone-50 px-4 py-2 border border-stone-100 font-bold">
                   Section // 01
                 </span>
-                <span className="text-stone-100 font-serif text-[12rem] absolute -top-12 -right-6 select-none group-hover:text-stone-200 transition-colors leading-none">
+                <span className="text-stone-100 font-display text-[12rem] absolute -top-12 -right-6 select-none group-hover:text-stone-200 transition-colors leading-none">
                   01
                 </span>
               </div>
-              <h3 className="font-serif text-4xl md:text-5xl text-[#121826] mb-8">
+              <h3 className="font-display text-4xl md:text-5xl text-[#121826] mb-8">
                 Risk Disclosure
               </h3>
-              <p className="font-sans font-extrabold text-[#9B7E4B] uppercase text-lg md:text-xl tracking-[0.1em] leading-tight mb-8 border-l-4 border-[#9B7E4B] pl-6">
+              <p className="font-display font-bold text-[#9B7E4B] uppercase text-lg md:text-xl tracking-[0.1em] leading-tight mb-8 border-l-4 border-[#9B7E4B] pl-6">
                 Commodity trading involves substantial risk of loss.
               </p>
               <div className="space-y-6 text-stone-600 text-lg md:text-xl leading-relaxed font-light">
@@ -337,16 +337,16 @@ export default function ServicesGrid() {
             viewport={{ once: true }}
             className="md:col-span-4 group relative bg-[#9B7E4B] p-10 flex flex-col justify-center overflow-hidden shadow-xl"
           >
-            <span className="text-white/20 font-serif text-8xl absolute -top-4 -right-4 select-none">
+            <span className="text-white/20 font-display text-8xl absolute -top-4 -right-4 select-none">
               02
             </span>
-            <h3 className="font-serif text-3xl text-white mb-6">
+            <h3 className="font-display text-3xl text-white mb-6">
               Limited Experience
             </h3>
-            <p className="text-[#121826] font-sans font-black uppercase text-xs tracking-widest mb-6 bg-white/20 w-fit px-2 py-1">
+            <p className="text-[#121826] font-display font-bold uppercase text-xs tracking-widest mb-6 bg-white/20 w-fit px-2 py-1">
               Notice of track record
             </p>
-            <p className="text-white text-lg leading-relaxed font-medium">
+            <p className="text-white text-lg leading-relaxed font-light">
               Valora Asset Management has had little or no experience in trading
               actual accounts for customers.
             </p>
@@ -364,17 +364,17 @@ export default function ServicesGrid() {
             className="md:col-span-5 group relative bg-[#121826] p-10 md:p-16 overflow-hidden shadow-xl"
           >
             <div className="relative z-10">
-              <span className="text-white/10 font-serif text-9xl absolute -top-4 -right-4 select-none">
+              <span className="text-white/10 font-display text-9xl absolute -top-4 -right-4 select-none">
                 03
               </span>
-              <h3 className="font-serif text-4xl text-white mb-8">
+              <h3 className="font-display text-4xl text-white mb-8">
                 Past Performance
               </h3>
               <p className="text-stone-300 text-lg md:text-xl leading-relaxed font-light mb-8">
                 Past results are not necessarily indicative of future results.
                 Historical data should never be considered in isolation.
               </p>
-              <p className="text-[#9B7E4B] font-mono text-xs uppercase tracking-[0.3em]">
+              <p className="text-[#9B7E4B] font-display text-xs uppercase tracking-[0.3em]">
                 Compliance Rule 2-29 & 2-36
               </p>
             </div>
@@ -387,10 +387,10 @@ export default function ServicesGrid() {
             viewport={{ once: true }}
             className="md:col-span-7 group relative bg-white border border-stone-200 p-10 md:p-16 overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-700"
           >
-            <span className="text-stone-100 font-serif text-9xl absolute -top-4 -right-4 select-none">
+            <span className="text-stone-100 font-display text-9xl absolute -top-4 -right-4 select-none">
               04
             </span>
-            <h3 className="font-serif text-4xl text-[#121826] mb-8">
+            <h3 className="font-display text-4xl text-[#121826] mb-8">
               Suitability
             </h3>
             <div className="space-y-6 text-stone-500 text-lg leading-relaxed font-light">
@@ -413,10 +413,10 @@ export default function ServicesGrid() {
             className="md:col-span-12 group relative bg-[#FBFBFA] border border-stone-200 p-10 md:p-20 overflow-hidden flex flex-col lg:flex-row gap-12 items-center"
           >
             <div className="lg:w-1/3">
-              <span className="text-[#9B7E4B] font-mono text-xs font-bold tracking-[0.4em] uppercase block mb-4">
+              <span className="text-[#9B7E4B] font-display text-xs font-bold tracking-[0.4em] uppercase block mb-4">
                 Required Documentation
               </span>
-              <h3 className="font-serif text-4xl md:text-5xl text-[#121826]">
+              <h3 className="font-display text-4xl md:text-5xl text-[#121826]">
                 Before You <br />
                 <span className="italic">Invest</span>
               </h3>
@@ -430,7 +430,7 @@ export default function ServicesGrid() {
                   no cost upon request.
                 </span>
               </p>
-              <p className="text-stone-400 text-sm uppercase tracking-widest leading-loose">
+              <p className="text-stone-400 text-sm uppercase tracking-widest leading-loose font-light">
                 The CFTC has not passed upon the merits of participating in our
                 trading programs nor on the adequacy or accuracy of our
                 disclosure document.
