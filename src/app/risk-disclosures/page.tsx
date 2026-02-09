@@ -9,7 +9,7 @@ export default function RiskDisclosures() {
     return (
         <section className="bg-gray-50 min-h-screen">
             {/* Hero Header */}
-            <div className="bg-[#082C49] text-white pt-40 pb-20 px-6">
+            <div className="bg-trust-blue-950 text-white pt-40 pb-20 px-6">
                 <div className="container mx-auto max-w-4xl text-center">
                     <IoDocumentTextOutline className="text-6xl text-gold-400 mx-auto mb-6 opacity-30" />
                     <h1 className="font-serif text-4xl md:text-6xl font-bold mb-6 tracking-wide">
@@ -185,7 +185,7 @@ export default function RiskDisclosures() {
                             <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-gold-300 via-gold-500 to-gold-300"></div>
 
                             <div className="relative z-10 flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
-                                <div className="p-4 bg-white/10 rounded-full backdrop-blur-sm border border-white/20">
+                                <div className="p-4 bg-white/10 rounded-full border border-white/20">
                                     <IoWarningOutline className="text-4xl text-gold-400" />
                                 </div>
                                 <div>
