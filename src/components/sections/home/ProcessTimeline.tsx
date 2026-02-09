@@ -79,7 +79,7 @@ export default function ProcessTimeline() {
     <section className="py-24 bg-white relative overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="text-center mb-20">
-          <span className="block text-gold-500 font-medium tracking-widest text-sm uppercase mb-3">
+          <span className="block text-gold-800 font-medium tracking-widest text-sm uppercase mb-3">
             Our Process
           </span>
           <h2 className=" font-display  text-4xl md:text-5xl font-bold text-trust-blue-950">

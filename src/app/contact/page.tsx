@@ -179,62 +179,97 @@ export default function ContactPage() {
           </div>
 
           {/* Important Compliance Information */}
-          <div className="w-[90%] mx-auto mt-16">
-            <h2 className=" font-display  text-3xl md:text-4xl font-bold text-trust-blue-950 mb-8">
-              Important Compliance Information
-            </h2>
+          <div className="w-[90%] mx-auto mt-20">
+            <div className="text-center mb-12">
+              <h2 className=" font-display  text-3xl md:text-4xl font-bold text-trust-blue-950 mb-4">
+                Important Compliance Information
+              </h2>
+              <p className="text-trust-blue-600 max-w-2xl mx-auto">
+                Transparency and regulatory compliance are at the core of our operations
+              </p>
+            </div>
 
-            <div className="hover:border-yellow-600 hover:border hover:scale-101 transition-all duration-300 bg-white p-8 md:p-12 rounded-md shadow-sm border-l-4 border-yellow-600">
-              <h3 className="font-bold text-xl text-trust-blue-950 mb-6">
-                Regulatory Information
-              </h3>
+            <div className="grid md:grid-cols-2 gap-6 mb-12">
+              {/* Regulatory Information Card */}
+              <div className="group bg-gradient-to-br from-white to-gray-50 p-8 rounded-xl shadow-sm border border-gray-200 hover:border-gold-800 hover:shadow-lg transition-all duration-300">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 bg-gold-400/10 rounded-lg group-hover:bg-gold-400/20 transition-colors">
+                    <FaExclamationTriangle className="text-gold-500 text-2xl" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-display font-bold text-xl text-trust-blue-950 mb-3">
+                      Regulatory Information
+                    </h3>
+                    <p className="text-gray-700 text-sm leading-relaxed">
+                      Valora Asset Management is registered with the NFA as a
+                      Commodity Trading Advisor (CTA). All promotional materials
+                      comply with NFA Compliance Rules 2-29 and 2-36.
+                    </p>
+                  </div>
+                </div>
+              </div>
 
-              <div className="space-y-4 text-trust-blue-700 leading-relaxed">
-                <p className="text-gray-800 text-sm">
-                  Valora Asset Management is registered with the NFA as a
-                  Commodity Trading Advisor (CTA). All promotional materials
-                  comply with NFA Compliance Rules 2-29 and 2-36.
-                </p>
+              {/* Record Retention Card */}
+              <div className="group bg-gradient-to-br from-white to-gray-50 p-8 rounded-xl shadow-sm border border-gray-200 hover:border-gold-800 hover:shadow-lg transition-all duration-300">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 bg-gold-400/10 rounded-lg group-hover:bg-gold-400/20 transition-colors">
+                    <FaExclamationTriangle className="text-gold-500 text-2xl" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-display font-bold text-xl text-trust-blue-950 mb-3">
+                      Record Retention
+                    </h3>
+                    <p className="text-gray-700 text-sm leading-relaxed">
+                      All promotional materials are reviewed and approved in writing
+                      by appropriate supervisory personnel before use. Copies of all
+                      materials are retained on file for 5 years (2 years readily
+                      accessible) as required by NFA regulations.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div className="mt-5 hover:border-yellow-600 hover:border hover:scale-101 transition-all duration-300 bg-white p-8 md:p-12 rounded-md shadow-sm border-l-4 border-yellow-600">
-              <h3 className="font-bold text-xl text-trust-blue-950 mb-6">
-                Record Retention
-              </h3>
+            {/* Critical Risk Warning - Enhanced Design */}
+            <div className="relative overflow-hidden bg-gradient-to-r from-trust-blue-950 to-trust-blue-900 p-8 md:p-10 rounded-xl border-2 border-gold-400 shadow-2xl">
+              {/* Background Pattern */}
+              <div className="absolute inset-0 opacity-5">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-gold-400 rounded-full blur-3xl" />
+                <div className="absolute bottom-0 left-0 w-64 h-64 bg-gold-400 rounded-full blur-3xl" />
+              </div>
 
-              <div className="space-y-4 text-trust-blue-700 leading-relaxed">
-                <p className="text-gray-800 text-sm">
-                  All promotional materials are reviewed and approved in writing
-                  by appropriate supervisory personnel before use. Copies of all
-                  materials are retained on file for 5 years (2 years readily
-                  accessible) as required by NFA regulations.
-                </p>
+              <div className="relative z-10">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="p-3 bg-yellow-400 rounded-lg animate-pulse">
+                    <FaExclamationTriangle className="text-trust-blue-950 text-2xl" />
+                  </div>
+                  <h3 className="font-display font-bold text-2xl md:text-3xl text-white">
+                    Critical Risk Warning
+                  </h3>
+                </div>
 
-                {/* <p className="text-gray-800 text-sm">
-                                    Valora Asset Management will provide you a copy of our disclosure document at no cost. You should review our disclosure document and study it carefully to determine whether such trading is appropriate for you in light of your financial condition.
-                                </p>
+                <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20">
+                  <p className="text-white text-sm md:text-base font-medium leading-relaxed">
+                    <span className="text-gold-400 font-bold">IMPORTANT:</span> The risk of loss in trading commodity interests can be substantial. You should therefore carefully consider whether such trading is suitable for you in light of your financial condition. Past performance is not necessarily indicative of future results.
+                  </p>
+                </div>
 
-                                <p className="text-gray-800 text-sm">
-                                    The CFTC has not passed upon the merits of participating in our trading programs nor on the adequacy or accuracy of our disclosure document.
-                                </p> */}
+                <div className="mt-6 flex flex-wrap gap-4 text-xs text-trust-blue-200">
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-gold-400 rounded-full" />
+                    <span>NFA Registered CTA</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-gold-400 rounded-full" />
+                    <span>CFTC Compliant</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-gold-400 rounded-full" />
+                    <span>Full Disclosure Available</span>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-
-          {/* Critical Risk Warning */}
-          <div className="w-[90%] mx-auto mt-16 p-6 bg-yellow-50 border border-yellow-400 rounded-sm text-yellow-900">
-            <div className="flex items-center gap-2 mb-3">
-              <FaExclamationTriangle className="text-yellow-600 text-lg" />
-              <h3 className="font-bold text-md text-yellow-800">
-                Critical Risk Warning
-              </h3>
-            </div>
-            <p className="text-sm font-semibold uppercase leading-relaxed text-yellow-800">
-              THE RISK OF LOSS IN TRADING COMMODITY INTERESTS CAN BE
-              SUBSTANTIAL. YOU SHOULD THEREFORE CAREFULLY CONSIDER WHETHER SUCH
-              TRADING IS SUITABLE FOR YOU IN LIGHT OF YOUR FINANCIAL CONDITION.
-            </p>
           </div>
         </div>
       </section>

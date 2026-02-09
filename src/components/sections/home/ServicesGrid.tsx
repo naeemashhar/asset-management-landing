@@ -254,7 +254,7 @@ export default function ServicesGrid() {
             href="/services"
             variant="gold"
             size="lg"
-            className="min-w-[200px]"
+            className="min-w-[200px] bg-[#F4F1EE] hover:bg-[#374B47] hover:text-white"
           >
             Discover All Expertise
           </Button>

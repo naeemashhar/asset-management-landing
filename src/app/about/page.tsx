@@ -48,7 +48,7 @@ export default function AboutPage() {
       />
 
       {/* Introduction Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white overflow-x-hidden">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row gap-16 items-center">
             <div className="w-full md:w-1/2">
@@ -86,9 +86,9 @@ export default function AboutPage() {
                   className="object-cover w-full h-full"
                 />
               </div>
-              {/* Decorative Element */}
-              <div className="absolute -bottom-8 -left-8 w-48 h-48 bg-gray-50 -z-10" />
-              <div className="absolute -top-8 -right-8 w-48 h-48 border border-gold-400 -z-10" />
+              {/* Decorative Element - Hidden on mobile to prevent overflow */}
+              <div className="hidden md:block absolute -bottom-8 -left-8 w-48 h-48 bg-gray-50 -z-10" />
+              <div className="hidden md:block absolute -top-8 -right-8 w-48 h-48 border border-gold-400 -z-10" />
             </div>
           </div>
         </div>
@@ -119,7 +119,7 @@ export default function AboutPage() {
 
       {/* Our Values */}
       {/* How We Work Section */}
-      <section className="py-24 bg-[#F0F4F8] overflow-hidden">
+      <section className="py-24 bg-[#F0F4F8] overflow-x-hidden">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20 max-w-3xl mx-auto">
             <h2 className="font-display text-4xl md:text-5xl font-bold text-trust-blue-950 mb-6">
@@ -131,11 +131,11 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-0 items-start">
-            
+          <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-0 items-start max-w-7xl mx-auto">
+
             {/* Left Column */}
             <div className="lg:col-span-4 flex flex-col gap-16 lg:pt-12 text-left lg:text-right lg:items-end">
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -151,7 +151,7 @@ export default function AboutPage() {
                 <div className="h-px w-full lg:w-full bg-gray-300" />
               </motion.div>
 
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -170,28 +170,28 @@ export default function AboutPage() {
 
             {/* Center Graphic */}
             <div className="lg:col-span-4 flex justify-center relative min-h-[400px]">
-               {/* Central Axis Line (SVG) */}
-               <svg className="absolute top-0 w-full h-full pointer-events-none hidden lg:block" viewBox="0 0 400 600" fill="none" preserveAspectRatio="xMidYMin slice">
-                 <path d="M200 150 C 200 300, 250 400, 200 550" stroke="#374B47" strokeWidth="2" fill="none" />
-                 <line x1="200" y1="550" x2="200" y2="600" stroke="#374B47" strokeWidth="2" />
-                 {/* Base of line */}
-                 <line x1="180" y1="590" x2="220" y2="590" stroke="#374B47" strokeWidth="2" />
-               </svg>
+              {/* Central Axis Line (SVG) */}
+              <svg className="absolute top-0 w-full h-full pointer-events-none hidden lg:block" viewBox="0 0 400 600" fill="none" preserveAspectRatio="xMidYMid meet">
+                <path d="M200 150 C 200 300, 250 400, 200 550" stroke="#374B47" strokeWidth="2" fill="none" />
+                <line x1="200" y1="550" x2="200" y2="600" stroke="#374B47" strokeWidth="2" />
+                {/* Base of line */}
+                <line x1="180" y1="590" x2="220" y2="590" stroke="#374B47" strokeWidth="2" />
+              </svg>
 
-               <div className="relative z-10 bg-[#C5E1C5] w-48 h-48 rounded-[3rem] rotate-45 flex items-center justify-center shadow-lg border-4 border-[#374B47]">
-                  <div className="-rotate-45">
-                    <FaLightbulb className="text-5xl text-[#374B47]" />
-                  </div>
-                  {/* Decorative nodes */}
-                  <div className="absolute -top-2 -right-2 w-4 h-4 bg-[#374B47] rounded-full" />
-                  <div className="absolute top-1/2 -left-3 w-3 h-3 bg-[#374B47] rounded-full" />
-                  <div className="absolute -bottom-1 -left-1 w-5 h-5 bg-white border-2 border-[#374B47] rounded-full" />
-               </div>
+              <div className="relative z-10 bg-[#C5E1C5] w-48 h-48 rounded-[3rem] rotate-45 flex items-center justify-center shadow-lg border-4 border-[#374B47]">
+                <div className="-rotate-45">
+                  <FaLightbulb className="text-5xl text-[#374B47]" />
+                </div>
+                {/* Decorative nodes */}
+                <div className="absolute -top-2 -right-2 w-4 h-4 bg-[#374B47] rounded-full" />
+                <div className="absolute top-1/2 -left-3 w-3 h-3 bg-[#374B47] rounded-full" />
+                <div className="absolute -bottom-1 -left-1 w-5 h-5 bg-white border-2 border-[#374B47] rounded-full" />
+              </div>
             </div>
 
             {/* Right Column */}
             <div className="lg:col-span-4 flex flex-col gap-16 lg:pt-12 text-left">
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -207,14 +207,14 @@ export default function AboutPage() {
                 <div className="h-px w-full bg-gray-300" />
               </motion.div>
 
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.3 }}
                 className="max-w-sm"
               >
-                 <h3 className="font-display text-xl font-bold text-trust-blue-950 mb-3">
+                <h3 className="font-display text-xl font-bold text-trust-blue-950 mb-3">
                   {values[3].title}
                 </h3>
                 <p className="text-trust-blue-600 text-sm leading-relaxed mb-4">

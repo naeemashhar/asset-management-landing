@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaQuoteLeft, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaQuoteLeft } from "react-icons/fa";
 
 const testimonials = [
   {
@@ -47,53 +47,26 @@ const clients = [
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const next = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const prev = () => {
-    setCurrentIndex(
-      (prev) => (prev - 1 + testimonials.length) % testimonials.length,
-    );
-  };
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section className="py-24 bg-trust-blue-950 text-white overflow-hidden">
       <div className="container mx-auto px-6">
         {/* Testimonials */}
         <div className="mb-24 flex flex-col md:flex-row gap-16 items-center">
-          {/* Control Side */}
-          <div className="w-full md:w-1/3">
-            <span className="block text-gold-400 font-medium tracking-widest text-sm uppercase mb-3">
-              Client Stories
-            </span>
-            <h2 className=" font-display  text-4xl md:text-5xl font-bold mb-8">
-              Trusted by Industry Leaders
-            </h2>
-            <div className="flex gap-4">
-              <button
-                onClick={prev}
-                className="p-4 border border-trust-blue-700 rounded-full hover:bg-gold-400 hover:text-trust-blue-950 hover:border-gold-400 transition-all"
-              >
-                <FaChevronLeft />
-              </button>
-              <button
-                onClick={next}
-                className="p-4 border border-trust-blue-700 rounded-full hover:bg-gold-400 hover:text-trust-blue-950 hover:border-gold-400 transition-all"
-              >
-                <FaChevronRight />
-              </button>
-            </div>
-          </div>
-
-          {/* Slider Content */}
+          {/* Slider Content - Left Side */}
           <div className="w-full md:w-2/3 relative min-h-[300px]">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentIndex}
-                initial={{ opacity: 0, x: 50 }}
+                initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -50 }}
+                exit={{ opacity: 0, x: 50 }}
                 transition={{ duration: 0.5 }}
                 className="bg-trust-blue-900/50 p-10 md:p-14 border border-trust-blue-800 rounded-sm relative"
               >
@@ -121,6 +94,25 @@ export default function Testimonials() {
                 </div>
               </motion.div>
             </AnimatePresence>
+          </div>
+
+          {/* Title Side - Right Side */}
+          <div className="w-full md:w-1/3 text-left  md:text-right">
+            <span className="block text-gold-400 font-medium tracking-widest text-sm uppercase mb-3">
+              Client Stories
+            </span>
+            <h2 className=" font-display  text-4xl md:text-4xl font-bold mb-8">
+              Trusted by Industry Leaders
+            </h2>
+            {/* Navigation Dots (Optional visual indicator since arrows are removed) */}
+            <div className="flex gap-2 justify-start md:justify-end mt-4">
+              {testimonials.map((_, idx) => (
+                <div
+                  key={idx}
+                  className={`h-1 rounded-full transition-all duration-300 ${idx === currentIndex ? 'w-8 bg-gold-400' : 'w-2 bg-trust-blue-800'}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
 

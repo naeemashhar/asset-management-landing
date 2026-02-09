@@ -140,19 +140,26 @@ export default function WhyChooseUsHeartbeat() {
             </div>
 
             {/* Risk Footer - Integrated & Subtle */}
+            {/* Risk Footer - Integrated & Subtle */}
             <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="mt-16 pt-6 border-t border-dashed border-slate-200 ml-4 lg:ml-0"
+              className="mt-16 ml-4 lg:ml-0"
             >
-              <p className="text-[10px] md:text-xs text-slate-600 leading-relaxed max-w-xl opacity-80 hover:opacity-100 transition-opacity">
-                <span className="font-bold text-slate-900">
-                  RISK DISCLOSURE:
-                </span>{" "}
-                Commodity trading involves substantial risk of loss. Past
-                results are not necessarily indicative of future results.
-              </p>
+              <div className="bg-slate-50 border-l-4 border-gold-400 p-6 rounded-r-sm flex items-start gap-4 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <div className="mt-1">
+                  <FaShieldAlt className="text-gold-400 text-xl" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-trust-blue-950 text-sm uppercase tracking-wider mb-2">
+                    Risk Disclosure
+                  </h4>
+                  <p className="text-xs md:text-sm text-slate-600 leading-relaxed max-w-xl">
+                    Commodity trading involves substantial risk of loss. Past results are not necessarily indicative of future results. Investors should carefully consider their financial condition before trading.
+                  </p>
+                </div>
+              </div>
             </motion.div>
           </div>
         </div>
