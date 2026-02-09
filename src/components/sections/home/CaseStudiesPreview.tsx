@@ -39,15 +39,17 @@ export default function CaseStudiesPreview() {
   return (
     <section className="py-24 bg-gray-50">
       <div className="container mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16">
-          <div className="max-w-xl">
-            <span className="block text-gold-500 font-medium tracking-widest text-sm uppercase mb-3">
+        <div className="flex flex-col items-center text-center mb-16 gap-6">
+          <div>
+            <span className="block text-trust-blue-500 font-medium tracking-widest text-sm uppercase mb-3">
               Proven Results
             </span>
-            <h2 className=" font-display  text-4xl md:text-5xl font-bold text-trust-blue-950">
+
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-trust-blue-950">
               Case Studies
             </h2>
           </div>
+
           <Button
             variant="link"
             className="hidden md:inline-flex text-trust-blue-900 font-semibold"
@@ -77,8 +79,15 @@ export default function CaseStudiesPreview() {
                 </span>
 
                 {/* Image Area */}
-                <div className={`w-full aspect-[4/3] mb-8 overflow-hidden relative ${index % 3 === 0 ? "bg-red-50" : index % 3 === 1 ? "bg-blue-50" : "bg-amber-50"
-                  }`}>
+                <div
+                  className={`w-full aspect-[4/3] mb-8 overflow-hidden relative ${
+                    index % 3 === 0
+                      ? "bg-red-50"
+                      : index % 3 === 1
+                        ? "bg-blue-50"
+                        : "bg-amber-50"
+                  }`}
+                >
                   <img
                     src={study.image}
                     alt={study.title}
@@ -96,7 +105,9 @@ export default function CaseStudiesPreview() {
                 </p>
 
                 <div className="mt-auto pt-4 w-full flex items-center justify-between border-t border-gray-100">
-                  <span className="text-xs font-bold text-gold-500 uppercase tracking-widest">{study.metric}</span>
+                  <span className="text-xs font-bold text-gold-500 uppercase tracking-widest">
+                    {study.metric}
+                  </span>
                   <FaArrowRight className="text-gray-300 w-3 h-3 group-hover:text-gold-500 group-hover:translate-x-1 transition-all" />
                 </div>
               </div>
