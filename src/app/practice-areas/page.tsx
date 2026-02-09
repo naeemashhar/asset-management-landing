@@ -78,7 +78,15 @@ const practices = [
 ];
 
 // Content Block Component
-function PracticeContent({ practice, activeId, setActiveId }) {
+function PracticeContent({
+  practice,
+  activeId,
+  setActiveId,
+}: {
+  practice: (typeof practices)[0];
+  activeId: number;
+  setActiveId: (id: number) => void;
+}) {
   const ref = useRef(null);
   const isInView = useInView(ref, { margin: "-50% 0px -50% 0px" });
 
