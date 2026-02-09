@@ -100,11 +100,10 @@ export default function CaseStudiesPage() {
               <button
                 key={cat}
                 onClick={() => setFilter(cat)}
-                className={`text-lg  font-display  transition-colors duration-300 relative pb-2 ${
-                  filter === cat
+                className={`text-lg  font-display  transition-colors duration-300 relative pb-2 ${filter === cat
                     ? "text-trust-blue-950 font-bold"
                     : "text-trust-blue-400 hover:text-trust-blue-800"
-                }`}
+                  }`}
               >
                 {cat}
                 {filter === cat && (
@@ -117,58 +116,55 @@ export default function CaseStudiesPage() {
             ))}
           </div>
 
-          {/* Premium Grid */}
           <motion.div
             layout
-            className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-20"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             <AnimatePresence mode="popLayout">
-              {filteredCases.map((study) => (
+              {filteredCases.map((study, index) => (
                 <motion.div
                   layout
                   key={study.id}
-                  initial={{ opacity: 0, y: 50 }}
+                  initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, scale: 0.95 }}
-                  transition={{ duration: 0.5, ease: "easeOut" }}
-                  className="group cursor-pointer"
+                  transition={{ duration: 0.4, ease: "easeOut" }}
+                  className="group cursor-pointer h-full"
                 >
-                  {/* Evaluation / Image Container */}
-                  <div className="relative aspect-[16/10] overflow-hidden mb-8 shadow-sm">
-                    <div className="absolute inset-0 bg-trust-blue-950/20 group-hover:bg-trust-blue-950/0 transition-colors duration-500 z-10" />
-                    <img
-                      src={study.image}
-                      alt={study.title}
-                      className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000 ease-out"
-                    />
-                    {/* Floating Badge */}
-                    <div className="absolute top-6 left-6 z-20 bg-white/95 px-4 py-2 shadow-lg">
-                      <span className="text-xs font-bold uppercase tracking-widest text-trust-blue-950">
-                        {study.category}
-                      </span>
-                    </div>
-                  </div>
+                  <div className="bg-white border border-gray-200 p-8 h-full relative hover:shadow-xl transition-all duration-300 flex flex-col items-start bg-opacity-50 hover:bg-opacity-100">
+                    {/* Top Green Accent */}
+                    <div className="absolute -top-3 left-8 w-4 h-8 bg-[#8FD299] transform -skew-x-[20deg] shadow-sm" />
 
-                  {/* Content */}
-                  <div className="pr-8">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="h-px flex-1 bg-gray-300 group-hover:bg-gold-400 transition-colors duration-300" />
-                      <span className="text-gold-500 font-bold  font-display  text-lg">
-                        {study.metric}
-                      </span>
+                    {/* Category */}
+                    <span className="text-xs font-bold uppercase tracking-wide text-trust-blue-950 mb-6 block mt-2">
+                      {study.category}
+                    </span>
+
+                    {/* Image Area */}
+                    <div className={`w-full aspect-[4/3] mb-8 overflow-hidden relative ${index % 3 === 0 ? "bg-red-50" : index % 3 === 1 ? "bg-blue-50" : "bg-amber-50"
+                      }`}>
+                      <img
+                        src={study.image}
+                        alt={study.title}
+                        className="w-full h-full object-cover mix-blend-multiply opacity-90 group-hover:scale-105 transition-transform duration-700 hover:mix-blend-normal hover:opacity-100"
+                      />
                     </div>
 
-                    <h3 className=" font-display  text-3xl md:text-4xl font-bold text-trust-blue-950 mb-4 group-hover:text-trust-blue-700 transition-colors">
+                    {/* Content */}
+                    <h3 className="font-display text-2xl font-bold text-trust-blue-950 mb-4 leading-tight">
                       {study.title}
                     </h3>
 
-                    <p className="text-trust-blue-600 text-lg leading-relaxed mb-6 line-clamp-3">
+                    <p className="text-gray-500 text-sm leading-relaxed mb-6 font-medium">
                       {study.description}
                     </p>
 
-                    <div className="inline-flex items-center text-trust-blue-950 font-bold border-b border-transparent group-hover:border-trust-blue-950 transition-all pb-1">
-                      View Case Study{" "}
-                      <FaArrowRight className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+                    {/* Optional Metric if needed, or remove to match reference strictness. 
+                        Reference has just text. I'll visual hide metric or keep it subtle.
+                        I'll keep it as a small footer item. */}
+                    <div className="mt-auto pt-4 w-full flex items-center justify-between border-t border-gray-100">
+                      <span className="text-xs font-bold text-gold-500 uppercase tracking-widest">{study.metric}</span>
+                      <FaArrowRight className="text-gray-300 w-3 h-3 group-hover:text-gold-500 group-hover:translate-x-1 transition-all" />
                     </div>
                   </div>
                 </motion.div>

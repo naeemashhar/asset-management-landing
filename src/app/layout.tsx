@@ -37,6 +37,7 @@ export const metadata: Metadata = {
     default: "Valora Asset Management",
   },
   description: "Premium financial consulting and asset management services.",
+  themeColor: "#374B47",
 };
 
 export default function RootLayout({

@@ -118,46 +118,112 @@ export default function AboutPage() {
       </section>
 
       {/* Our Values */}
-      <section className="py-24 bg-white">
+      {/* How We Work Section */}
+      <section className="py-24 bg-[#F0F4F8] overflow-hidden">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16 max-w-2xl mx-auto">
-            <span className="block text-gold-500 font-medium tracking-widest text-sm uppercase mb-3">
-              Our Philosophy
-            </span>
-            <h2 className=" font-display  text-4xl md:text-5xl font-bold text-trust-blue-950 mb-6">
-              Guided by Principles
+          <div className="text-center mb-20 max-w-3xl mx-auto">
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-trust-blue-950 mb-6">
+              How we work
             </h2>
-            <p className="text-trust-blue-600 leading-relaxed">
-              Our culture is defined by a relentless pursuit of excellence and
-              an unshakeable commitment to our clients&apos; best interests.
+            <p className="text-trust-blue-600 leading-relaxed max-w-2xl mx-auto">
+              Transforming organizations sustainably. Unlocking performance excellence.
+              Nurturing thriving workforces for generations. Partner with us for success.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {values.map((value, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+          <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-0 items-start">
+            
+            {/* Left Column */}
+            <div className="lg:col-span-4 flex flex-col gap-16 lg:pt-12 text-left lg:text-right lg:items-end">
+              <motion.div 
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1, duration: 0.5 }}
-                className="flex gap-6"
+                transition={{ duration: 0.5 }}
+                className="max-w-sm"
               >
-                <div className="flex-shrink-0">
-                  <div className="w-16 h-16 rounded-full bg-trust-blue-950 flex items-center justify-center text-gold-400 text-2xl">
-                    <value.icon />
-                  </div>
-                </div>
-                <div>
-                  <h3 className=" font-display  text-2xl font-bold text-trust-blue-950 mb-3">
-                    {value.title}
-                  </h3>
-                  <p className="text-trust-blue-600 leading-relaxed">
-                    {value.description}
-                  </p>
-                </div>
+                <h3 className="font-display text-xl font-bold text-trust-blue-950 mb-3">
+                  {values[0].title}
+                </h3>
+                <p className="text-trust-blue-600 text-sm leading-relaxed mb-4">
+                  {values[0].description}
+                </p>
+                <div className="h-px w-full lg:w-full bg-gray-300" />
               </motion.div>
-            ))}
+
+              <motion.div 
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="max-w-sm"
+              >
+                <h3 className="font-display text-xl font-bold text-trust-blue-950 mb-3">
+                  {values[2].title}
+                </h3>
+                <p className="text-trust-blue-600 text-sm leading-relaxed mb-4">
+                  {values[2].description}
+                </p>
+                <div className="h-px w-full lg:w-full bg-gray-300" />
+              </motion.div>
+            </div>
+
+            {/* Center Graphic */}
+            <div className="lg:col-span-4 flex justify-center relative min-h-[400px]">
+               {/* Central Axis Line (SVG) */}
+               <svg className="absolute top-0 w-full h-full pointer-events-none hidden lg:block" viewBox="0 0 400 600" fill="none" preserveAspectRatio="xMidYMin slice">
+                 <path d="M200 150 C 200 300, 250 400, 200 550" stroke="#374B47" strokeWidth="2" fill="none" />
+                 <line x1="200" y1="550" x2="200" y2="600" stroke="#374B47" strokeWidth="2" />
+                 {/* Base of line */}
+                 <line x1="180" y1="590" x2="220" y2="590" stroke="#374B47" strokeWidth="2" />
+               </svg>
+
+               <div className="relative z-10 bg-[#C5E1C5] w-48 h-48 rounded-[3rem] rotate-45 flex items-center justify-center shadow-lg border-4 border-[#374B47]">
+                  <div className="-rotate-45">
+                    <FaLightbulb className="text-5xl text-[#374B47]" />
+                  </div>
+                  {/* Decorative nodes */}
+                  <div className="absolute -top-2 -right-2 w-4 h-4 bg-[#374B47] rounded-full" />
+                  <div className="absolute top-1/2 -left-3 w-3 h-3 bg-[#374B47] rounded-full" />
+                  <div className="absolute -bottom-1 -left-1 w-5 h-5 bg-white border-2 border-[#374B47] rounded-full" />
+               </div>
+            </div>
+
+            {/* Right Column */}
+            <div className="lg:col-span-4 flex flex-col gap-16 lg:pt-12 text-left">
+              <motion.div 
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="max-w-sm"
+              >
+                <h3 className="font-display text-xl font-bold text-trust-blue-950 mb-3">
+                  {values[1].title}
+                </h3>
+                <p className="text-trust-blue-600 text-sm leading-relaxed mb-4">
+                  {values[1].description}
+                </p>
+                <div className="h-px w-full bg-gray-300" />
+              </motion.div>
+
+              <motion.div 
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="max-w-sm"
+              >
+                 <h3 className="font-display text-xl font-bold text-trust-blue-950 mb-3">
+                  {values[3].title}
+                </h3>
+                <p className="text-trust-blue-600 text-sm leading-relaxed mb-4">
+                  {values[3].description}
+                </p>
+                <div className="h-px w-full bg-gray-300" />
+              </motion.div>
+            </div>
+
           </div>
         </div>
       </section>
