@@ -75,7 +75,7 @@ export default function WhyChooseUsHeartbeat() {
           <div className="lg:w-5/12 relative py-20 lg:py-32 z-10">
             <div className="lg:sticky lg:top-24 flex flex-col justify-center">
               {/* The "Pulse" - Dynamic Background Element */}
-              <div className="absolute top-1/2 -left-20 w-96 h-96 bg-gold-100/50 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse-slow pointer-events-none" />
+              <div className="absolute top-1/2 -left-20 w-96 h-96 bg-trust-blue-100/50 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse-slow pointer-events-none" />
 
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -89,7 +89,7 @@ export default function WhyChooseUsHeartbeat() {
                 <div className="sticky top-0">
                   <h2 className=" font-display  text-5xl md:text-6xl lg:text-7xl font-medium leading-[1.05] text-slate-900 mb-8 relative z-10">
                     Precision in <br />
-                    <span className="text-slate-400 italic">motion.</span>
+                    <span className="text-[#374B47] italic">motion.</span>
                   </h2>
 
                   <p className="text-slate-600 text-lg leading-relaxed max-w-md font-light mb-10 relative z-10">
@@ -98,7 +98,6 @@ export default function WhyChooseUsHeartbeat() {
                     long-term wealth growth.
                   </p>
 
-                  {/* Functional Progress Line */}
                   {/* Functional Progress Line */}
                   <div className="hidden lg:flex items-center gap-6">
                     <div className="h-48 w-[5px] bg-slate-100/80 relative rounded-full overflow-visible">
@@ -110,9 +109,9 @@ export default function WhyChooseUsHeartbeat() {
                             ["0%", "100%"],
                           ),
                         }}
-                        className="w-full bg-gradient-to-b from-gold-400 to-gold-600 rounded-full relative"
+                        className="w-full bg-gradient-to-b from-trust-blue-900 to-gold-400 rounded-full relative"
                       >
-                        <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-2.5 h-2.5 bg-gold-600 rounded-full shadow-[0_0_10px_var(--color-gold-500)] border border-white/80" />
+                        <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-2.5 h-2.5 bg-gold-400 rounded-full shadow-[0_0_10px_var(--color-gold-400)] border border-white/80" />
                       </motion.div>
                       {/* Track background subtle glow for depth */}
                       <div className="absolute inset-0 bg-slate-200/30 rounded-full -z-10 blur-[1px]" />
@@ -147,8 +146,8 @@ export default function WhyChooseUsHeartbeat() {
               viewport={{ once: true }}
               className="mt-16 pt-6 border-t border-dashed border-slate-200 ml-4 lg:ml-0"
             >
-              <p className="text-[10px] md:text-xs text-slate-400 leading-relaxed max-w-xl opacity-80 hover:opacity-100 transition-opacity">
-                <span className="font-bold text-slate-500">
+              <p className="text-[10px] md:text-xs text-slate-600 leading-relaxed max-w-xl opacity-80 hover:opacity-100 transition-opacity">
+                <span className="font-bold text-slate-900">
                   RISK DISCLOSURE:
                 </span>{" "}
                 Commodity trading involves substantial risk of loss. Past
@@ -180,10 +179,10 @@ function FeatureItem({
       <div className="flex flex-col md:flex-row gap-8 items-start">
         {/* Number & Icon Block */}
         <div className="flex items-center gap-6 md:w-1/4">
-          <span className="text-slate-300  font-display  text-3xl font-light group-hover:text-gold-600 transition-colors duration-300">
+          <span className="text-slate-300  font-display  text-3xl font-light group-hover:text-trust-blue-900 transition-colors duration-300">
             {feature.id}
           </span>
-          <div className="h-12 w-12 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 group-hover:border-gold-600 group-hover:text-gold-600 transition-all duration-300 bg-white">
+          <div className="h-12 w-12 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 group-hover:border-trust-blue-900 group-hover:text-trust-blue-900 transition-all duration-300 bg-white">
             <feature.icon className="text-lg" />
           </div>
         </div>

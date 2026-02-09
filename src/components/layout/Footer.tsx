@@ -15,37 +15,46 @@ export default function Footer() {
     <footer className="bg-trust-blue-950  text-white  pb-12">
       <div className=" container mx-auto px-6">
         {/* Top Section: Risk Disclosure */}
-        <div className="mt-10 mb-10 relative max-w-5xl mx-auto">
-          {/* subtle glow behind */}
-          <div className="absolute inset-0 bg-gold-500/5 blur-[100px] rounded-full pointer-events-none" />
+        <div className="mt-16 mb-20 relative max-w-7xl mx-auto">
+          <div className="relative bg-trust-blue-900 border-l-4 border-gold-400 p-8 md:p-12 shadow-2xl rounded-r-lg overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-gold-400/5 rounded-full blur-3xl -mr-32 -mt-32 pointer-events-none" />
 
-          <div className="relative bg-white border border-slate-200 p-10 md:p-14 rounded-2xl overflow-hidden shadow-2xl">
-            {/* Decorative corners */}
-            <div className="absolute top-0 left-0 w-20 h-20 border-l-2 border-t-2 border-gold-600/20 rounded-tl-2xl" />
-            <div className="absolute bottom-0 right-0 w-20 h-20 border-r-2 border-b-2 border-gold-600/20 rounded-br-2xl" />
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start relative z-10">
+              {/* Header Side */}
+              <div className="lg:col-span-4 flex flex-col justify-between h-full space-y-6">
+                <div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="h-px w-8 bg-gold-400" />
+                    <span className="text-gold-400 font-bold uppercase tracking-[0.2em] text-xs">
+                      Important Notice
+                    </span>
+                  </div>
+                  <h3 className="font-display text-3xl text-white font-bold leading-tight">
+                    Risk <br /> Disclosure
+                  </h3>
+                </div>
 
-            <div className="text-center relative z-10">
-              <div className="inline-flex items-center gap-3 mb-8 px-4 py-1 rounded-full bg-gold-50 border border-gold-500/20">
-                <span className="w-1.5 h-1.5 rounded-full bg-gold-500 animate-pulse" />
-                <h5 className="font-display text-gold-600 font-bold uppercase tracking-[0.2em] text-xs">
-                  Risk Disclosure
-                </h5>
+                <div className="hidden lg:block">
+                  <p className="text-trust-blue-400 text-xs uppercase tracking-wider font-medium">
+                    NFA Compliance <br />Rule 2-29 & 2-36
+                  </p>
+                </div>
               </div>
 
-              <h3 className="font-display text-2xl md:text-3xl text-trust-blue-950 mb-6 leading-tight">
-                Trading involves substantial <span className="text-gold-600 italic">risk of loss.</span>
-              </h3>
+              {/* Content Side */}
+              <div className="lg:col-span-8 space-y-6 text-trust-blue-200 text-sm leading-7 font-light">
+                <p>
+                  <span className="text-white font-medium border-b border-gold-400/30 pb-0.5">Trading commodity futures and options involves substantial risk of loss</span> and is not suitable for all investors. You should carefully consider whether trading is suitable for you in light of your circumstances, knowledge, and financial resources. You may lose all or more of your initial investment.
+                </p>
+                <p>
+                  <span className="text-white font-medium">Past performance is not necessarily indicative of future results.</span> Opinions, market data, and recommendations are subject to change at any time. Valora Asset Management does not guarantee the accuracy of any market predictions.
+                </p>
 
-              <div className="h-px w-24 bg-gradient-to-r from-transparent via-slate-200 to-transparent mx-auto mb-8" />
-
-              <p className="text-slate-600 text-sm leading-loose font-light mb-8 max-w-2xl mx-auto">
-                <span className="text-trust-blue-950 font-medium">Past performance is not necessarily indicative of future results.</span> The risk of loss in trading commodity futures, options, and foreign exchange (&quot;forex&quot;) is substantial. You should carefully consider whether such trading is suitable for you in light of your financial condition.
-              </p>
-
-              <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-xs text-slate-500 font-medium tracking-wide uppercase">
-                <p>© {new Date().getFullYear()} Valora Asset Management</p>
-                <div className="hidden md:block w-1 h-1 bg-slate-300 rounded-full" />
-                <p>NFA Compliance Rule 2-29 & 2-36</p>
+                <div className="lg:hidden pt-4 border-t border-trust-blue-800">
+                  <p className="text-trust-blue-400 text-xs uppercase tracking-wider font-medium">
+                    NFA Compliance Rule 2-29 & 2-36
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -74,7 +83,7 @@ export default function Footer() {
 
           {/* Col 2: Services (Span 2) */}
           <div className="lg:col-span-2">
-            <h4 className="font-bold text-white mb-6 text-sm uppercase tracking-wide">
+            <h4 className="font-bold text-white mb-6 text -sm uppercase tracking-wide">
               Services
             </h4>
             <ul className="space-y-4">
