@@ -54,7 +54,8 @@ export default function AboutBrief() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className=" font-display  text-4xl md:text-5xl font-bold text-trust-blue-950 mb-8 leading-tight"
+              className=" font-display tracking-wider
+              text-4xl md:text-5xl font-bold text-trust-blue-950 mb-8 leading-tight"
             >
               Trusted experts with years of experience and industry
               accreditations
@@ -105,7 +106,7 @@ export default function AboutBrief() {
               {/* Placeholder for the 'Running Man' sketch - using a clean abstract business visual for now as vector assets aren't local. 
                                  Ideally would use an SVG component here. */}
               <Image
-                src="/finance-illustration.svg"
+                src="/image.png"
                 alt="Financial Expertise Illustration"
                 fill
                 className="object-contain" // Removed mix-blend-multiply as SVGs usually have transparent backgrounds
@@ -117,18 +118,20 @@ export default function AboutBrief() {
           </div>
 
           {/* RIGHT COLUMN: Stats (Span 3) */}
-          <div className=" lg:col-span-3 flex flex-col justify-center pl-0 lg:pl-10 relative">
+          <div className="lg:col-span-3 flex flex-col justify-center pl-0 lg:pl-10 relative lg:items-end">
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="relative py-8 first:pt-0 border-b border-gray-200 last:border-0"
+                style={{ marginRight: `${index * 4}rem` }} // Adjust "4" to make steps steeper or shallower
+                className="relative py-8 first:pt-0 border-b border-gray-200 last:border-0 w-full lg:w-[340px] transition-all duration-300"
               >
                 <motion.div
                   initial={{ opacity: 0, x: 20 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+                  className="text-left lg:text-right" // Aligns text to the right on desktop to match the steps
                 >
-                  <span className="block text-5xl font-bold text-trust-blue-950 mb-2  font-display ">
+                  <span className="block text-5xl font-bold text-trust-blue-950 mb-2 font-display">
                     {stat.value}
                   </span>
                   <span className="block text-xs font-bold uppercase tracking-wider text-trust-blue-950 mb-2">

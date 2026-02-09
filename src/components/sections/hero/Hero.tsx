@@ -62,7 +62,7 @@ export default function Hero() {
               backgroundImage: `url('${slides[currentIndex].image}')`,
             }}
           >
-            <div className="absolute inset-0 bg-trust-blue-950/80 bg-gradient-to-t from-trust-blue-950 via-trust-blue-950/60 to-transparent" />
+            <div className="absolute inset-0 bg-trust-blue-950/80 bg-gradient-to-t from-trust-blue-750 via-trust-blue-750/60 to-transparent" />
           </motion.div>
         </AnimatePresence>
       </motion.div>
@@ -138,7 +138,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll Indicator */}
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
@@ -148,7 +148,7 @@ export default function Hero() {
           Scroll
         </span>
         <div className="w-[1px] h-12 bg-gradient-to-b from-gold-400 to-transparent" />
-      </motion.div>
+      </motion.div> */}
     </section>
   );
 }
