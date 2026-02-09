@@ -300,11 +300,8 @@ function DisclosureBento() {
             className="md:col-span-8 group relative bg-white border border-stone-200 p-10 md:p-16 overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-2xl transition-all duration-700"
           >
             <div className="relative z-10">
-              <div className="flex justify-between items-start mb-12">
-                <span className="font-display  text-[#374B47] text-sm tracking-widest uppercase bg-stone-50 px-4 py-2 border border-stone-100 font-bold">
-                  Section // 01
-                </span>
-                <span className="text-stone-100 font-display text-[12rem] absolute -top-12 -right-6 select-none group-hover:text-stone-200 transition-colors leading-none">
+              <div className="flex justify-between items-start mb-5">
+                <span className="text-stone-100 font-display text-[8rem] absolute -top-18 -right-10 select-none group-hover:text-stone-200 transition-colors leading-none">
                   01
                 </span>
               </div>
@@ -316,13 +313,14 @@ function DisclosureBento() {
               </p>
               <div className="space-y-6 text-stone-600 text-lg md:text-xl leading-relaxed font-light">
                 <p>
-                  The high degree of leverage obtainable can work against you as
-                  well as for you. Leverage can lead to large losses as well as
-                  gains.
-                </p>
-                <p>
-                  Managed accounts may be subject to substantial charges.
-                  Trading profits must be significant to avoid asset exhaustion.
+                  The high degree of leverage that is often obtainable in
+                  commodity futures, options, and forex trading can work against
+                  you as well as for you. The use of leverage can lead to large
+                  losses as well as gains. In some cases, managed commodity
+                  accounts are subject to substantial charges for management and
+                  advisory fees. It may be necessary for those accounts that are
+                  subject to these charges to make substantial trading profits
+                  to avoid depletion or exhaustion of their assets.
                 </p>
               </div>
             </div>
@@ -335,7 +333,7 @@ function DisclosureBento() {
             viewport={{ once: true }}
             className="md:col-span-4 group relative bg-[#D1D2BC] p-10 flex flex-col justify-center overflow-hidden shadow-xl"
           >
-            <span className="text-white/20 font-display text-8xl absolute -top-2 -right-0 select-none">
+            <span className="text-white/20 font-display text-8xl absolute top-1 right-6 select-none">
               02
             </span>
             <h3 className="font-display text-3xl text-white mb-6">
@@ -349,8 +347,9 @@ function DisclosureBento() {
               actual accounts for customers.
             </p>
             <p className="text-[#121826]/80 text-md mt-4 font-light">
-              Customers should be particularly wary of placing undue reliance on
-              hypothetical performance results.
+              Because there are no actual trading result to compare to any
+              hypothetical result, Customers should be particularly wary of
+              placing undue reliance on hypothetical performance results.
             </p>
           </motion.div>
 
@@ -362,7 +361,7 @@ function DisclosureBento() {
             className="md:col-span-5 group relative bg-[#374B47] p-10 md:p-16 overflow-hidden shadow-xl"
           >
             <div className="relative z-10">
-              <span className="text-white/10 font-display text-9xl absolute -top-4 -right-4 select-none">
+              <span className="text-white/10 font-display text-9xl absolute -top-16 -right-10 select-none">
                 03
               </span>
               <h3 className="font-display text-4xl text-white mb-8">
@@ -370,7 +369,10 @@ function DisclosureBento() {
               </h3>
               <p className="text-stone-300 text-lg md:text-xl leading-relaxed font-light mb-8">
                 Past results are not necessarily indicative of future results.
-                Historical data should never be considered in isolation.
+                Historical performance data should be considered in context with
+                the market conditions that existed during that period. The
+                results represented in any marketing materials are not
+                indicative of future performance.
               </p>
               <p className="text-[#D1D2BC] font-display text-xs uppercase tracking-[0.3em]">
                 Compliance Rule 2-29 & 2-36
@@ -385,7 +387,7 @@ function DisclosureBento() {
             viewport={{ once: true }}
             className="md:col-span-7 group relative bg-white border border-stone-200 p-10 md:p-16 overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-700"
           >
-            <span className="text-stone-100 font-display text-9xl absolute -top-4 -right-4 select-none">
+            <span className="text-stone-100 font-display text-9xl absolute -top-4 right-4 select-none">
               04
             </span>
             <h3 className="font-display text-4xl text-[#121826] mb-8">
@@ -393,12 +395,18 @@ function DisclosureBento() {
             </h3>
             <div className="space-y-6 text-stone-500 text-lg leading-relaxed font-light">
               <p>
-                Carefully consider whether trading is suitable for your
-                financial condition.
+                You should carefully consider whether such trading is suitable
+                for you in light of your financial condition. You should be
+                aware that if you purchase a commodity option you may sustain a
+                total loss of the premium and of any additional funds you
+                deposit with your broker to establish or maintain your position.
               </p>
               <p>
-                Purchasing or selling commodity interests may result in a total
-                loss of initial margin and additional security deposits.
+                If you purchase or sell a commodity futures contract or sell a
+                commodity option you may sustain a total loss of the initial
+                margin funds or security deposit and any additional funds that
+                you deposit with your broker to establish or maintain your
+                position.
               </p>
             </div>
           </motion.div>
@@ -411,14 +419,13 @@ function DisclosureBento() {
             className="md:col-span-12 group relative bg-trust-blue-950 border border-trust-blue-800 p-8 md:p-16 overflow-hidden shadow-2xl rounded-2xl"
           >
             {/* Background Effects */}
-            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-trust-blue-900/40 rounded-full blur-[120px] -mr-40 -mt-40 pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gold-400/5 rounded-full blur-[100px] -ml-20 -mb-20 pointer-events-none" />
+            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-trust-blue-900/40 rounded-full  -mr-40 -mt-40 pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gold-400/5 rounded-full  -ml-20 -mb-20 pointer-events-none" />
 
             {/* Watermark Icon */}
             <FaFileContract className="absolute -right-10 -bottom-10 text-[300px] text-white/5 rotate-12 pointer-events-none group-hover:rotate-[15deg] group-hover:scale-110 transition-transform duration-700 ease-in-out" />
 
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-
               {/* Left Side: Heading & Context */}
               <div className="space-y-8">
                 <div>
@@ -435,7 +442,9 @@ function DisclosureBento() {
                 </div>
 
                 <p className="text-trust-blue-200 text-lg leading-relaxed font-light max-w-lg">
-                  Transparency is the foundation of our partnership. CFTC regulations requirement ensures you are fully informed before entering any agreement.
+                  Transparency is the foundation of our partnership. CFTC
+                  regulations requirement ensures you are fully informed before
+                  entering any agreement.
                 </p>
 
                 <div className="flex flex-col gap-4">
@@ -443,13 +452,17 @@ function DisclosureBento() {
                     <div className="mt-1 w-5 h-5 rounded-full bg-trust-blue-800 flex items-center justify-center flex-shrink-0 border border-trust-blue-700">
                       <FaCheck className="text-gold-400 w-2.5 h-2.5" />
                     </div>
-                    <p className="text-sm text-trust-blue-300">Detailed Risk Disclosures</p>
+                    <p className="text-sm text-trust-blue-300">
+                      Detailed Risk Disclosures
+                    </p>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="mt-1 w-5 h-5 rounded-full bg-trust-blue-800 flex items-center justify-center flex-shrink-0 border border-trust-blue-700">
                       <FaCheck className="text-gold-400 w-2.5 h-2.5" />
                     </div>
-                    <p className="text-sm text-trust-blue-300">Fee Structure Transparency</p>
+                    <p className="text-sm text-trust-blue-300">
+                      Fee Structure Transparency
+                    </p>
                   </div>
                 </div>
               </div>
@@ -463,7 +476,9 @@ function DisclosureBento() {
                     Downlaod Disclosure Document
                   </h4>
                   <p className="text-trust-blue-200 text-sm mb-6">
-                    We provided this comprehensive document at <span className="text-white font-medium">no cost</span> to all prospective clients.
+                    We provided this comprehensive document at{" "}
+                    <span className="text-white font-medium">no cost</span> to
+                    all prospective clients.
                   </p>
 
                   <Button
@@ -480,7 +495,6 @@ function DisclosureBento() {
                   </p>
                 </div>
               </div>
-
             </div>
           </motion.div>
         </div>
