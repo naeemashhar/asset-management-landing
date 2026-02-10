@@ -4,23 +4,23 @@ import { useRef } from "react";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 
-const stats = [
-  {
-    value: "20",
-    label: "Years of Experience",
-    desc: "A decade of proven financial expertise.",
-  },
-  {
-    value: "110",
-    label: "Customers",
-    desc: "Serving a thriving community of satisfied customers.",
-  },
-  {
-    value: "20+",
-    label: "Specialists",
-    desc: "A dedicated team of financial experts at your service.",
-  },
-];
+// const stats = [
+//   {
+//     value: "20",
+//     label: "Years of Experience",
+//     desc: "A decade of proven financial expertise.",
+//   },
+//   {
+//     value: "110",
+//     label: "Customers",
+//     desc: "Serving a thriving community of satisfied customers.",
+//   },
+//   {
+//     value: "20+",
+//     label: "Specialists",
+//     desc: "A dedicated team of financial experts at your service.",
+//   },
+// ];
 
 export default function AboutBrief() {
   const ref = useRef(null);
@@ -96,12 +96,12 @@ export default function AboutBrief() {
           </div>
 
           {/* CENTER COLUMN: Illustration/Image (Span 4) */}
-          <div className="lg:col-span-4 flex justify-center items-center relative min-h-[400px]">
+          <div className="lg:col-span-7 hidden md:block flex justify-center items-center relative min-h-[400px]">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="relative w-full h-full min-h-[400px]"
+              className="relative w-full h-full  min-h-[400px]"
             >
               {/* Placeholder for the 'Running Man' sketch - using a clean abstract business visual for now as vector assets aren't local. 
                                  Ideally would use an SVG component here. */}
@@ -118,7 +118,7 @@ export default function AboutBrief() {
           </div>
 
           {/* RIGHT COLUMN: Stats (Span 3) */}
-          <div className="lg:col-span-3 flex flex-col justify-center pl-0 lg:pl-10 relative lg:items-end">
+          {/* <div className="lg:col-span-3 flex flex-col justify-center pl-0 lg:pl-10 relative lg:items-end">
             {stats.map((stat, index) => (
               <div
                 key={index}
@@ -143,7 +143,7 @@ export default function AboutBrief() {
                 </motion.div>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
