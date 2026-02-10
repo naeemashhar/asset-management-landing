@@ -106,7 +106,7 @@ function PracticeContent({
         <div
           className={`absolute left-0 top-0 bottom-0 w-[2px] transition-all duration-500 ${
             activeId === practice.id
-              ? "bg-gold-500 h-full"
+              ? "bg-trust-blue-500 h-full"
               : "bg-gray-200 h-full group-hover:bg-gray-300"
           }`}
         />
@@ -120,7 +120,7 @@ function PracticeContent({
         <div className="flex items-center gap-4 mb-6">
           <span
             className={`text-2xl transition-colors duration-300 ${
-              activeId === practice.id ? "text-gold-500" : "text-gray-400"
+              activeId === practice.id ? "text-trust-blue-500" : "text-gray-400"
             }`}
           >
             <practice.icon />
@@ -139,7 +139,7 @@ function PracticeContent({
         <div
           className={`h-[2px] mb-8 transition-all duration-700 ease-out ${
             activeId === practice.id
-              ? "w-24 bg-gold-500"
+              ? "w-24 bg-trust-blue-500"
               : "w-12 bg-gray-200 group-hover:w-16"
           }`}
         />
@@ -150,12 +150,12 @@ function PracticeContent({
         </p>
 
         {/* 7. Explore Button (Optional) */}
-        <button
+        {/* <button
           className={`group/btn flex items-center gap-2 text-sm font-bold uppercase tracking-widest transition-colors ${activeId === practice.id ? "text-trust-blue-950" : "text-gray-400"}`}
         >
           Explore Sector
           <FaArrowRight className="transition-transform duration-300 group-hover/btn:translate-x-2" />
-        </button>
+        </button> */}
       </div>
     </div>
   );
