@@ -95,7 +95,7 @@ export default function AboutPage() {
       </section>
 
       {/* Stats / Impact Section */}
-      <section className="py-20 bg-trust-blue-50">
+      {/* <section className="py-20 bg-trust-blue-50">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center divide-x divide-trust-blue-200/50">
             {[
@@ -115,7 +115,7 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Our Values */}
       {/* How We Work Section */}
