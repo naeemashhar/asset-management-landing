@@ -91,11 +91,11 @@ export default function ServicesPage() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="mb-20 text-center md:text-left"
+        className=" text-center md:text-left"
       >
-        <div className="flex items-center gap-6 mb-8 justify-center md:justify-start">
+        <div className="flex items-center gap-6 mb-4 justify-center md:justify-start">
           <div className="h-[2px] w-16 bg-[#374B47]" />
-          <span className="text-[#374B47] font-display text-2xl mb-3 font-bold tracking-[0.5em] uppercase">
+          <span className="text-[#374B47] font-display text-2xl  font-bold tracking-[0.5em] uppercase">
             Our Services
           </span>
         </div>
@@ -106,17 +106,13 @@ export default function ServicesPage() {
       </motion.div>
 
 
-      <section className="py-24 relative overflow-hidden">
+      <section className="py-10 relative overflow-hidden">
 
         <div className="container mx-auto max-w-[1600px] px-8 relative z-10 ">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-24 mb-20 ">
             {mainServices.map((service, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group relative flex flex-col h-full bg-[#D1D2BC] rounded-md overflow-hidden hover:shadow-2xl hover:shadow-[#D1D2BC]/40 transition-all duration-500 hover:-translate-y-2 "
               >
                 {/* Top Border Accent */}
@@ -171,15 +167,15 @@ export default function ServicesPage() {
                     ))}
                   </ul>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
 
-          <div className="flex justify-center pb-8">
+          <div className="flex justify-center">
             <Link href="/services">
               <button className="group relative px-8 py-3 bg-white text-trust-blue-950 font-semibold rounded-full border border-gray-600 shadow-lg hover:shadow-xl hover:border-gold-400 hover:text-white hover:bg-[#202C2A] transition-all duration-300">
                 <span className="flex items-center gap-2 text-sm tracking-wide uppercase">
-                  View More
+                  Explore Services
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </span>
               </button>

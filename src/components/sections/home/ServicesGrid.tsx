@@ -441,7 +441,7 @@ function DisclosureBento() {
                   <div className="absolute top-0 left-0 w-1 h-full bg-gold-400" />
 
                   <h4 className="text-white font-display text-xl font-bold mb-2">
-                    Downlaod Disclosure Document
+                    Download Disclosure Document
                   </h4>
                   <p className="text-trust-blue-200 text-sm mb-6">
                     We provided this comprehensive document at{" "}
