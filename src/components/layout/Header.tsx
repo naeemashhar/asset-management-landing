@@ -10,13 +10,14 @@ import { cn } from "@/lib/utils";
 
 const navLinks = [
   { name: "Home", href: "/" },
+  /* { name: "Why us ", href: "/why-us" }, */
   { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
-  { name: "Practice Areas", href: "/practice-areas" },
+  /* { name: "Practice Areas", href: "/practice-areas" }, */
   /* { name: "Case Studies", href: "/case-studies" }, */
   { name: "Risk Disclosures", href: "/risk-disclosures" },
   { name: "Contact", href: "/contact" },
-  { name: "Blog", href: "/blog" },
+  /* { name: "Blog", href: "/blog" }, */
 ];
 
 export default function Header() {

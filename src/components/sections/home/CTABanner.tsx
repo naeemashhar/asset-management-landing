@@ -54,7 +54,7 @@ export default function CTABanner() {
                   Schedule Consultation
                 </Button>
               </Link>
-              <Link href="/practice-areas">
+              <Link href="/services">
                 <Button
                   size="lg"
                   variant="outline"
