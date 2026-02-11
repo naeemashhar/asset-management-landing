@@ -14,6 +14,7 @@ import {
   Check,
   ChevronRight,
 } from "lucide-react";
+import Link from "next/link";
 
 // --- Data Models ---
 
@@ -81,8 +82,8 @@ const additionalServices = [
 
 const SectionLabel = ({ children }: { children: React.ReactNode }) => (
   <div className="flex items-center gap-2 mb-4">
-    <span className="h-px w-8 bg-amber-600/50"></span>
-    <span className="text-xs font-bold tracking-widest text-amber-700 uppercase">
+    <span className="h-[1px] w-12 bg-trust-blue-400/50"></span>
+    <span className="text-xs font-bold tracking-widest text-gold-800 uppercase">
       {children}
     </span>
   </div>
@@ -90,10 +91,10 @@ const SectionLabel = ({ children }: { children: React.ReactNode }) => (
 
 export default function ServicesPage() {
   return (
-    <div className="min-h-screen bg-white font-sans text-slate-900 selection:bg-amber-100 selection:text-amber-900">
+    <div className="min-h-screen max-w-7xl mx-auto bg-white font-sans text-slate-900 selection:bg-trust-blue-50 selection:text-trust-blue-900">
       {/* 1. Header Section */}
-      <section className="relative pt-32 pb-20 px-6 overflow-hidden">
-        {/* Abstract Background Element */}
+      {/* <section className="relative pt-32 pb-20 px-6 overflow-hidden">
+        
         <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-slate-50 to-transparent -z-10" />
 
         <div className="container mx-auto max-w-6xl">
@@ -103,7 +104,7 @@ export default function ServicesPage() {
             transition={{ duration: 0.6 }}
             className="max-w-3xl"
           >
-            <SectionLabel>Our Expertise</SectionLabel>
+            <SectionLabel>Our Services</SectionLabel>
             <h1 className="text-4xl md:text-6xl font-light tracking-tight text-slate-900 mb-6">
               Asset management for the <br />
               <span className="font-serif italic font-medium text-slate-800">
@@ -117,73 +118,111 @@ export default function ServicesPage() {
             </p>
           </motion.div>
         </div>
-      </section>
+      </section> */}
+
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="mb-20 text-center md:text-left"
+      >
+        <div className="flex items-center gap-6 mb-8 justify-center md:justify-start">
+          <div className="h-[2px] w-16 bg-[#374B47]" />
+          <span className="text-[#374B47] font-display text-sm font-bold tracking-[0.5em] uppercase">
+            Our Services
+          </span>
+        </div>
+        <h2 className="font-display font-semibold text-6xl md:text-8xl text-[#121826] tracking-tighter leading-[0.9]">
+          Asset management for the <br className="hidden md:block" />
+          <span className="italic text-[#374b47] ">modern economy.</span>
+        </h2>
+      </motion.div>
 
       {/* 2. Main Services - The "Hero Cards" */}
-      <section className="py-12 px-6">
+      <section className="py-20 px-6 bg-slate-50/50">
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {mainServices.map((service, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative flex flex-col justify-between bg-white border border-slate-200 p-8 rounded-2xl hover:shadow-xl hover:shadow-slate-200/50 transition-all duration-500 ease-out hover:-translate-y-1"
+                
+                className="group relative flex flex-col h-full bg-gray-100 border border-slate-300 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-slate-200/50 transition-all duration-500 hover:-translate-y-1"
               >
-                {/* Hover Accent Line */}
-                <div className="absolute top-0 left-8 right-8 h-1 bg-amber-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                {/* Subtle Gradient Blob on Hover */}
+                <div className="absolute top-0 right-0 w-64 h-64 bg-trust-blue-50/50 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none -translate-y-1/2 translate-x-1/2" />
 
-                <div>
-                  {/* Icon */}
-                  <div className="w-14 h-14 bg-slate-50 rounded-xl flex items-center justify-center mb-8 border border-slate-100 group-hover:bg-amber-50 group-hover:border-amber-100 transition-colors duration-300">
-                    <service.icon
-                      className="w-6 h-6 text-slate-700 group-hover:text-amber-700 transition-colors"
-                      strokeWidth={1.5}
-                    />
+                {/* Top Section: Value Prop */}
+                <div className="p-8 relative z-10 flex-grow">
+                  <div className="flex justify-between items-start mb-6">
+                    {/* Icon with glowing backdrop */}
+                    <div className="relative">
+                      <div className="absolute inset-0 bg-trust-blue-100 rounded-xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      <div className="relative w-14 h-14 bg-white border border-slate-100 rounded-xl flex items-center justify-center text-slate-600 shadow-sm group-hover:text-trust-blue-600 group-hover:border-trust-blue-100 transition-all duration-300">
+                        <service.icon className="w-7 h-7" strokeWidth={1.5} />
+                      </div>
+                    </div>
+
+                    {/* Decorative Arrow */}
+                    <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-x-2 group-hover:translate-x-0">
+                      <ArrowRight className="w-5 h-5 text-trust-blue-600" />
+                    </div>
                   </div>
 
-                  {/* Content */}
-                  <h3 className="text-2xl font-medium text-slate-900 mb-4">
+                  <h3 className="text-2xl font-semibold text-slate-900 mb-3 tracking-tight">
                     {service.title}
                   </h3>
-                  <p className="text-slate-500 leading-relaxed mb-8">
+                  <p className="text-slate-500 leading-relaxed text-base">
                     {service.description}
                   </p>
+                </div>
 
-                  {/* Benefits Divider */}
-                  <div className="h-px w-full bg-slate-100 mb-6 group-hover:bg-slate-200 transition-colors" />
+                {/* Bottom Section: Features & Action (The "Grounded" look) */}
+                <div className="bg-slate-50/80 border-t border-slate-100 p-8 pt-6 mt-auto relative z-10 group-hover:bg-slate-50 transition-colors">
+                  <div className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">
+                    Key Features
+                  </div>
 
-                  {/* Benefits List */}
-                  <ul className="space-y-3 mb-8">
+                  <ul className="space-y-3 mb-6">
                     {service.benefits.map((benefit, i) => (
                       <li
                         key={i}
-                        className="flex items-start text-sm text-slate-600"
+                        className="flex items-start text-sm text-slate-600 font-medium"
                       >
-                        <Check className="w-4 h-4 text-amber-600 mr-3 mt-0.5 shrink-0" />
+                        <div className="mt-0.5 mr-3 p-0.5 rounded-full bg-trust-blue-100/50 text-trust-blue-600">
+                          <Check className="w-3 h-3" strokeWidth={3} />
+                        </div>
                         {benefit}
                       </li>
                     ))}
                   </ul>
-                </div>
 
-                {/* Action */}
-                <div className="mt-auto pt-4">
-                  <button className="flex items-center text-sm font-semibold text-slate-900 group-hover:text-amber-700 transition-colors">
-                    Explore Solution
-                    <ArrowRight className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" />
-                  </button>
+                  {/* <button className="w-full py-3 px-4 rounded-lg border border-slate-200 bg-white text-slate-900 text-sm font-semibold hover:border-trust-blue-200 hover:text-trust-blue-700 hover:shadow-md transition-all duration-300 flex items-center justify-center gap-2 group/btn">
+                    View Details
+                    <ArrowRight className="w-4 h-4 text-slate-400 group-hover/btn:text-trust-blue-500 transition-colors" />
+                  </button> */}
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
+      <Link href="/services">
+      
+      <button className="group relative flex items-center mx-auto mb-20 justify-center gap-3 px-8 py-3 rounded-full bg-slate-900 text-white text-sm font-semibold tracking-wide shadow-lg shadow-slate-200 hover:shadow-xl hover:shadow-gold-900/10 hover:-translate-y-0.5 transition-all duration-300 overflow-hidden">
+        {/* Hover Gradient Background Effect */}
+        <div className="absolute inset-0 bg-gradient-to-r from-gold-900 to-gold-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out" />
+
+        {/* Content (Relative to sit on top of gradient) */}
+        <span className="relative  font-display z-10 flex items-center gap-2">
+          Discover more
+          <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-white group-hover:translate-x-1 transition-all duration-300" />
+        </span>
+      </button>
+      </Link>
 
       {/* 3. Secondary Services - "Bento" Style Grid */}
-      <section className="py-24 px-6 bg-slate-50/50">
+      {/* <section className="py-24 px-6 bg-slate-50/50">
         <div className="container mx-auto max-w-6xl">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div>
@@ -214,12 +253,12 @@ export default function ServicesPage() {
                   <div className="p-2.5 bg-slate-50 rounded-lg text-slate-600 group-hover:bg-amber-50 group-hover:text-amber-700 transition-colors">
                     <service.icon className="w-5 h-5" strokeWidth={1.5} />
                   </div>
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 bg-slate-100 px-2 py-1 rounded-md group-hover:bg-amber-50 group-hover:text-amber-700/70 transition-colors">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 bg-slate-100 px-2 py-1 rounded-md group-hover:bg-trust-blue-50 group-hover:text-trust-blue-700/70 transition-colors">
                     {service.category}
                   </span>
                 </div>
 
-                <h3 className="text-lg font-medium text-slate-900 mb-2 group-hover:text-amber-800 transition-colors">
+                <h3 className="text-lg font-medium text-slate-900 mb-2 group-hover:text-trust-blue-800 transition-colors">
                   {service.title}
                 </h3>
                 <p className="text-sm text-slate-500 leading-relaxed">
@@ -228,7 +267,7 @@ export default function ServicesPage() {
               </motion.div>
             ))}
 
-            {/* CTA Card injected into the grid */}
+       
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -249,7 +288,7 @@ export default function ServicesPage() {
             </motion.div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
