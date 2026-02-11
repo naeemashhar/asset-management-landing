@@ -140,17 +140,35 @@ export default function ServicesPage() {
       </motion.div>
 
       {/* 2. Main Services - The "Hero Cards" */}
-      <section className="py-20 px-6 bg-slate-50/50">
+      
+      <section className="py-20 px-6 ">
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {mainServices.map((service, index) => (
               <motion.div
                 key={index}
-                
-                className="group relative flex flex-col h-full bg-gray-100 border border-slate-300 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-slate-200/50 transition-all duration-500 hover:-translate-y-1"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="group relative flex flex-col h-full bg-white border border-slate-200 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-slate-200/50 transition-all duration-500 hover:-translate-y-1"
               >
                 {/* Subtle Gradient Blob on Hover */}
                 <div className="absolute top-0 right-0 w-64 h-64 bg-trust-blue-50/50 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none -translate-y-1/2 translate-x-1/2" />
+                {/* <div
+                  className="absolute -top-24 -right-24 w-72 h-72 
+                  bg-[radial-gradient(circle,rgba(34,197,94,0.35),transparent_70%)] 
+                  pointer-events-none"
+                /> */}
+                
+                
+
+                {/* Bottom Left Radial Gradient */}
+                <div
+                  className="absolute -bottom-24 -left-24 w-72 h-72 
+                  bg-[radial-gradient(circle,rgba(34,197,94,0.35),transparent_70%)] 
+                  pointer-events-none"
+                />
 
                 {/* Top Section: Value Prop */}
                 <div className="p-8 relative z-10 flex-grow">
@@ -182,6 +200,20 @@ export default function ServicesPage() {
                   <div className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">
                     Key Features
                   </div>
+                  <div
+                    className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[150%] h-[60%] pointer-events-none"
+                    style={{
+                      background: `radial-gradient(
+ellipse at bottom,
+rgba(34,197,94,0.28) 0%,
+rgba(22,163,74,0.18) 25%,
+rgba(74,222,128,0.12) 45%,
+rgba(134,239,172,0.07) 60%,
+rgba(187,247,208,0.04) 70%,
+transparent 85%
+)`,
+                    }}
+                  />
 
                   <ul className="space-y-3 mb-6">
                     {service.benefits.map((benefit, i) => (
@@ -207,18 +239,12 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-      <Link href="/services">
-      
-      <button className="group relative flex items-center mx-auto mb-20 justify-center gap-3 px-8 py-3 rounded-full bg-slate-900 text-white text-sm font-semibold tracking-wide shadow-lg shadow-slate-200 hover:shadow-xl hover:shadow-gold-900/10 hover:-translate-y-0.5 transition-all duration-300 overflow-hidden">
-        {/* Hover Gradient Background Effect */}
-        <div className="absolute inset-0 bg-gradient-to-r from-gold-900 to-gold-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out" />
 
-        {/* Content (Relative to sit on top of gradient) */}
-        <span className="relative  font-display z-10 flex items-center gap-2">
-          Discover more
-          <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-white group-hover:translate-x-1 transition-all duration-300" />
-        </span>
-      </button>
+      <Link href="/services">
+        <button className="flex items-center mx-auto text-white mb-20 bg-gradient-to-r from-gold-800 via-gold-750 to-gold-700 hover:bg-gold-800/40 justify-center gap-2 text-sm font-semibold border border-slate-200  px-5 py-2.5 rounded-full  transition-colors">
+          View Details
+          <ArrowRight className="w-4 h-4 text-white group-hover/btn:text-trust-blue-900 transition-colors" />
+        </button>
       </Link>
 
       {/* 3. Secondary Services - "Bento" Style Grid */}
