@@ -248,7 +248,7 @@ export default function ContactPage() {
                   </h3>
                 </div>
 
-                <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20">
+                <div className="bg-white/10 p-6 rounded-lg border border-white/20">
                   <p className="text-white text-sm md:text-base font-medium leading-relaxed">
                     <span className="text-gold-400 font-bold">IMPORTANT:</span> The risk of loss in trading commodity interests can be substantial. You should therefore carefully consider whether such trading is suitable for you in light of your financial condition. Past performance is not necessarily indicative of future results.
                   </p>
