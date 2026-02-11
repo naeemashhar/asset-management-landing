@@ -299,30 +299,44 @@ export default function ServicesPage() {
                 </div>
 
                 {/* Bottom Section: Features & Action (The "Grounded" look) */}
-                <div className="bg-slate-50/80 border-t border-slate-100 p-8 pt-6 mt-auto relative z-10 group-hover:bg-slate-50 transition-colors">
-                  <div className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">
-                    Key Features
-                  </div>
-
-                  <ul className="space-y-3 mb-6">
-                    {service.benefits.map((benefit, i) => (
-                      <li
-                        key={i}
-                        className="flex items-start text-sm text-slate-600 font-medium"
-                      >
-                        <div className="mt-0.5 mr-3 p-0.5 rounded-full bg-trust-blue-100/50 text-trust-blue-600">
-                          <Check className="w-3 h-3" strokeWidth={3} />
-                        </div>
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-
-                  {/* <button className="w-full py-3 px-4 rounded-lg border border-slate-200 bg-white text-slate-900 text-sm font-semibold hover:border-trust-blue-200 hover:text-trust-blue-700 hover:shadow-md transition-all duration-300 flex items-center justify-center gap-2 group/btn">
-                    View Details
-                    <ArrowRight className="w-4 h-4 text-slate-400 group-hover/btn:text-trust-blue-500 transition-colors" />
-                  </button> */}
-                </div>
+               <div className="bg-slate-50/80 border-t border-slate-100 p-8 pt-6 mt-auto relative z-10 group-hover:bg-slate-50 transition-colors">
+                                 <div className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">
+                                   Key Features
+                                 </div>
+                                 <div
+                                   className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[150%] h-[60%] pointer-events-none"
+                                   style={{
+                                     background: `radial-gradient(
+               ellipse at bottom,
+               rgba(34,197,94,0.28) 0%,
+               rgba(22,163,74,0.18) 25%,
+               rgba(74,222,128,0.12) 45%,
+               rgba(134,239,172,0.07) 60%,
+               rgba(187,247,208,0.04) 70%,
+               transparent 85%
+               )`,
+                                   }}
+                                 />
+               
+                                 <ul className="space-y-3 mb-6">
+                                   {service.benefits.map((benefit, i) => (
+                                     <li
+                                       key={i}
+                                       className="flex items-start text-sm text-slate-600 font-medium"
+                                     >
+                                       <div className="mt-0.5 mr-3 p-0.5 rounded-full bg-trust-blue-100/50 text-trust-blue-600">
+                                         <Check className="w-3 h-3" strokeWidth={3} />
+                                       </div>
+                                       {benefit}
+                                     </li>
+                                   ))}
+                                 </ul>
+               
+                                 {/* <button className="w-full py-3 px-4 rounded-lg border border-slate-200 bg-white text-slate-900 text-sm font-semibold hover:border-trust-blue-200 hover:text-trust-blue-700 hover:shadow-md transition-all duration-300 flex items-center justify-center gap-2 group/btn">
+                                   View Details
+                                   <ArrowRight className="w-4 h-4 text-slate-400 group-hover/btn:text-trust-blue-500 transition-colors" />
+                                 </button> */}
+                               </div>
               </motion.div>
             ))}
           </div>

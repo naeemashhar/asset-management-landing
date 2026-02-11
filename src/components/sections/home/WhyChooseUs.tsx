@@ -158,7 +158,7 @@ export default function WhyChooseUsHeartbeat() {
                 <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center gap-8">
                   {/* Icon Box */}
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-500">
+                    <div className="w-16 h-16 rounded-xl  flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-500">
                       <FaShieldAlt className="text-white text-3xl" />
                     </div>
                   </div>

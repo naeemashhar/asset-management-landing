@@ -16,8 +16,8 @@ export default function Home() {
       <AboutBrief />
       <WhyChooseUs />
       {/* <ServicesGrid /> */}
-      <DisclosureBento />
       <ServicesPage />
+      <DisclosureBento />
       {/* <ProcessTimeline /> */}
       {/* <Testimonials /> */}
       {/* <CaseStudiesPreview /> */}

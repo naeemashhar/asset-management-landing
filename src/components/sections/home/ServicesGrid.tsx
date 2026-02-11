@@ -20,10 +20,9 @@ import {
   FaNetworkWired,
   // FaLock
   FaCheck,
-  FaArrowRight
+  FaArrowRight,
 } from "react-icons/fa";
 import { Button } from "@/components/ui/Button";
-import { motion } from "framer-motion";
 
 // Register ScrollTrigger
 if (typeof window !== "undefined") {
@@ -223,7 +222,7 @@ const services = [
 //                         </p>
 //                       </div>
 //                     ))}
-//                   </div>  
+//                   </div>
 //                 </div>
 //               </div>
 
@@ -272,13 +271,7 @@ function DisclosureBento() {
     <div className="py-32 px-6 relative z-10 bg-[#F4F1EE]">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-20 text-center md:text-left"
-        >
+        <div className="mb-20 text-center md:text-left">
           <div className="flex items-center gap-6 mb-8 justify-center md:justify-start">
             <div className="h-[2px] w-16 bg-[#374B47]" />
             <span className="text-[#374B47] font-display text-sm font-bold tracking-[0.5em] uppercase">
@@ -289,16 +282,11 @@ function DisclosureBento() {
             Required <br className="hidden md:block" />
             <span className="italic text-[#374b47] ">Disclosures</span>
           </h2>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           {/* 01: Risk Disclosure */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.98 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="md:col-span-8 group relative bg-white border border-stone-200 p-10 md:p-16 overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-2xl transition-all duration-700"
-          >
+          <div className="md:col-span-8 group relative bg-white border border-stone-200 p-10 md:p-16 overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-2xl transition-all duration-700">
             <div className="relative z-10">
               <div className="flex justify-between items-start mb-5">
                 <span className="text-stone-100 font-display text-[8rem] absolute -top-18 -right-10 select-none group-hover:text-stone-200 transition-colors leading-none">
@@ -324,15 +312,10 @@ function DisclosureBento() {
                 </p>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* 04: Limited Experience (High Contrast Warning) */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="md:col-span-4 group relative bg-[#D1D2BC] p-10 flex flex-col justify-center overflow-hidden shadow-xl"
-          >
+          <div className="md:col-span-4 group relative bg-[#D1D2BC] p-10 flex flex-col justify-center overflow-hidden shadow-xl">
             <span className="text-white/20 font-display text-8xl absolute top-1 right-6 select-none">
               02
             </span>
@@ -351,15 +334,10 @@ function DisclosureBento() {
               hypothetical result, Customers should be particularly wary of
               placing undue reliance on hypothetical performance results.
             </p>
-          </motion.div>
+          </div>
 
           {/* 02: Past Performance */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="md:col-span-5 group relative bg-[#374B47] p-10 md:p-16 overflow-hidden shadow-xl"
-          >
+          <div className="md:col-span-5 group relative bg-[#374B47] p-10 md:p-16 overflow-hidden shadow-xl">
             <div className="relative z-10">
               <span className="text-white/10 font-display text-9xl absolute -top-16 -right-10 select-none">
                 03
@@ -378,15 +356,10 @@ function DisclosureBento() {
                 Compliance Rule 2-29 & 2-36
               </p>
             </div>
-          </motion.div>
+          </div>
 
           {/* 03: Suitability Considerations */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="md:col-span-7 group relative bg-white border border-stone-200 p-10 md:p-16 overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-700"
-          >
+          <div className="md:col-span-7 group relative bg-white border border-stone-200 p-10 md:p-16 overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-700">
             <span className="text-stone-100 font-display text-9xl absolute -top-4 right-4 select-none">
               04
             </span>
@@ -409,15 +382,10 @@ function DisclosureBento() {
                 position.
               </p>
             </div>
-          </motion.div>
+          </div>
 
           {/* 05: Before You Invest / Documentation */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="md:col-span-12 group relative bg-trust-blue-950 border border-trust-blue-800 p-8 md:p-16 overflow-hidden shadow-2xl rounded-2xl"
-          >
+          <div className="md:col-span-12 group relative bg-trust-blue-950 border border-trust-blue-800 p-8 md:p-16 overflow-hidden shadow-2xl rounded-2xl">
             {/* Background Effects */}
             <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-trust-blue-900/40 rounded-full  -mr-40 -mt-40 pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gold-400/5 rounded-full  -ml-20 -mb-20 pointer-events-none" />
@@ -496,7 +464,7 @@ function DisclosureBento() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </div>
