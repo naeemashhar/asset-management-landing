@@ -13,10 +13,10 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <AboutBrief />
       <WhyChooseUs />
       {/* <ServicesGrid /> */}
       <DisclosureBento />
-      <AboutBrief />
       <ServicesPage />
       {/* <ProcessTimeline /> */}
       {/* <Testimonials /> */}

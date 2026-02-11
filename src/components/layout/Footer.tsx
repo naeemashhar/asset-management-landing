@@ -65,8 +65,8 @@ export default function Footer() {
 
         {/* Bottom Section: <Grid></Grid> Layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
-          {/* Col 1: Award Badge (Span 3) */}
-          <div className="lg:col-span-3 flex flex-col justify-end">
+          {/* Col 1: Award Badge (Span 4) */}
+          <div className="lg:col-span-4 flex flex-col justify-center">
             <div className="inline-flex items-center gap-4 text-gold-400 border border-gold-400/30 px-6 py-4 rounded-sm bg-trust-blue-900/20 max-w-max">
               <FaAward className="text-4xl" />
               <div>
@@ -81,9 +81,9 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Col 2: Services (Span 2) */}
-          <div className="lg:col-span-2">
-            <h4 className="font-bold text-white mb-6 text -sm uppercase tracking-wide">
+          {/* Col 2: Services (Span 3) */}
+          <div className="lg:col-span-3">
+            <h4 className="font-bold text-white mb-6 text-sm uppercase tracking-wide">
               Services
             </h4>
             <ul className="space-y-4">
@@ -138,75 +138,10 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/team"
-                  className="text-trust-blue-300 hover:text-white transition-colors text-sm font-medium"
-                >
-                  Our People
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className="text-trust-blue-300 hover:text-white transition-colors text-sm font-medium"
-                >
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/about"
-                  className="text-trust-blue-300 hover:text-white transition-colors text-sm font-medium"
-                >
-                  Awards & Recognitions
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/contact"
                   className="text-trust-blue-300 hover:text-white transition-colors text-sm font-medium"
                 >
                   Contacts
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Col 4: Thinking (Span 2) */}
-          <div className="lg:col-span-2">
-            <h4 className="font-bold text-white mb-6 text-sm uppercase tracking-wide">
-              Thinking
-            </h4>
-            <ul className="space-y-4">
-              <li>
-                <Link
-                  href="/blog"
-                  className="text-trust-blue-300 hover:text-white transition-colors text-sm font-medium"
-                >
-                  Insights
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/case-studies"
-                  className="text-trust-blue-300 hover:text-white transition-colors text-sm font-medium"
-                >
-                  Case Studies
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className="text-trust-blue-300 hover:text-white transition-colors text-sm font-medium"
-                >
-                  Subscribe
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/about"
-                  className="text-trust-blue-300 hover:text-white transition-colors text-sm font-medium"
-                >
-                  Media Mentions
                 </Link>
               </li>
             </ul>

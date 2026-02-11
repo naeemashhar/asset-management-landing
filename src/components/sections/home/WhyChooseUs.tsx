@@ -139,25 +139,50 @@ export default function WhyChooseUsHeartbeat() {
               ))}
             </div>
 
-            {/* Risk Footer - Integrated & Subtle */}
-            {/* Risk Footer - Integrated & Subtle */}
+            {/* Risk Footer - Premium Redesign */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="mt-16 ml-4 lg:ml-0"
+              className="mt-24 relative group"
             >
-              <div className="bg-slate-50 border-l-4 border-gold-400 p-6 rounded-r-sm flex items-start gap-4 shadow-sm hover:shadow-md transition-shadow duration-300">
-                <div className="mt-1">
-                  <FaShieldAlt className="text-gold-400 text-xl" />
+              {/* Decorative Glow */}
+              <div className="absolute -inset-1 bg-gradient-to-r from-gold-400 to-trust-blue-500 rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+
+              <div className="relative bg-[#1B2525] p-8 md:p-10 rounded-xl border border-trust-blue-800/50 shadow-2xl overflow-hidden">
+                {/* Background Texture */}
+                <div className="absolute top-0 right-0 p-12 opacity-5 pointer-events-none">
+                  <FaShieldAlt className="text-9xl text-gold-400 transform rotate-12" />
                 </div>
-                <div>
-                  <h4 className="font-bold text-trust-blue-950 text-sm uppercase tracking-wider mb-2">
-                    Risk Disclosure
-                  </h4>
-                  <p className="text-xs md:text-sm text-slate-600 leading-relaxed max-w-xl">
-                    Commodity trading involves substantial risk of loss. Past results are not necessarily indicative of future results. Investors should carefully consider their financial condition before trading.
-                  </p>
+
+                <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center gap-8">
+                  {/* Icon Box */}
+                  <div className="flex-shrink-0">
+                    <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-500">
+                      <FaShieldAlt className="text-white text-3xl" />
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-2">
+                      <h4 className="font-display font-bold text-white text-xl uppercase tracking-wide">
+                        Risk Disclosure
+                      </h4>
+                      <div className="px-2 py-0.5 rounded text-[10px] font-bold bg-white/10 text-gold-400 border border-gold-400/20 uppercase tracking-wider">
+                        Important
+                      </div>
+                    </div>
+
+                    <p className="text-trust-blue-200 text-sm leading-relaxed font-light border-l-2 border-gold-500/50 pl-4">
+                      Commodity trading involves substantial risk of loss. Past results are not necessarily indicative of future results. Investors should carefully consider their financial condition before trading.
+                    </p>
+                  </div>
+
+                  {/* Action or Visual Indicator */}
+                  <div className="hidden lg:block opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform translate-x-4 group-hover:translate-x-0">
+                    {/* <FaArrowRight className="text-gold-400 text-2xl" /> */}
+                  </div>
                 </div>
               </div>
             </motion.div>

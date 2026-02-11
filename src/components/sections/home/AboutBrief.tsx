@@ -43,9 +43,9 @@ export default function AboutBrief() {
             >
               Why us
             </motion.span> */}
-            <div className="flex items-center gap-2">
-              <div className="h-[1px] w-12 bg-gradient-to-r from-gold-600 to-gold-400" />
-              <span className="text-gold-800 font-sans text-md font-semibold tracking-[0.3em] uppercase">
+            <div className="flex items-center gap-2 mb-4">
+              <div className="h-[4px] w-12 bg-gradient-to-r from-gold-700 to-gold-600" />
+              <span className="text-gold-800 font-sans text-3xl font-bold tracking-[0.3em] uppercase">
                 Why us
               </span>
             </div>
