@@ -113,8 +113,7 @@ export default function Hero() {
           className="text-lg md:text-md text-trust-blue-200 max-w-2xl mb-10 leading-relaxed font-light"
         >
           Expert guidance and portfolio management in the dynamic world of
-          futures and commodities trading. Decades of combined experience
-          serving institutional and individual clients.
+          futures and commodities trading. 
         </motion.p>
 
         <motion.div

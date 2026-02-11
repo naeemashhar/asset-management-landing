@@ -6,17 +6,21 @@ import ProcessTimeline from "@/components/sections/home/ProcessTimeline";
 import Testimonials from "@/components/sections/home/Testimonials";
 import CaseStudiesPreview from "@/components/sections/home/CaseStudiesPreview";
 import CTABanner from "@/components/sections/home/CTABanner";
+import DisclosureBento from "@/components/sections/home/ServicesGrid";
+import ServicesPage from "@/components/sections/home/Services";
 
 export default function Home() {
   return (
     <>
       <Hero />
       <WhyChooseUs />
-      <ServicesGrid />
+      {/* <ServicesGrid /> */}
+      <DisclosureBento />
       <AboutBrief />
-      <ProcessTimeline />
-      <Testimonials />
-      <CaseStudiesPreview />
+      <ServicesPage />
+      {/* <ProcessTimeline /> */}
+      {/* <Testimonials /> */}
+      {/* <CaseStudiesPreview /> */}
       <CTABanner />
     </>
   );
