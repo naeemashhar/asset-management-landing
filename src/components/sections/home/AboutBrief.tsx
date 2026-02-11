@@ -57,8 +57,7 @@ export default function AboutBrief() {
               className=" font-display tracking-wider
               text-4xl md:text-5xl font-bold text-trust-blue-950 mb-8 leading-tight"
             >
-              Trusted experts with years of experience and industry
-              accreditations
+              Trusted Advisors with Professional Accreditations
             </motion.h2>
 
             <motion.div

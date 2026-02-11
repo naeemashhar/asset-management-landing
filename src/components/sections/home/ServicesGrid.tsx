@@ -149,123 +149,123 @@ const services = [
      }, */
 ];
 
-export default function ServicesGrid() {
-  const container = useRef<HTMLDivElement>(null);
-  const cards = useRef<(HTMLDivElement | null)[]>([]);
+// export default function ServicesGrid() {
+//   const container = useRef<HTMLDivElement>(null);
+//   const cards = useRef<(HTMLDivElement | null)[]>([]);
 
-  useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
-      cards.current.forEach((card, index) => {
-        if (card && index < cards.current.length - 1) {
-          gsap.to(card, {
-            scale: 0.95, // Subtle scale
-            scrollTrigger: {
-              trigger: card,
-              start: "top top",
-              end: "bottom top",
-              scrub: true,
-            },
-          });
-        }
-      });
-    }, container);
-    return () => ctx.revert();
-  }, []);
+//   useLayoutEffect(() => {
+//     const ctx = gsap.context(() => {
+//       cards.current.forEach((card, index) => {
+//         if (card && index < cards.current.length - 1) {
+//           gsap.to(card, {
+//             scale: 0.95, // Subtle scale
+//             scrollTrigger: {
+//               trigger: card,
+//               start: "top top",
+//               end: "bottom top",
+//               scrub: true,
+//             },
+//           });
+//         }
+//       });
+//     }, container);
+//     return () => ctx.revert();
+//   }, []);
 
-  return (
-    <section ref={container} className="relative" id="services">
-      {/* Header / Intro pinned at top or just part of flow */}
-      <div className="py-24 px-6 text-center">
-        <span className="block text-trust-blue-500 font-medium tracking-widest text-sm uppercase mb-3">
-          Our Expertise
-        </span>
-        <h2 className=" font-display  text-4xl md:text-5xl font-bold text-trust-blue-950 mb-4">
-          Comprehensive Solutions
-        </h2>
-        <p className="text-trust-blue-600 text-lg max-w-2xl mx-auto">
-          Bespoke strategies tailored to your unique financial ambitions.
-        </p>
-      </div>
+//   return (
+//     <section ref={container} className="relative" id="services">
+//       {/* Header / Intro pinned at top or just part of flow */}
+//       <div className="py-24 px-6 text-center">
+//         <span className="block text-trust-blue-500 font-medium tracking-widest text-sm uppercase mb-3">
+//           Our Expertise
+//         </span>
+//         <h2 className=" font-display  text-4xl md:text-5xl font-bold text-trust-blue-950 mb-4">
+//           Comprehensive Solutions
+//         </h2>
+//         <p className="text-trust-blue-600 text-lg max-w-2xl mx-auto">
+//           Bespoke strategies tailored to your unique financial ambitions.
+//         </p>
+//       </div>
 
-      <div className="pb-24 ">
-        {services.map((service, i) => (
-          <div
-            key={i}
-            ref={(el) => {
-              cards.current[i] = el;
-            }}
-            className="rounded-sm nav-section h-screen w-[95%] mx-auto sticky top-0 flex items-center justify-center overflow-hidden bg-[#EFEFE4]" // Adjusted background color
-          >
-            <div className="w-full h-full max-w-[1920px] mx-auto relative flex flex-col lg:flex-row items-center">
-              {/* Left Content Area */}
-              <div className="w-full lg:w-[65%] h-full px-8 md:px-16 lg:px-24 flex flex-col justify-center relative z-20 pointer-events-none">
-                <div className="pointer-events-auto pr-0 lg:pr-20">
-                  <div className="text-[#6F6E63] font-medium tracking-widest text-sm mb-4">
-                    {service.id} {service.category}
-                  </div>
+//       <div className="pb-24 ">
+//         {services.map((service, i) => (
+//           <div
+//             key={i}
+//             ref={(el) => {
+//               cards.current[i] = el;
+//             }}
+//             className="rounded-sm nav-section h-screen w-[95%] mx-auto sticky top-0 flex items-center justify-center overflow-hidden bg-[#EFEFE4]" // Adjusted background color
+//           >
+//             <div className="w-full h-full max-w-[1920px] mx-auto relative flex flex-col lg:flex-row items-center">
+//               {/* Left Content Area */}
+//               <div className="w-full lg:w-[65%] h-full px-8 md:px-16 lg:px-24 flex flex-col justify-center relative z-20 pointer-events-none">
+//                 <div className="pointer-events-auto pr-0 lg:pr-20">
+//                   <div className="text-[#6F6E63] font-medium tracking-widest text-sm mb-4">
+//                     {service.id} {service.category}
+//                   </div>
 
-                  <h3 className="font-display text-5xl md:text-7xl font-bold text-[#6F6E63] mb-12 lg:mb-20 leading-tight">
-                    {service.title}
-                  </h3>
+//                   <h3 className="font-display text-5xl md:text-7xl font-bold text-[#6F6E63] mb-12 lg:mb-20 leading-tight">
+//                     {service.title}
+//                   </h3>
 
-                  <div className="grid grid-cols-1 md:grid-cols-3 bg-white shadow-sm rounded-none overflow-hidden divide-y md:divide-y-0 md:divide-x divide-gray-200">
-                    {service.subFeatures.map((feat, idx) => (
-                      <div
-                        key={idx}
-                        className="py-10 px-4 hover:bg-gray-50 transition-colors duration-300 group"
-                      >
-                        <feat.icon className="text-4xl text-black mb-6" />
-                        <h4 className="font-display text-xl font-bold text-black mb-4">
-                          {feat.title}
-                        </h4>
-                        <p className="text-[#6F6E63] text-base leading-relaxed">
-                          {feat.desc}
-                        </p>
-                      </div>
-                    ))}
-                  </div>  
-                </div>
-              </div>
+//                   <div className="grid grid-cols-1 md:grid-cols-3 bg-white shadow-sm rounded-none overflow-hidden divide-y md:divide-y-0 md:divide-x divide-gray-200">
+//                     {service.subFeatures.map((feat, idx) => (
+//                       <div
+//                         key={idx}
+//                         className="py-10 px-4 hover:bg-gray-50 transition-colors duration-300 group"
+//                       >
+//                         <feat.icon className="text-4xl text-black mb-6" />
+//                         <h4 className="font-display text-xl font-bold text-black mb-4">
+//                           {feat.title}
+//                         </h4>
+//                         <p className="text-[#6F6E63] text-base leading-relaxed">
+//                           {feat.desc}
+//                         </p>
+//                       </div>
+//                     ))}
+//                   </div>  
+//                 </div>
+//               </div>
 
-              {/* Right Image Area */}
-              <div className="hidden lg:block w-[55%] h-full absolute right-0 top-0 overflow-hidden z-10">
-                <div
-                  className="w-full h-full bg-cover bg-center relative"
-                  style={{
-                    backgroundImage: `url(${service.image})`,
-                    clipPath: "polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%)", // Adjusted clip-path
-                  }}
-                ></div>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
+//               {/* Right Image Area */}
+//               <div className="hidden lg:block w-[55%] h-full absolute right-0 top-0 overflow-hidden z-10">
+//                 <div
+//                   className="w-full h-full bg-cover bg-center relative"
+//                   style={{
+//                     backgroundImage: `url(${service.image})`,
+//                     clipPath: "polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%)", // Adjusted clip-path
+//                   }}
+//                 ></div>
+//               </div>
+//             </div>
+//           </div>
+//         ))}
+//       </div>
 
-      {/* View All Services CTA */}
+//       {/* View All Services CTA */}
 
-      {/* View All Services CTA */}
-      <div className="pb-24  flex justify-center relative z-10">
-        <div className="text-center">
-          <p className="text-trust-blue-500 mb-6 text-sm uppercase tracking-widest">
-            Looking for more?
-          </p>
-          <Button
-            href="/services"
-            variant="gold"
-            size="lg"
-            className="min-w-[200px] bg-[#F4F1EE] hover:bg-[#374B47] hover:text-white"
-          >
-            Discover All Expertise
-          </Button>
-        </div>
-      </div>
+//       {/* View All Services CTA */}
+//       <div className="pb-24  flex justify-center relative z-10">
+//         <div className="text-center">
+//           <p className="text-trust-blue-500 mb-6 text-sm uppercase tracking-widest">
+//             Looking for more?
+//           </p>
+//           <Button
+//             href="/services"
+//             variant="gold"
+//             size="lg"
+//             className="min-w-[200px] bg-[#F4F1EE] hover:bg-[#374B47] hover:text-white"
+//           >
+//             Discover All Expertise
+//           </Button>
+//         </div>
+//       </div>
 
-      {/* Required Disclosures */}
-      <DisclosureBento />
-    </section>
-  );
-}
+//       {/* Required Disclosures */}
+//       <DisclosureBento />
+//     </section>
+//   );
+// }
 
 function DisclosureBento() {
   return (
@@ -502,3 +502,5 @@ function DisclosureBento() {
     </div>
   );
 }
+
+export default DisclosureBento;
