@@ -4,15 +4,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import {
   TrendingUp,
-  Landmark,
   HandCoins,
   ShieldCheck,
-  Globe,
-  GraduationCap,
-  FileText,
   ArrowRight,
   Check,
-  ChevronRight,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -54,40 +49,11 @@ const mainServices = [
   },
 ];
 
-const additionalServices = [
-  {
-    title: "Portfolio Consulting",
-    icon: Landmark,
-    category: "Analysis",
-    description:
-      "Independent analysis and actionable recommendations for existing positions.",
-  },
-  {
-    title: "Education & Training",
-    icon: GraduationCap,
-    category: "Learning",
-    description:
-      "Comprehensive educational programs for individuals and institutions.",
-  },
-  {
-    title: "Research Services",
-    icon: FileText,
-    category: "Intelligence",
-    description:
-      "In-depth research reports and market intelligence across commodity sectors.",
-  },
-];
+
 
 // --- Components ---
 
-const SectionLabel = ({ children }: { children: React.ReactNode }) => (
-  <div className="flex items-center gap-2 mb-4">
-    <span className="h-[1px] w-12 bg-trust-blue-400/50"></span>
-    <span className="text-xs font-bold tracking-widest text-gold-800 uppercase">
-      {children}
-    </span>
-  </div>
-);
+
 
 export default function ServicesPage() {
   return (
@@ -129,21 +95,21 @@ export default function ServicesPage() {
       >
         <div className="flex items-center gap-6 mb-8 justify-center md:justify-start">
           <div className="h-[2px] w-16 bg-[#374B47]" />
-          <span className="text-[#374B47] font-display text-sm font-bold tracking-[0.5em] uppercase">
+          <span className="text-[#374B47] font-display text-2xl mb-3 font-bold tracking-[0.5em] uppercase">
             Our Services
           </span>
         </div>
-        <h2 className="font-display font-semibold text-6xl md:text-8xl text-[#121826] tracking-tighter leading-[0.9]">
+        <h2 className="font-display font-semibold text-4xl md:text-7xl text-[#121826] tracking-tighter leading-[0.9]">
           Asset management for the <br className="hidden md:block" />
           <span className="italic text-[#374b47] ">modern economy.</span>
         </h2>
       </motion.div>
 
-      {/* 2. Main Services - The "Hero Cards" */}
-      
-      <section className="py-20 px-6 ">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+      <section className="py-24 relative overflow-hidden">
+
+        <div className="container mx-auto max-w-[1600px] px-8 relative z-10 ">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-24 mb-20 ">
             {mainServices.map((service, index) => (
               <motion.div
                 key={index}
@@ -151,170 +117,78 @@ export default function ServicesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative flex flex-col h-full bg-white border border-slate-200 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-slate-200/50 transition-all duration-500 hover:-translate-y-1"
+                className="group relative flex flex-col h-full bg-[#D1D2BC] rounded-md overflow-hidden hover:shadow-2xl hover:shadow-[#D1D2BC]/40 transition-all duration-500 hover:-translate-y-2 "
               >
-                {/* Subtle Gradient Blob on Hover */}
-                <div className="absolute top-0 right-0 w-64 h-64 bg-trust-blue-50/50 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none -translate-y-1/2 translate-x-1/2" />
-                {/* <div
-                  className="absolute -top-24 -right-24 w-72 h-72 
-                  bg-[radial-gradient(circle,rgba(34,197,94,0.35),transparent_70%)] 
-                  pointer-events-none"
-                /> */}
-                
-                
+                {/* Top Border Accent */}
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-trust-blue-900 via-gold-400 to-trust-blue-900 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
 
-                {/* Bottom Left Radial Gradient */}
-                <div
-                  className="absolute -bottom-24 -left-24 w-72 h-72 
-                  bg-[radial-gradient(circle,rgba(34,197,94,0.35),transparent_70%)] 
-                  pointer-events-none"
-                />
+                {/* Subtle Gradient Blob on Hover */}
+                <div className="absolute top-0 right-0 w-64 h-64 bg-[#F4F1EE]/30 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none -translate-y-1/2 translate-x-1/2" />
 
                 {/* Top Section: Value Prop */}
-                <div className="p-8 relative z-10 flex-grow">
-                  <div className="flex justify-between items-start mb-6">
+                <div className="px-10 py-5 relative z-10 flex-grow">
+                  <div className="flex justify-between items-start mb-8">
                     {/* Icon with glowing backdrop */}
                     <div className="relative">
-                      <div className="absolute inset-0 bg-trust-blue-100 rounded-xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                      <div className="relative w-14 h-14 bg-white border border-slate-100 rounded-xl flex items-center justify-center text-slate-600 shadow-sm group-hover:text-trust-blue-600 group-hover:border-trust-blue-100 transition-all duration-300">
+                      <div className="absolute inset-0 bg-gold-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      <div className="relative w-16 h-16 bg-[#F4F1EE]/60 border border-[#F4F1EE] rounded-full flex items-center justify-center text-trust-blue-900 shadow-sm group-hover:text-gold-600 group-hover:border-gold-500/30 transition-all duration-300">
                         <service.icon className="w-7 h-7" strokeWidth={1.5} />
                       </div>
                     </div>
 
                     {/* Decorative Arrow */}
-                    <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-x-2 group-hover:translate-x-0">
-                      <ArrowRight className="w-5 h-5 text-trust-blue-600" />
+                    <div className="relative overflow-hidden rounded-full p-2 opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-x-4 group-hover:translate-x-0">
+                      <ArrowRight className="w-5 h-5 text-trust-blue-800" />
                     </div>
                   </div>
 
-                  <h3 className="text-2xl font-semibold text-slate-900 mb-3 tracking-tight">
+                  <h3 className="font-serif text-2xl font-bold text-trust-blue-950 mb-4 tracking-wide group-hover:text-gold-700 transition-colors duration-300">
                     {service.title}
                   </h3>
-                  <p className="text-slate-500 leading-relaxed text-base">
+                  <p className="text-trust-blue-900/80 leading-relaxed text-base font-light group-hover:text-trust-blue-950 transition-colors">
                     {service.description}
                   </p>
                 </div>
 
-                {/* Bottom Section: Features & Action (The "Grounded" look) */}
-                <div className="bg-slate-50/80 border-t border-slate-100 p-8 pt-6 mt-auto relative z-10 group-hover:bg-slate-50 transition-colors">
-                  <div className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">
+                {/* Bottom Section: Features & Action */}
+                <div className="bg-[#F4F1EE] border-t border-[#EAE7E4] p-10 pt-8 mt-auto relative z-10 group-hover:bg-[#F4F1EE]/90 transition-colors duration-500">
+                  <div className="text-[10px] font-bold text-gold-600 uppercase tracking-[0.2em] mb-6 flex items-center gap-2 opacity-80 group-hover:opacity-100 transition-opacity">
+                    <span className="w-8 h-[1px] bg-gold-600/50"></span>
                     Key Features
                   </div>
-                  <div
-                    className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[150%] h-[60%] pointer-events-none"
-                    style={{
-                      background: `radial-gradient(
-ellipse at bottom,
-rgba(34,197,94,0.28) 0%,
-rgba(22,163,74,0.18) 25%,
-rgba(74,222,128,0.12) 45%,
-rgba(134,239,172,0.07) 60%,
-rgba(187,247,208,0.04) 70%,
-transparent 85%
-)`,
-                    }}
-                  />
 
-                  <ul className="space-y-3 mb-6">
+                  <ul className="space-y-4 mb-0">
                     {service.benefits.map((benefit, i) => (
                       <li
                         key={i}
-                        className="flex items-start text-sm text-slate-600 font-medium"
+                        className="flex items-start text-sm text-trust-blue-800 font-medium group-hover:text-trust-blue-950 transition-colors"
                       >
-                        <div className="mt-0.5 mr-3 p-0.5 rounded-full bg-trust-blue-100/50 text-trust-blue-600">
-                          <Check className="w-3 h-3" strokeWidth={3} />
+                        <div className="mt-1 mr-3 min-w-[16px]">
+                          <Check className="w-4 h-4 text-gold-600" strokeWidth={2.5} />
                         </div>
-                        {benefit}
+                        <span className="leading-snug">{benefit}</span>
                       </li>
                     ))}
                   </ul>
-
-                  {/* <button className="w-full py-3 px-4 rounded-lg border border-slate-200 bg-white text-slate-900 text-sm font-semibold hover:border-trust-blue-200 hover:text-trust-blue-700 hover:shadow-md transition-all duration-300 flex items-center justify-center gap-2 group/btn">
-                    View Details
-                    <ArrowRight className="w-4 h-4 text-slate-400 group-hover/btn:text-trust-blue-500 transition-colors" />
-                  </button> */}
                 </div>
               </motion.div>
             ))}
+          </div>
+
+          <div className="flex justify-center pb-8">
+            <Link href="/services">
+              <button className="group relative px-8 py-3 bg-white text-trust-blue-950 font-semibold rounded-full border border-gray-600 shadow-lg hover:shadow-xl hover:border-gold-400 hover:text-white hover:bg-[#202C2A] transition-all duration-300">
+                <span className="flex items-center gap-2 text-sm tracking-wide uppercase">
+                  View More
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </button>
+            </Link>
           </div>
         </div>
       </section>
 
-      <Link href="/services">
-        <button className="flex items-center mx-auto text-white mb-20 bg-gradient-to-r from-gold-800 via-gold-750 to-gold-700 hover:bg-gold-800/40 justify-center gap-2 text-sm font-semibold border border-slate-200  px-5 py-2.5 rounded-full  transition-colors">
-          View Details
-          <ArrowRight className="w-4 h-4 text-white group-hover/btn:text-trust-blue-900 transition-colors" />
-        </button>
-      </Link>
 
-      {/* 3. Secondary Services - "Bento" Style Grid */}
-      {/* <section className="py-24 px-6 bg-slate-50/50">
-        <div className="container mx-auto max-w-6xl">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-            <div>
-              <h2 className="text-3xl font-light text-slate-900 mb-3">
-                Specialized Capabilities
-              </h2>
-              <p className="text-slate-500 max-w-md">
-                Targeted financial services tailored to specific operational
-                needs.
-              </p>
-            </div>
-            <button className="hidden md:flex items-center gap-2 text-sm font-semibold border border-slate-200 bg-white px-5 py-2.5 rounded-full hover:bg-slate-50 transition-colors">
-              View Full Service Map <ChevronRight className="w-4 h-4" />
-            </button>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {additionalServices.map((service, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="group bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:border-trust-blue-200 hover:shadow-md transition-all cursor-pointer"
-              >
-                <div className="flex justify-between items-start mb-4">
-                  <div className="p-2.5 bg-slate-50 rounded-lg text-slate-600 group-hover:bg-amber-50 group-hover:text-amber-700 transition-colors">
-                    <service.icon className="w-5 h-5" strokeWidth={1.5} />
-                  </div>
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 bg-slate-100 px-2 py-1 rounded-md group-hover:bg-trust-blue-50 group-hover:text-trust-blue-700/70 transition-colors">
-                    {service.category}
-                  </span>
-                </div>
-
-                <h3 className="text-lg font-medium text-slate-900 mb-2 group-hover:text-trust-blue-800 transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-sm text-slate-500 leading-relaxed">
-                  {service.description}
-                </p>
-              </motion.div>
-            ))}
-
-       
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.3 }}
-              className="bg-slate-900 p-6 rounded-xl border border-slate-800 flex flex-col justify-center items-center text-center group cursor-pointer"
-            >
-              <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                <Globe className="w-5 h-5 text-trust-blue-500" />
-              </div>
-              <h3 className="text-white font-medium mb-1">Global Access</h3>
-              <p className="text-slate-400 text-xs mb-4">
-                Trading access to all major global exchanges.
-              </p>
-              <span className="text-trust-blue-500 text-xs font-bold uppercase tracking-widest group-hover:underline underline-offset-4">
-                Contact Sales
-              </span>
-            </motion.div>
-          </div>
-        </div>
-      </section> */}
     </div>
   );
 }
