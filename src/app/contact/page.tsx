@@ -4,11 +4,6 @@ import PageHeader from "@/components/layout/PageHeader";
 import { Button } from "@/components/ui/Button";
 import { motion } from "framer-motion";
 import {
-  FaPhone,
-  FaEnvelope,
-  FaMapMarkerAlt,
-  FaLinkedinIn,
-  FaTwitter,
   FaExclamationTriangle,
 } from "react-icons/fa";
 
@@ -178,95 +173,98 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Important Compliance Information */}
-          <div className="w-[90%] mx-auto mt-20">
-            <div className="text-center mb-12">
-              <h2 className=" font-display  text-3xl md:text-4xl font-bold text-trust-blue-950 mb-4">
+          {/* Important Compliance Information & Risk Disclosures - Premium Redesign */}
+          <div className="w-full max-w-6xl mx-auto mt-24 mb-16 px-6">
+            <div className="text-center mb-16">
+              <div className="flex items-center gap-4 justify-center mb-4">
+                <div className="h-[1px] w-12 bg-gold-400/50" />
+               {/*  <span className="text-gold-500 font-bold uppercase tracking-[0.2em] text-xs">
+                  Regulatory Framework
+                </span> */}
+                <div className="h-[1px] w-12 bg-gold-400/50" />
+              </div>
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-trust-blue-950 mb-6">
                 Important Compliance Information
               </h2>
-              <p className="text-trust-blue-600 max-w-2xl mx-auto">
+              <p className="text-slate-500 max-w-2xl mx-auto leading-relaxed">
                 Transparency and regulatory compliance are at the core of our operations
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6 mb-12">
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
               {/* Regulatory Information Card */}
-              <div className="group bg-gradient-to-br from-white to-gray-50 p-8 rounded-xl shadow-sm border border-gray-200 hover:border-gold-800 hover:shadow-lg transition-all duration-300">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-gold-400/10 rounded-lg group-hover:bg-gold-400/20 transition-colors">
-                    <FaExclamationTriangle className="text-gold-500 text-2xl" />
+              <div className="group bg-white p-8 rounded-xl shadow-sm border border-slate-200 hover:border-gold-400/50 hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-trust-blue-50 rounded-bl-full -mr-16 -mt-16 transition-transform group-hover:scale-110" />
+
+                <div className="relative z-10 flex items-start gap-5">
+                  <div className="p-3 bg-trust-blue-50 rounded-lg group-hover:bg-trust-blue-900 group-hover:text-gold-400 transition-colors duration-300">
+                    <div className="font-display font-bold text-xl">01</div>
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-display font-bold text-xl text-trust-blue-950 mb-3">
+                    <h3 className="font-display font-bold text-xl text-trust-blue-950 mb-3 group-hover:text-trust-blue-800 transition-colors">
                       Regulatory Information
                     </h3>
-                    <p className="text-gray-700 text-sm leading-relaxed">
-                      Valora Asset Management is registered with the NFA as a
-                      Commodity Trading Advisor (CTA). All promotional materials
-                      comply with NFA Compliance Rules 2-29 and 2-36.
+                    <p className="text-slate-600 text-sm leading-relaxed mb-4">
+                      Valora Asset Management is registered with the NFA as a Commodity Trading Advisor (CTA). All promotional materials comply with NFA Compliance Rules 2-29 and 2-36.
                     </p>
+                    {/* <div className="flex items-center gap-2 text-xs font-semibold text-trust-blue-600">
+                      <div className="w-1.5 h-1.5 rounded-full bg-gold-400" />
+                      NFA ID: 0560642
+                    </div> */}
                   </div>
                 </div>
               </div>
 
               {/* Record Retention Card */}
-              <div className="group bg-gradient-to-br from-white to-gray-50 p-8 rounded-xl shadow-sm border border-gray-200 hover:border-gold-800 hover:shadow-lg transition-all duration-300">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-gold-400/10 rounded-lg group-hover:bg-gold-400/20 transition-colors">
-                    <FaExclamationTriangle className="text-gold-500 text-2xl" />
+              <div className="group bg-white p-8 rounded-xl shadow-sm border border-slate-200 hover:border-gold-400/50 hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gold-50 rounded-bl-full -mr-16 -mt-16 transition-transform group-hover:scale-110" />
+
+                <div className="relative z-10 flex items-start gap-5">
+                  <div className="p-3 bg-gold-50 rounded-lg group-hover:bg-gold-500 group-hover:text-white transition-colors duration-300">
+                    <div className="font-display font-bold text-xl">02</div>
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-display font-bold text-xl text-trust-blue-950 mb-3">
+                    <h3 className="font-display font-bold text-xl text-trust-blue-950 mb-3 group-hover:text-trust-blue-800 transition-colors">
                       Record Retention
                     </h3>
-                    <p className="text-gray-700 text-sm leading-relaxed">
-                      All promotional materials are reviewed and approved in writing
-                      by appropriate supervisory personnel before use. Copies of all
-                      materials are retained on file for 5 years (2 years readily
-                      accessible) as required by NFA regulations.
+                    <p className="text-slate-600 text-sm leading-relaxed mb-4">
+                      All promotional materials are reviewed and approved in writing by appropriate supervisory personnel before use. Copies of all materials are retained on file for 5 years (2 years readily accessible) as required by NFA regulations.
                     </p>
+                   {/*  <div className="flex items-center gap-2 text-xs font-semibold text-gold-600">
+                      <div className="w-1.5 h-1.5 rounded-full bg-trust-blue-900" />
+                      Strict Adherence
+                    </div> */}
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Critical Risk Warning - Enhanced Design */}
-            <div className="relative overflow-hidden bg-gradient-to-r from-trust-blue-950 to-trust-blue-900 p-8 md:p-10 rounded-xl border-2 border-gold-400 shadow-2xl">
-              {/* Background Pattern */}
-              <div className="absolute inset-0 opacity-5">
-                <div className="absolute top-0 right-0 w-64 h-64 bg-gold-400 rounded-full blur-3xl" />
-                <div className="absolute bottom-0 left-0 w-64 h-64 bg-gold-400 rounded-full blur-3xl" />
-              </div>
+            {/* Critical Risk Warning - Distinct & Authoritative */}
+            <div className="relative overflow-hidden rounded-xl bg-[#0B1221] border border-trust-blue-800 shadow-2xl">
+              {/* Decorative Background */}
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold-500 to-transparent opacity-50" />
+              <div className="absolute -left-10 top-1/2 -translate-y-1/2 w-40 h-40 bg-trust-blue-600/10 rounded-full blur-3xl pointer-events-none" />
+              <div className="absolute -right-10 top-1/2 -translate-y-1/2 w-40 h-40 bg-gold-500/5 rounded-full blur-3xl pointer-events-none" />
 
-              <div className="relative z-10">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="p-3 bg-yellow-400 rounded-lg animate-pulse">
-                    <FaExclamationTriangle className="text-trust-blue-950 text-2xl" />
+              <div className="flex flex-col md:flex-row">
+                {/* Warning Icon Section */}
+                <div className="bg-[#162032] p-8 md:w-1/4 flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-trust-blue-800">
+                  <div className="w-12 h-12 rounded-full bg-red-500/10 border border-red-500/30 flex items-center justify-center mb-4 animate-pulse-slow">
+                    <FaExclamationTriangle className="text-red-500 text-xl" />
                   </div>
-                  <h3 className="font-display font-bold text-2xl md:text-3xl text-white">
+                  <h3 className="text-white font-bold uppercase tracking-wider text-sm text-center">
                     Critical Risk Warning
                   </h3>
                 </div>
 
-                <div className="bg-white/10 p-6 rounded-lg border border-white/20">
-                  <p className="text-white text-sm md:text-base font-medium leading-relaxed">
-                    <span className="text-gold-400 font-bold">IMPORTANT:</span> The risk of loss in trading commodity interests can be substantial. You should therefore carefully consider whether such trading is suitable for you in light of your financial condition. Past performance is not necessarily indicative of future results.
+                {/* Content Section */}
+                <div className="p-8 md:p-10 md:w-3/4">
+                  <p className="text-gray-300 text-sm md:text-base leading-relaxed font-light mb-6">
+                    IMPORTANT: The risk of loss in trading commodity interests can be substantial. You should therefore carefully consider whether such trading is suitable for you in light of your financial condition. Past performance is not necessarily indicative of future results.
                   </p>
-                </div>
-
-                <div className="mt-6 flex flex-wrap gap-4 text-xs text-trust-blue-200">
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-gold-400 rounded-full" />
-                    <span>NFA Registered CTA</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-gold-400 rounded-full" />
-                    <span>CFTC Compliant</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-gold-400 rounded-full" />
-                    <span>Full Disclosure Available</span>
-                  </div>
+                  {/* <p className="text-gray-400 text-xs leading-relaxed italic border-l-2 border-gold-500/30 pl-4">
+                    &quot;Past performance is not necessarily indicative of future results.&quot;
+                  </p> */}
                 </div>
               </div>
             </div>

@@ -3,7 +3,7 @@
 import React from "react";
 import PageHeader from "@/components/layout/PageHeader";
 import { motion } from "framer-motion";
-import CTABanner from "@/components/sections/home/CTABanner";
+
 import { FaLightbulb, FaScaleBalanced } from "react-icons/fa6";
 import { AlertTriangle } from "lucide-react"; // Optional: requires lucide-react, or remove icon if not needed
 
@@ -154,8 +154,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      <CTABanner />
     </>
   );
 }
