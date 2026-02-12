@@ -8,12 +8,14 @@ import CaseStudiesPreview from "@/components/sections/home/CaseStudiesPreview";
 import CTABanner from "@/components/sections/home/CTABanner";
 import DisclosureBento from "@/components/sections/home/ServicesGrid";
 import ServicesPage from "@/components/sections/home/Services";
+import InstitutionalGradeTechnology from "@/components/sections/home/InstitutionalGradeTechnology";
 
 export default function Home() {
   return (
     <>
       <Hero />
       <AboutBrief />
+      <InstitutionalGradeTechnology/>
       <WhyChooseUs />
       {/* <ServicesGrid /> */}
       <ServicesPage />

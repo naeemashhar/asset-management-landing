@@ -69,7 +69,7 @@ export default function WhyChooseUsHeartbeat() {
       ref={containerRef}
       className="relative bg-white text-slate-900 overflow-x-clip"
     >
-      <div className="container mx-auto px-6 md:px-12 lg:px-20">
+      <div className="container w-7xl mx-auto px-6 md:px-12 lg:px-20">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-24">
           {/* LEFT SIDE: Sticky + Dynamic "Pulse" */}
           <div className="lg:w-5/12 relative py-20 lg:py-32 z-10">
@@ -140,30 +140,29 @@ export default function WhyChooseUsHeartbeat() {
             </div>
 
             {/* Risk Footer - Premium Redesign */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="mt-24 relative group"
             >
-              {/* Decorative Glow */}
+           
               <div className="absolute -inset-1 bg-gradient-to-r from-gold-400 to-trust-blue-500 rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
 
               <div className="relative bg-[#1B2525] p-8 md:p-10 rounded-xl border border-trust-blue-800/50 shadow-2xl overflow-hidden">
-                {/* Background Texture */}
+             
                 <div className="absolute top-0 right-0 p-12 opacity-5 pointer-events-none">
                   <FaShieldAlt className="text-9xl text-gold-400 transform rotate-12" />
                 </div>
 
                 <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center gap-8">
-                  {/* Icon Box */}
+            
                   <div className="flex-shrink-0">
                     <div className="w-16 h-16 rounded-xl  flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-500">
                       <FaShieldAlt className="text-white text-3xl" />
                     </div>
                   </div>
 
-                  {/* Content */}
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-2">
                       <h4 className="font-display font-bold text-white text-xl uppercase tracking-wide">
@@ -179,13 +178,12 @@ export default function WhyChooseUsHeartbeat() {
                     </p>
                   </div>
 
-                  {/* Action or Visual Indicator */}
                   <div className="hidden lg:block opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform translate-x-4 group-hover:translate-x-0">
-                    {/* <FaArrowRight className="text-gold-400 text-2xl" /> */}
+            
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </motion.div> */}
           </div>
         </div>
       </div>
