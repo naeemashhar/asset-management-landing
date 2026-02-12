@@ -54,7 +54,7 @@ export default function CTABanner() {
                   Schedule Consultation
                 </Button>
               </Link>
-              <Link href="/services">
+              {/* <Link href="/services">
                 <Button
                   size="lg"
                   variant="outline"
@@ -62,7 +62,7 @@ export default function CTABanner() {
                 >
                   Explore Services <FaArrowRight className="ml-2 h-4 w-4" />
                 </Button>
-              </Link>
+              </Link> */}
             </div>
           </motion.div>
         </div>

@@ -227,7 +227,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <CTABanner />
+      
     </>
   );
 }

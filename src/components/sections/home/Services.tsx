@@ -108,7 +108,7 @@ export default function ServicesPage() {
 
       <section className="py-10 relative overflow-hidden">
 
-        <div className="container mx-auto max-w-[1600px] px-8 relative z-10 ">
+        <div className="container  mx-auto max-w-[1600px] px-8 relative z-10 ">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-24 mb-20 ">
             {mainServices.map((service, index) => (
               <div
@@ -138,10 +138,10 @@ export default function ServicesPage() {
                     </div>
                   </div>
 
-                  <h3 className="font-serif text-2xl font-bold text-trust-blue-950 mb-4 tracking-wide group-hover:text-gold-700 transition-colors duration-300">
+                  <h3 className="font-display text-2xl font-bold text-trust-blue-950 mb-4 tracking-wide group-hover:text-gold-700 transition-colors duration-300">
                     {service.title}
                   </h3>
-                  <p className="text-trust-blue-900/80 leading-relaxed text-base font-light group-hover:text-trust-blue-950 transition-colors">
+                  <p className="text-trust-blue-900/80 leading-relaxed text-base font-light font-sans group-hover:text-trust-blue-950 transition-colors">
                     {service.description}
                   </p>
                 </div>
