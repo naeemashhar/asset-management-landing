@@ -27,10 +27,7 @@ export default function AboutBrief() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section
-      ref={ref}
-      className="py-24 bg-white overflow-hidden w-[90%] mx-auto"
-    >
+    <section ref={ref} className="py-24 bg-white overflow-hidden w-7xl mx-auto">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* LEFT COLUMN: Text Content (Span 5) */}
@@ -45,7 +42,7 @@ export default function AboutBrief() {
             </motion.span> */}
             <div className="flex items-center gap-2 mb-4">
               <div className="h-[4px] w-12 bg-gradient-to-r from-gold-700 to-gold-600" />
-              <span className="text-gold-800 font-sans text-3xl font-bold tracking-[0.3em] uppercase">
+              <span className="text-gold-800 font-sans text-lg md:text-xl font-bold tracking-[0.3em] uppercase">
                 Why us
               </span>
             </div>
@@ -105,7 +102,7 @@ export default function AboutBrief() {
               {/* Placeholder for the 'Running Man' sketch - using a clean abstract business visual for now as vector assets aren't local. 
                                  Ideally would use an SVG component here. */}
               <Image
-                src="/image.png"
+                src="/whyus.png"
                 alt="Financial Expertise Illustration"
                 fill
                 className="object-contain" // Removed mix-blend-multiply as SVGs usually have transparent backgrounds

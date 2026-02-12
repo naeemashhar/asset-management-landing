@@ -97,7 +97,7 @@ export default function AboutPage() {
                   </div>
 
                   {/* NFA Regulatory Disclosure - High Contrast Warning */}
-                  <div className="mt-4 relative overflow-hidden bg-[#1B2525] rounded-lg border border-gold-500/30 shadow-lg group hover:border-gold-500/60 transition-colors duration-300">
+                  {/* <div className="mt-4 relative overflow-hidden bg-[#1B2525] rounded-lg border border-gold-500/30 shadow-lg group hover:border-gold-500/60 transition-colors duration-300">
                     <div className="absolute top-0 right-0 p-4 opacity-5">
                       <FaScaleBalanced className="text-6xl text-white transform -rotate-12" />
                     </div>
@@ -131,7 +131,7 @@ export default function AboutPage() {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </motion.div>
               </div>
 
@@ -140,7 +140,7 @@ export default function AboutPage() {
                 <div className="aspect-[4/3] rounded-sm overflow-hidden shadow-2xl relative">
                   <div className="absolute inset-0 bg-trust-blue-950/20 mix-blend-multiply z-10" />
                   <img
-                    src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2664&auto=format&fit=crop"
+                    src="/aboutpage.jpeg"
                     alt="Meeting in a modern office"
                     className="object-cover w-full h-full"
                   />

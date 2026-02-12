@@ -42,7 +42,7 @@ export default function ContactPage() {
                     Compliance Team
                   </h3>
                   <div className="space-y-1 text-trust-blue-100">
-                    <p className="font-semibold text-white">Jadi Abboud</p>
+                    <p className="font-semibold text-white">Jadina Anjos</p>
                     <p>jadi@valoraam.com</p>
                     <p>(714) 743-9987</p>
                   </div>
@@ -240,14 +240,13 @@ export default function ContactPage() {
             </div>
 
             {/* Critical Risk Warning - Distinct & Authoritative */}
-            <div className="relative overflow-hidden rounded-xl bg-[#0B1221] border border-trust-blue-800 shadow-2xl">
-              {/* Decorative Background */}
+            {/* <div className="relative overflow-hidden rounded-xl bg-[#0B1221] border border-trust-blue-800 shadow-2xl">
+            
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold-500 to-transparent opacity-50" />
               <div className="absolute -left-10 top-1/2 -translate-y-1/2 w-40 h-40 bg-trust-blue-600/10 rounded-full blur-3xl pointer-events-none" />
               <div className="absolute -right-10 top-1/2 -translate-y-1/2 w-40 h-40 bg-gold-500/5 rounded-full blur-3xl pointer-events-none" />
 
-              <div className="flex flex-col md:flex-row">
-                {/* Warning Icon Section */}
+              <div className="flex flex-col md:flex-row">       
                 <div className="bg-[#162032] p-8 md:w-1/4 flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-trust-blue-800">
                   <div className="w-12 h-12 rounded-full bg-red-500/10 border border-red-500/30 flex items-center justify-center mb-4 animate-pulse-slow">
                     <FaExclamationTriangle className="text-red-500 text-xl" />
@@ -257,17 +256,17 @@ export default function ContactPage() {
                   </h3>
                 </div>
 
-                {/* Content Section */}
+               
                 <div className="p-8 md:p-10 md:w-3/4">
                   <p className="text-gray-300 text-sm md:text-base leading-relaxed font-light mb-6">
                     IMPORTANT: The risk of loss in trading commodity interests can be substantial. You should therefore carefully consider whether such trading is suitable for you in light of your financial condition. Past performance is not necessarily indicative of future results.
                   </p>
-                  {/* <p className="text-gray-400 text-xs leading-relaxed italic border-l-2 border-gold-500/30 pl-4">
+                  <p className="text-gray-400 text-xs leading-relaxed italic border-l-2 border-gold-500/30 pl-4">
                     &quot;Past performance is not necessarily indicative of future results.&quot;
-                  </p> */}
+                  </p> 
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
