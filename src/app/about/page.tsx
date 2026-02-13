@@ -54,7 +54,7 @@ export default function AboutPage() {
 
                   {/* Mission Block - Premium Card */}
                   <div className="relative group">
-                    <div className="absolute -inset-0.5 bg-gradient-to-r from-[#374B47] to-gold-400 rounded-lg blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
+                    <div className="absolute -inset-0.5 bg-gradient-to-r from-[#374B47] to-gold-400 rounded-lg  opacity-20 group-hover:opacity-40 transition duration-500"></div>
                     <div className="relative bg-white p-8 rounded-lg shadow-xl border-t-4 border-[#374B47]">
                       <div className="flex items-start gap-4 mb-4">
                         <div className="p-3 bg-[#374B47]/10 rounded-full">

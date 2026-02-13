@@ -87,7 +87,7 @@ export default function WhyChooseUsHeartbeat() {
           <div className="lg:w-5/12 relative py-20 lg:py-32 z-10">
             <div className="lg:sticky lg:top-24 flex flex-col justify-center">
               {/* The "Pulse" - Dynamic Background Element */}
-              <div className="absolute top-1/2 -left-20 w-96 h-96 bg-trust-blue-100/50 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse-slow pointer-events-none" />
+              <div className="absolute top-1/2 -left-20 w-96 h-96 bg-trust-blue-100/50 rounded-full mix-blend-multiply filter  opacity-30 animate-pulse-slow pointer-events-none" />
 
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -126,7 +126,7 @@ export default function WhyChooseUsHeartbeat() {
                         <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-2.5 h-2.5 bg-gold-400 rounded-full shadow-[0_0_10px_var(--color-gold-400)] border border-white/80" />
                       </motion.div>
                       {/* Track background subtle glow for depth */}
-                      <div className="absolute inset-0 bg-slate-200/30 rounded-full -z-10 blur-[1px]" />
+                      <div className="absolute inset-0 bg-slate-200/30 rounded-full -z-10" />
                     </div>
 
                     {/* Dynamic Image Display */}
