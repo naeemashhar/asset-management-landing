@@ -135,7 +135,7 @@ export default function ServicesGrid() {
         </h2>
       </motion.div> */}
 
-      <div className="pb-16 ">
+      <div className="">
         {services.map((service, i) => (
           <div
             key={i}
@@ -189,7 +189,7 @@ export default function ServicesGrid() {
       {/* View All Services CTA */}
 
       {/* View All Services CTA */}
-      <div className="pb-24  flex justify-center relative z-10">
+      {/* <div className="pb-24  flex justify-center relative z-10">
         <div className="text-center">
           <p className="text-trust-blue-500 mb-6 text-sm uppercase tracking-widest">
             Looking for more?
@@ -203,7 +203,7 @@ export default function ServicesGrid() {
             Discover All Expertise
           </Button>
         </div>
-      </div>
+      </div> */}
 
 
     </section>
