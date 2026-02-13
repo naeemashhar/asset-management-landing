@@ -325,7 +325,7 @@ const ScrollStack: React.FC<ScrollStackProps> = ({
       }
       stackCompletedRef.current = false;
       cardsRef.current = [];
-      transformsCache.clear();
+      lastTransformsRef.current.clear();
       isUpdatingRef.current = false;
     };
   }, [
