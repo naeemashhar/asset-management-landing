@@ -98,11 +98,11 @@ export default function InfraPanel() {
             <div className={`absolute inset-0 rounded-lg bg-${node.color}-100/0 group-hover:bg-${node.color}-100/50 transition-all duration-300`} />
 
             {/* Status dot */}
-            <motion.div
+           {/*  <motion.div
               className={`absolute -top-1 -right-1 w-2 h-2 rounded-full bg-${node.color}-500 shadow-lg`}
               animate={{ scale: [1, 1.3, 1] }}
               transition={{ duration: 2, delay: i * 0.3, repeat: Infinity }}
-            />
+            /> */}
 
             <span className="relative z-10">{node.label}</span>
           </motion.div>
