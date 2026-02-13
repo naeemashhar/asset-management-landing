@@ -17,7 +17,7 @@ export default function Footer() {
         {/* Top Section: Risk Disclosure */}
         <div className="mt-16 mb-20 relative max-w-7xl mx-auto">
           <div className="relative bg-trust-blue-900 border-l-4 border-gold-400 p-8 md:p-12 shadow-2xl rounded-r-lg overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-gold-400/5 rounded-full blur-3xl -mr-32 -mt-32 pointer-events-none" />
+            <div className="absolute top-0 right-0 w-64 h-64 bg-gold-400/5 rounded-full  -mr-32 -mt-32 pointer-events-none" />
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start relative z-10">
               {/* Header Side */}
