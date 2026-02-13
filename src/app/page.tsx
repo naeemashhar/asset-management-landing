@@ -15,8 +15,8 @@ export default function Home() {
     <>
       <Hero />
       <AboutBrief />
-      <InstitutionalGradeTechnology/>
       <WhyChooseUs />
+      <InstitutionalGradeTechnology/>
       {/* <ServicesGrid /> */}
       <ServicesPage />
       <DisclosureBento />
