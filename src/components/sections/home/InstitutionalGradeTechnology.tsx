@@ -130,7 +130,7 @@ const InstitutionalGradeTechnology = () => {
               className="mt-12 p-8 bg-gradient-to-br from-white to-slate-50 rounded-xl border border-[#374B47] shadow-xl relative overflow-hidden"
             >
               <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03]" />
-              <div className="absolute bottom-0 right-0 w-32 h-32 bg-gold-400/10 rounded-full blur-3xl" />
+              <div className="absolute bottom-0 right-0 w-32 h-32 bg-gold-400/10 rounded-full " />
 
               <div className="relative z-10 flex gap-5 items-start">
                 <div className="mt-1 text-gold-500 p-2 bg-trust-blue-50 rounded-full border border-trust-blue-100 shadow-sm">
