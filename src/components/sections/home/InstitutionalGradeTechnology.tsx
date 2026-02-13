@@ -83,63 +83,68 @@ const InstitutionalGradeTechnology = () => {
         {/* --- Control Room Split Layout --- */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
           {/* LEFT: The "Institutional Dashboard" Visual Anchor */}
-          <InfraPanel/>
+          <InfraPanel />
 
-          {/* RIGHT: Content Rows (The "List") */}
+          {/* RIGHT: Content Rows (The "List") - Redesigned for High Engagement */}
           <div className="lg:col-span-7 flex flex-col justify-center">
-            <div className="border-t border-[#374B47]/20">
-              {techFeatures.map((item, idx) => (
+            <div className="grid md:grid-cols-2 gap-6 ">
+              {techFeatures.map((item, idx) => ( 
                 <motion.div
                   key={item.id}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: idx * 0.1, duration: 0.5 }}
-                  viewport={{ margin: "-50px" }}
-                  className="group relative border-b border-[#374B47]/20 py-8 md:py-10 hover:bg-[#374B47]/5 transition-colors duration-300 px-4 md:px-6 cursor-default"
+                  whileHover={{ y: -5 }}
+                  className="group relative bg-[radial-gradient(circle_at_center,_#E3E4CF_0%,_#D1D2BC_100%)] border-1px border-[#374B47] rounded-xl p-6 hover:shadow-xl hover:shadow-[#F4F1EE]/50 hover:border-[#F4F1EE] transition-all duration-300 overflow-hidden"
                 >
-                  <div className="flex flex-col md:flex-row md:items-start gap-6">
-                    {/* Icon Column */}
-                    <div className="flex-shrink-0 pt-1">
-                      <div className="w-12 h-12 rounded-full border border-[#374B47]/20 flex items-center justify-center text-[#374B47] group-hover:bg-[#374B47] group-hover:text-white transition-all duration-300">
-                        <item.icon size={20} />
-                      </div>
-                    </div>
+                  {/* Hover Gradient Background - Lighter for the new base */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#F4F1EE]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                    {/* Text Column */}
-                    <div className="flex-grow">
-                      <div className="flex justify-between items-baseline mb-3">
-                        <h3 className="font-display text-2xl font-semibold text-[#121826]">
-                          {item.title}
-                        </h3>
-                        <span className="hidden md:block font-mono text-xs tracking-wider text-[#374B47]/60 uppercase border border-[#374B47]/20 px-2 py-1 rounded">
-                          {item.stat}
-                        </span>
+                  {/* Decorative Corner Accent */}
+                  <div className="absolute top-0 right-0 w-16 h-16 bg-[#F4F1EE]/20 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150" />
+
+                  <div className="relative z-10 ">
+                    <div className="flex justify-between items-start mb-4">
+                      {/* Icon */}
+                      <div className="w-12 h-12 rounded-lg bg-[#374B47] flex items-center justify-center text-[#F4F1EE] group-hover:bg-[#F4F1EE] group-hover:text-[#374B47] transition-colors duration-300 shadow-md">
+                        <item.icon size={22} />
                       </div>
 
-                      <p className="text-gray-600 leading-relaxed max-w-xl">
-                        {item.desc}
-                      </p>
+                      {/* Stat Pill */}
+                      <span className="font-mono text-xs font-bold tracking-wider text-[#374B47] bg-[#F4F1EE]/50 px-2 py-1 rounded border border-[#374B47]/30 group-hover:bg-[#F4F1EE] group-hover:border-[#374B47] transition-colors">
+                        {item.stat}
+                      </span>
                     </div>
+
+                    <h3 className="font-display text-xl font-bold text-[#121826] mb-3 group-hover:text-[#374B47]">
+                      {item.title}
+                    </h3>
+
+                    <p className="text-[#374B47]/80 text-sm leading-relaxed mb-4 font-medium group-hover:text-[#374B47]">
+                      {item.desc}
+                    </p>
                   </div>
                 </motion.div>
               ))}
             </div>
 
-            {/* Closing Statement */}
+            {/* Closing Statement - Enhanced (Light Theme Friendly) */}
             <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ delay: 0.6 }}
-              className="mt-12 p-6 bg-[#374B47]/5 border-l-2 border-[#374B47] flex gap-4 items-start"
+              className="mt-12 p-8 bg-gradient-to-br from-white to-slate-50 rounded-xl border border-[#374B47] shadow-xl relative overflow-hidden"
             >
-              <div className="mt-1 text-[#374B47]">
-                <ArrowUpRight size={20} />
+              <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03]" />
+              <div className="absolute bottom-0 right-0 w-32 h-32 bg-gold-400/10 rounded-full blur-3xl" />
+
+              <div className="relative z-10 flex gap-5 items-start">
+                <div className="mt-1 text-gold-500 p-2 bg-trust-blue-50 rounded-full border border-trust-blue-100 shadow-sm">
+                  <ArrowUpRight size={20} />
+                </div>
+                <div>
+                  <h4 className="text-trust-blue-950 font-display font-bold text-lg mb-2">
+                    Expertise Enhanced by Technology
+                  </h4>
+                  <p className="text-slate-600 italic font-medium leading-relaxed font-serif">
+                    "Technology doesn't replace expertise—it enhances it. Our team combines human judgment with cutting-edge tools to execute disciplined strategies."
+                  </p>
+                </div>
               </div>
-              <p className="text-[#374B47] italic font-medium">
-                "Technology doesn't replace expertise—it enhances it. Our team
-                combines human judgment with cutting-edge tools to execute
-                disciplined strategies."
-              </p>
             </motion.div>
           </div>
         </div>
