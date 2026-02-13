@@ -173,14 +173,14 @@ export default function ServicesPage() {
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-trust-blue-900 via-gold-400 to-trust-blue-900 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
 
                 {/* Subtle Gradient Blob on Hover */}
-                <div className="absolute top-0 right-0 w-64 h-64 bg-[#F4F1EE]/30 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none -translate-y-1/2 translate-x-1/2" />
+                <div className="absolute top-0 right-0 w-64 h-64 bg-[#F4F1EE]/30 rounded-full  opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none -translate-y-1/2 translate-x-1/2" />
 
                 {/* Top Section: Value Prop */}
                 <div className="px-10 py-5 relative z-10 flex-grow">
                   <div className="flex justify-between items-start mb-8">
                     {/* Icon with glowing backdrop */}
                     <div className="relative">
-                      <div className="absolute inset-0 bg-gold-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      <div className="absolute inset-0 bg-gold-400/20 rounded-full  opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                       <div className="relative w-16 h-16 bg-[#F4F1EE]/60 border border-[#F4F1EE] rounded-full flex items-center justify-center text-trust-blue-900 shadow-sm group-hover:text-gold-600 group-hover:border-gold-500/30 transition-all duration-300">
                         <service.icon className="w-7 h-7" strokeWidth={1.5} />
                       </div>
