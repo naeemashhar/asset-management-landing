@@ -6,7 +6,7 @@ import ProcessTimeline from "@/components/sections/home/ProcessTimeline";
 import Testimonials from "@/components/sections/home/Testimonials";
 import CaseStudiesPreview from "@/components/sections/home/CaseStudiesPreview";
 import CTABanner from "@/components/sections/home/CTABanner";
-import DisclosureBento from "@/components/sections/home/ServicesGrid";
+import DisclosureBento from "@/components/sections/home/DisclosureBento";
 import ServicesPage from "@/components/sections/home/Services";
 import InstitutionalGradeTechnology from "@/components/sections/home/InstitutionalGradeTechnology";
 
@@ -15,11 +15,11 @@ export default function Home() {
     <>
       <Hero />
       <AboutBrief />
-      <WhyChooseUs />
+      {/* <WhyChooseUs /> */}
+      <ServicesGrid />
       <InstitutionalGradeTechnology/>
-      {/* <ServicesGrid /> */}
       <ServicesPage />
-      <DisclosureBento />
+      <DisclosureBento/>
       {/* <ProcessTimeline /> */}
       {/* <Testimonials /> */}
       {/* <CaseStudiesPreview /> */}

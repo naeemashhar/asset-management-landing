@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import {
   FaChartLine,
   FaShieldAlt,
@@ -19,6 +19,8 @@ const features = [
     description:
       "Comprehensive fundamental and technical analysis across all major commodity sectors including energy, metals, agriculture, and financial futures.",
     icon: FaChartLine,
+    image:
+      "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=2670&auto=format&fit=crop",
   },
   {
     id: "02",
@@ -26,6 +28,8 @@ const features = [
     description:
       "Sophisticated hedging strategies and risk mitigation techniques tailored to your portfolio objectives and risk tolerance levels.",
     icon: FaShieldAlt,
+    image:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2670&auto=format&fit=crop",
   },
   {
     id: "03",
@@ -33,13 +37,17 @@ const features = [
     description:
       "Strategic allocation across multiple asset classes and trading strategies to optimize risk-adjusted returns and reduce correlation with traditional investments.",
     icon: FaChartPie,
+    image:
+      "https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?q=80&w=2670&auto=format&fit=crop",
   },
   {
     id: "04",
     title: "Commitment to Excellence",
     description:
       "Dedicated to providing thorough market analysis and personalized service as we build our track record with client accounts.",
-    icon: FaAward, // you can import from react-icons/fa
+    icon: FaAward,
+    image:
+      "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=2670&auto=format&fit=crop",
   },
   {
     id: "05",
@@ -47,6 +55,8 @@ const features = [
     description:
       "Direct access to advisors who understand your unique objectives and provide customized solutions rather than one-size-fits-all approaches.",
     icon: FaUserTie,
+    image:
+      "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2670&auto=format&fit=crop",
   },
   {
     id: "06",
@@ -54,6 +64,8 @@ const features = [
     description:
       "Full NFA registration and adherence to all CFTC regulations, ensuring the highest standards of professional conduct and client protection.",
     icon: FaBalanceScale,
+    image:
+      "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2670&auto=format&fit=crop",
   },
 ];
 
@@ -109,7 +121,7 @@ export default function WhyChooseUsHeartbeat() {
                             ["0%", "100%"],
                           ),
                         }}
-                        className="w-full bg-gradient-to-b from-trust-blue-900 to-gold-400 rounded-full relative"
+                        className="w-full  bg-gradient-to-b from-trust-blue-900 to-gold-400 rounded-full relative"
                       >
                         <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-2.5 h-2.5 bg-gold-400 rounded-full shadow-[0_0_10px_var(--color-gold-400)] border border-white/80" />
                       </motion.div>
@@ -117,14 +129,8 @@ export default function WhyChooseUsHeartbeat() {
                       <div className="absolute inset-0 bg-slate-200/30 rounded-full -z-10 blur-[1px]" />
                     </div>
 
-                    <div className="flex flex-col gap-1 -mt-2 opacity-80 select-none">
-                      <span className="text-[10px] uppercase tracking-[0.25em] text-slate-400 font-bold">
-                        Journey
-                      </span>
-                      <span className="text-xs font-bold text-slate-900 font-display">
-                        Start — Finish
-                      </span>
-                    </div>
+                    {/* Dynamic Image Display */}
+                    <DynamicFeatureImage scrollProgress={scrollYProgress} />
                   </div>
                 </div>
               </motion.div>
@@ -188,6 +194,52 @@ export default function WhyChooseUsHeartbeat() {
         </div>
       </div>
     </section>
+  );
+}
+
+function DynamicFeatureImage({ scrollProgress }: { scrollProgress: any }) {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const unsubscribe = scrollProgress.on("change", (value: number) => {
+      // Map scroll progress (0-1) to feature index (0-5)
+      const index = Math.min(
+        Math.floor(value * features.length * 1.2),
+        features.length - 1,
+      );
+      setActiveIndex(Math.max(0, index));
+    });
+
+    return () => unsubscribe();
+  }, [scrollProgress]);
+
+  return (
+    <div className="relative w-96 h-80 rounded-lg overflow-hidden shadow-2xl">
+      {features.map((feature, index) => (
+        <motion.div
+          key={feature.id}
+          className="absolute inset-0"
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: activeIndex === index ? 1 : 0,
+            scale: activeIndex === index ? 1 : 1.1,
+          }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
+        >
+          <img
+            src={feature.image}
+            alt={feature.title}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 p-4">
+            <p className="text-white text-sm font-display font-bold">
+              {feature.title}
+            </p>
+          </div>
+        </motion.div>
+      ))}
+    </div>
   );
 }
 
