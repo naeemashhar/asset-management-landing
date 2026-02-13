@@ -7,13 +7,13 @@ export default function InfraPanel() {
       <div className="relative w-[440px] h-[440px]">
         {/* ENHANCED AMBIENT GLOW - Multi-layered */}
         <motion.div
-          className="absolute inset-0 bg-[#D1D2BC]/20 blur-3xl rounded-full"
+          className="absolute inset-0 bg-[#D1D2BC]/20  rounded-full"
           animate={{ scale: [1, 1.1, 1], opacity: [0.2, 0.3, 0.2] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         />
-        <div className="absolute inset-0 bg-[#F4F1EE]/10 blur-2xl rounded-full transform scale-90" />
+        <div className="absolute inset-0 bg-[#F4F1EE]/10  rounded-full transform scale-90" />
         <motion.div
-          className="absolute inset-0 bg-emerald-400/10 blur-xl rounded-full"
+          className="absolute inset-0 bg-emerald-400/10  rounded-full"
           animate={{ opacity: [0.1, 0.2, 0.1] }}
           transition={{ duration: 3, repeat: Infinity }}
         />
@@ -98,11 +98,11 @@ export default function InfraPanel() {
             <div className={`absolute inset-0 rounded-lg bg-${node.color}-100/0 group-hover:bg-${node.color}-100/50 transition-all duration-300`} />
 
             {/* Status dot */}
-            <motion.div
+           {/*  <motion.div
               className={`absolute -top-1 -right-1 w-2 h-2 rounded-full bg-${node.color}-500 shadow-lg`}
               animate={{ scale: [1, 1.3, 1] }}
               transition={{ duration: 2, delay: i * 0.3, repeat: Infinity }}
-            />
+            /> */}
 
             <span className="relative z-10">{node.label}</span>
           </motion.div>
