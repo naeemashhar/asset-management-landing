@@ -19,7 +19,7 @@ export default function Home() {
       <ServicesGrid />
       <InstitutionalGradeTechnology/>
       <ServicesPage />
-      <DisclosureBento/>
+      {/* <DisclosureBento/> */}
       {/* <ProcessTimeline /> */}
       {/* <Testimonials /> */}
       {/* <CaseStudiesPreview /> */}

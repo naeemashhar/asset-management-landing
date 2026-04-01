@@ -53,7 +53,7 @@ const InstitutionalGradeTechnology = () => {
 
 
   return (
-    <section className="py-24 overflow-hidden">
+    <section className="pb-22 overflow-hidden">
       <div className="container w-7xl mx-auto px-6">
         {/* --- Header Section --- */}
         <motion.div

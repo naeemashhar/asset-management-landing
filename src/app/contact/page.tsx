@@ -42,9 +42,9 @@ export default function ContactPage() {
                     Compliance Team
                   </h3>
                   <div className="space-y-1 text-trust-blue-100">
-                    <p className="font-semibold text-white">Jadina Anjos</p>
-                    <p>jadi@valoraam.com</p>
-                    <p>(714) 743-9987</p>
+                    <p className="font-semibold text-white">Valora Support</p>
+                    <p>email: support@valoraam.com</p>
+                    <p>(949) -241-4804</p>
                   </div>
                 </motion.div>
 
