@@ -74,7 +74,7 @@ export default function AboutPage() {
                   </div>
 
                   {/* Important Risk Disclosure - Critical Warning */}
-                  <div className="mt-8 relative overflow-hidden bg-[#2C1818] rounded-lg border border-red-500/30 shadow-lg group hover:border-red-500/60 transition-colors duration-300">
+              {/*     <div className="mt-8 relative overflow-hidden bg-[#2C1818] rounded-lg border border-red-500/30 shadow-lg group hover:border-red-500/60 transition-colors duration-300">
                     <div className="p-6 relative z-10">
                       <div className="flex items-start gap-4">
                         <div className="shrink-0 pt-1">
@@ -94,7 +94,7 @@ export default function AboutPage() {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
 
                   {/* NFA Regulatory Disclosure - High Contrast Warning */}
                   {/* <div className="mt-4 relative overflow-hidden bg-[#1B2525] rounded-lg border border-gold-500/30 shadow-lg group hover:border-gold-500/60 transition-colors duration-300">

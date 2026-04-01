@@ -45,15 +45,15 @@ export default function RiskDisclosures() {
 
             {/* Risk Disclosure Statement */}
             <div className="space-y-6">
-              <div className="flex items-center gap-3 text-red-600">
-                <IoTrendingDownOutline className="text-2xl" />
+              <div className="flex items-center gap-3 text-green-600">
+                {/* <IoTrendingDownOutline className="text-2xl" /> */}
                 <h2 className="font-serif text-2xl font-bold text-trust-blue-950">
                   Risk Disclosure Statement
                 </h2>
               </div>
 
-              <div className="relative overflow-hidden bg-red-50 rounded-sm border-l-4 border-red-500 p-8 shadow-sm">
-                <p className="font-bold text-red-950 uppercase leading-loose text-sm md:text-[15px] tracking-wide">
+              <div className="relative overflow-hidden rounded-sm border-l-4 border-green-900 p-8 shadow-sm">
+                <p className="font-bold text-green-950 uppercase leading-loose text-sm md:text-[15px] tracking-wide">
                   COMMODITY TRADING INVOLVES SUBSTANTIAL RISK OF LOSS.
                 </p>
               </div>
@@ -264,9 +264,9 @@ export default function RiskDisclosures() {
                 {/* Card 2: Futures & Margin */}
                 <div className="bg-white p-6 rounded-sm shadow-sm border border-gray-100 hover:border-gray-700 hover:shadow-md transition-shadow">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="p-2 bg-orange-50 rounded-full text-orange-600">
+                    {/* <div className="p-2 bg-orange-50 rounded-full text-orange-600">
                       <IoWarningOutline className="text-xl" />
-                    </div>
+                    </div> */}
                     <h4 className="font-bold text-trust-blue-950 text-base uppercase tracking-wider">
                       Futures & Margin Risks
                     </h4>
@@ -294,9 +294,9 @@ export default function RiskDisclosures() {
                 {/* Card 3: Market Volatility - Full Width on Mobile, Centered on Desktop if wanted, or just span 2 */}
                 <div className="md:col-span-2 bg-gradient-to-r from-gray-50 to-white p-6 rounded-sm shadow-sm border border-gray-100 hover:border-gray-700">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="p-2 bg-red-50 rounded-full text-red-600">
+                    {/* <div className="p-2 bg-red-50 rounded-full text-red-600">
                       <IoShieldCheckmarkOutline className="text-xl" />
-                    </div>
+                    </div> */}
                     <h4 className="font-bold text-trust-blue-950 text-base uppercase tracking-wider">
                       Market Conditions & Limit Moves
                     </h4>
@@ -327,7 +327,7 @@ export default function RiskDisclosures() {
                 </div>
 
                 <div className="relative overflow-hidden bg-yellow-50 rounded-sm border-l-4 border-gold-500 p-8 shadow-sm">
-                  <p className="font-bold text-trust-blue-950 uppercase leading-loose text-sm md:text-[15px] tracking-wide text-justify">
+                  <p className="text-trust-blue-950 uppercase  text-sm md:text-[15px] text-justify">
                     VALORA ASSET MANAGEMENT HAS HAD LITTLE OR NO EXPERIENCE IN
                     TRADING ACTUAL ACCOUNTS FOR CUSTOMERS. BECAUSE THERE ARE NO
                     ACTUAL TRADING RESULTS TO COMPARE TO ANY HYPOTHETICAL
